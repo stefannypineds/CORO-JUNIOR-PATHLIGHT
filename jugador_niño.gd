@@ -19,14 +19,9 @@ var mouse_sensitivity = 0.002
 @onready var animacion_niño: Node3D = $"Animacion niño"
 @onready var modelo = $"Animacion niño"
 
-func _ready():
-	# Esto hace que el ratón desaparezca y se quede atrapado en el juego
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
 func _input(event):
-	# 1. Movimiento con el ratón (Para cuando pruebes en el PC)
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		if camera != null: # <--- Aquí está la trampa de seguridad
+		if camera != null:
 			rotate_y(-event.relative.x * mouse_sensitivity)
 			camera.rotate_x(-event.relative.y * mouse_sensitivity)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))

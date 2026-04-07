@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://c7d6aym6ccivg"]
 
-[ext_resource type="Script" uid="uid://ch5d3c0uv065u" path="res://control.gd" id="1_bw7nc"]
-[ext_resource type="Texture2D" uid="uid://bwnrjx6sthaui" path="res://18.png" id="2_na2pe"]
-[ext_resource type="Texture2D" uid="uid://c2s536njv7p3g" path="res://19.png" id="3_na2pe"]
-[ext_resource type="Texture2D" uid="uid://dnovnpm3bxc4a" path="res://20.png" id="4_qj2k4"]
+[ext_resource type="Script" uid="uid://pxpnsh5mwym5" path="res://SeleccionPersonaje.gd" id="1_bw7nc"]
+[ext_resource type="Texture2D" uid="uid://pcrv8oq1gdia" path="res://Imagenes del recorrido.png" id="1_iq6wu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bw7nc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_na2pe"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qj2k4"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qj2k4"]
-texture = ExtResource("3_na2pe")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_75itv"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_na2pe"]
-texture = ExtResource("3_na2pe")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uf84i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bcrrj"]
 
@@ -19,17 +19,11 @@ texture = ExtResource("3_na2pe")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c48os"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75itv"]
-texture = ExtResource("4_qj2k4")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xhgps"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uf84i"]
-texture = ExtResource("4_qj2k4")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hgmqn"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tojmx"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6aojb"]
-
-[node name="Control" type="Control" unique_id=92125230]
+[node name="Control" type="Control" unique_id=517157931]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,35 +32,48 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bw7nc")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1280660000]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=247258312]
 layout_mode = 0
 offset_right = 1151.0
 offset_bottom = 649.0
-texture = ExtResource("2_na2pe")
+texture = ExtResource("1_iq6wu")
 expand_mode = 1
+stretch_mode = 5
 
-[node name="Theo" type="Button" parent="." unique_id=1967941020]
+[node name="TheoButton" type="Button" parent="." unique_id=1511378116]
 layout_mode = 0
-offset_left = 312.0
-offset_top = 102.0
+offset_left = 293.0
+offset_top = 89.0
 offset_right = 513.0
-offset_bottom = 597.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_qj2k4")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_qj2k4")
-theme_override_styles/hover = SubResource("StyleBoxTexture_na2pe")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_bcrrj")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_uvvut")
+offset_bottom = 611.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bw7nc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_na2pe")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qj2k4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_75itv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uf84i")
+flat = true
 
-[node name="Joy" type="Button" parent="Theo" unique_id=1938276912]
-layout_mode = 1
-anchors_preset = -1
-anchor_bottom = 0.079
-offset_left = 347.0
-offset_top = 3.0
-offset_right = 548.0
-offset_bottom = 458.895
-theme_override_styles/normal = SubResource("StyleBoxEmpty_c48os")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_75itv")
-theme_override_styles/hover = SubResource("StyleBoxTexture_uf84i")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_tojmx")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6aojb")
+[node name="JoyButton" type="Button" parent="TheoButton" unique_id=13409702]
+layout_mode = 0
+offset_left = 344.0
+offset_top = -1.0
+offset_right = 583.0
+offset_bottom = 522.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bcrrj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uvvut")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_c48os")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xhgps")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hgmqn")
+flat = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1423270500]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="mouse_entered" from="TheoButton" to="." method="_on_theo_button_mouse_entered"]
+[connection signal="mouse_exited" from="TheoButton" to="." method="_on_theo_button_mouse_exited"]
+[connection signal="pressed" from="TheoButton" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="TheoButton/JoyButton" to="." method="_on_joy_button_mouse_entered"]
+[connection signal="mouse_exited" from="TheoButton/JoyButton" to="." method="_on_joy_button_mouse_exited"]
+[connection signal="pressed" from="TheoButton/JoyButton" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
