@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cmhvw7tw6j88g" path="res://MODELOS/MAPA 1 Y 2/Carpa baja calidad.glb" id="14_6hbkg"]
 [ext_resource type="PackedScene" uid="uid://dvgy244nscapg" path="res://MODELOS/MAPA 4 Y 5/Canoa baja calidad.glb" id="14_k4wfn"]
 [ext_resource type="Texture2D" uid="uid://vq8a53028tgl" path="res://MODELOS/Niebla 2.webp" id="15_qy7de"]
+[ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="16_6hbkg"]
+[ext_resource type="Script" uid="uid://codviaqne8qcn" path="res://hacia_mapa_4_y_5.gd" id="17_2pv8m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -42,7 +44,7 @@ data = PackedVector3Array(-8.3337, 0, 50, -6.4817, 0, 48.765198, -6.4817, 0, 50,
 size = Vector3(18.004002, 10.232208, 0.07421875)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rqdt1"]
-size = Vector3(26.33442, 10.232208, 0.07421875)
+size = Vector3(25.503593, 10.232208, 0.07421875)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hlrx2"]
 size = Vector3(8.564932, 10.232208, 0.07421875)
@@ -56,6 +58,9 @@ size = Vector3(21.291788, 10.232208, 0.07421875)
 [sub_resource type="BoxShape3D" id="BoxShape3D_aqfpc"]
 size = Vector3(32.578003, 10.232208, 0.07421875)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_7xj8a"]
+size = Vector3(21.680817, 0.001, 5.5319824)
+
 [node name="Node3D" type="Node3D" unique_id=978302472]
 
 [node name="Seccion1" type="Node3D" parent="." unique_id=561212832]
@@ -67,7 +72,7 @@ environment = SubResource("Environment_v1v01")
 [node name="Fondo mapa 3" parent="Seccion1" unique_id=2121909699 instance=ExtResource("3_01mhm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.180943, 0.37781048, -5.516509)
 
-[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=2080325630]
+[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=529613081]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030014038, 1.9073486e-06, 0.083227634)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Seccion1/Fondo mapa 3/MAPA 3" index="0" unique_id=1182644870]
@@ -76,7 +81,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030014038, 1.9073486e-06, 
 shape = SubResource("ConcavePolygonShape3D_01mhm")
 
 [node name="Fondo mapa montaña" parent="Seccion1" unique_id=284371775 instance=ExtResource("4_k4wfn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.22803, 0.487648, -5.321668)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.30578, 0.487648, -5.462012)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Seccion1" unique_id=1737390671]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.690384, 3.5327637, 30.653044)
@@ -86,11 +91,7 @@ transform = Transform3D(-0.0078015327, 0, -0.99996954, 0, 1, 0, 0.99996954, 0, -
 shape = SubResource("BoxShape3D_rcy3m")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Seccion1/StaticBody3D" unique_id=86138123]
-transform = Transform3D(-0.0078015327, 0, -0.99996954, 0, 1, 0, 0.99996954, 0, -0.0078015327, -10.285134, 1.9225504, -10.934322)
-shape = SubResource("BoxShape3D_rqdt1")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Seccion1/StaticBody3D" unique_id=1912688336]
-transform = Transform3D(-0.0078015327, 0, -0.99996954, 0, 1, 0, 0.99996954, 0, -0.0078015327, -10.285134, 1.9225504, 5.7330074)
+transform = Transform3D(-0.0078015327, 0, -0.99996954, 0, 1, 0, 0.99996954, 0, -0.0078015327, -11.624638, 1.9225504, -9.5118065)
 shape = SubResource("BoxShape3D_rqdt1")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="Seccion1" unique_id=1588016498]
@@ -188,7 +189,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8272, 0.94542503, 25.4480
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.325413, 0.36885548, -5.964052)
 
 [node name="MAPA 4 Y 52" parent="." unique_id=1723137936 instance=ExtResource("10_w5y8a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.26569, 0.42946243, -5.8137546)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.142197, 0.44542027, -5.5192122)
 
 [node name="Letrero 3" parent="." unique_id=944302657 instance=ExtResource("11_ea38a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.821999, 1.2400347, 26.803665)
@@ -913,5 +914,26 @@ texture = ExtResource("15_qy7de")
 transform = Transform3D(-0.99928814, 0, 0.037725165, 0, 1, 0, -0.037725165, 0, -0.99928814, -83.19204, 5.154359, 10.706674)
 modulate = Color(1, 1, 1, 0.59607846)
 texture = ExtResource("15_qy7de")
+
+[node name="CharacterBody3D" parent="." unique_id=595004463 instance=ExtResource("16_6hbkg")]
+transform = Transform3D(-0.021518283, 0, 0.99976844, 0, 1, 0, -0.99976844, 0, -0.021518283, -3.1626194, 1.3875043, 21.643698)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1788639843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.989362, 0)
+light_energy = 1.5
+light_angular_distance = 90.0
+shadow_enabled = true
+shadow_bias = 6.77
+shadow_normal_bias = 7.078
+
+[node name="Portal hacia 4" type="Area3D" parent="." unique_id=1131079791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.683361, 3.6091294, 7.982623)
+script = ExtResource("17_2pv8m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Portal hacia 4" unique_id=231885116]
+transform = Transform3D(1, 0, 0, 0, -0.1191318, 0.9928785, 0, -0.9928785, -0.1191318, 0.41200256, -1.5550537, 1.7941523)
+shape = SubResource("BoxShape3D_7xj8a")
+
+[connection signal="body_entered" from="Portal hacia 4" to="CharacterBody3D" method="_on_hacia_mapa_4_y_5_body_entered"]
 
 [editable path="Seccion1/Fondo mapa 3"]

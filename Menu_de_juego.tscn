@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://ntltr73sjks1"]
+[gd_scene format=3 uid="uid://bjkwav0ltrjnr"]
 
-[ext_resource type="Script" uid="uid://cmmtyai5mi2no" path="res://menu_de_juego.gd" id="1_jynhb"]
+[ext_resource type="Script" path="res://menu_de_juego.gd" id="1_jynhb"]
 [ext_resource type="Texture2D" uid="uid://d2myb547dk3tj" path="res://MENU DE JUEGO.png" id="1_rf8kq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rf8kq"]
