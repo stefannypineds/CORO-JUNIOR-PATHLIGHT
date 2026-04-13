@@ -19,6 +19,10 @@ var mouse_sensitivity = 0.002
 @onready var animacion_niño: Node3D = $"Animacion niño"
 @onready var modelo = $"Animacion niño"
 
+func _ready():
+	# Esto atrapa el mouse y lo oculta para poder girar la cámara
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
 func _input(event):
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		if camera != null:
@@ -76,3 +80,11 @@ func _physics_process(delta):
 
 	# Aplicamos todo el movimiento y colisiones al final
 	move_and_slide()
+
+func _on_portal_hacia_3_body_entered(body: Node3D) -> void:
+	if body.name == "CharacterBody3D":
+		get_tree().change_scene_to_file("res://MAPA 3.tscn")
+
+func _on_body_portal_hacia_4_entered(body: Node3D) -> void:
+	if body.name == "CharacterBody3D":
+		get_tree().change_scene_to_file("res://MAPA 3 Y 4.tscn")
