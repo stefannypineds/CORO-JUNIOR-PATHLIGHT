@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://c8kairutbn80o"]
+
+[ext_resource type="PackedScene" uid="uid://jlbq5mtfvwj2" path="res://MODELOS/Personajes prueba/Caminar Niña.glb" id="1_318t7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_go5fv"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=544758080]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1033741138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044956386, 0.84789264, 0)
+shape = SubResource("CapsuleShape3D_go5fv")
+
+[node name="Caminar Niña" parent="." unique_id=8523499 instance=ExtResource("1_318t7")]
+transform = Transform3D(-0.99974215, 0, 0.022704773, 0, 1, 0, -0.022704773, 0, -0.99974215, -0.03663832, -0.016718328, 0.017962813)
+
+[node name="Skeleton3D" parent="Caminar Niña/Armature" parent_id_path=PackedInt32Array(8523499, 3038201) index="0" unique_id=913577742]
+bones/0/position = Vector3(0.0006869029, 0.5854923, -0.0004274128)
+bones/0/rotation = Quaternion(-0.0052026073, 0.08684525, -0.031193532, 0.99571973)
+bones/1/rotation = Quaternion(-0.023739012, -0.0075188233, 0.020131268, 0.9994873)
+bones/2/rotation = Quaternion(0.014301646, -0.020558944, 0.005210805, 0.99967283)
+bones/3/rotation = Quaternion(-0.025549999, -0.020042099, 0.0008531381, 0.99947226)
+bones/4/rotation = Quaternion(0.017074868, -0.009898576, -0.008755499, 0.9997669)
+bones/5/rotation = Quaternion(-0.011859487, -0.033482965, 0.0031001777, 0.99936414)
+bones/7/rotation = Quaternion(-0.68189853, -0.37983692, 0.4327458, -0.451076)
+bones/8/rotation = Quaternion(0.49786043, -0.01743744, -0.08593621, 0.8628128)
+bones/9/rotation = Quaternion(0.029566694, -0.002113495, 0.31014213, 0.950228)
+bones/10/rotation = Quaternion(-0.052520413, 0.39839825, 0.17778325, 0.89828366)
+bones/11/rotation = Quaternion(0.028994393, 0.32428136, 0.13114892, 0.93637645)
+bones/12/rotation = Quaternion(0.09215103, -0.18468249, -0.03525802, 0.97783303)
+bones/13/rotation = Quaternion(0.015528239, 0.084968574, 0.23869544, 0.9672454)
+bones/15/rotation = Quaternion(-0.010066187, 0.0022270177, -0.020722331, 0.9997322)
+bones/16/rotation = Quaternion(0.1428396, -0.00049289106, -0.009898183, 0.9896963)
+bones/17/rotation = Quaternion(0.031441327, 0.001903376, 0.036875896, 0.9988233)
+bones/19/rotation = Quaternion(0.5991314, -0.3803887, 0.5737373, 0.40886623)
+bones/20/rotation = Quaternion(0.4509811, -0.123893425, 0.19416091, 0.8623039)
+bones/21/rotation = Quaternion(0.025450155, 0.0026100029, -0.27881032, 0.96000546)
+bones/22/rotation = Quaternion(0.019709153, -0.4710825, -0.08146005, 0.8780986)
+bones/23/rotation = Quaternion(0.04482912, -0.17603597, -0.17203149, 0.96819776)
+bones/24/rotation = Quaternion(-0.04109963, -0.070510335, 0.15285134, 0.9848734)
+bones/25/rotation = Quaternion(-0.05174605, 0.08649488, -0.33252323, 0.9376936)
+bones/27/rotation = Quaternion(0.10265014, 0.010296178, -0.05907996, 0.9929081)
+bones/28/rotation = Quaternion(0.2215346, 0.0028596018, -0.05571998, 0.9735551)
+bones/29/rotation = Quaternion(0.13897869, -0.0002468397, -0.050523818, 0.9890057)
+bones/31/rotation = Quaternion(-0.010285664, 0.18817002, 0.9819561, -0.015761562)
+bones/32/rotation = Quaternion(-0.5469675, 0.01661848, 0.070544615, 0.8340107)
+bones/33/rotation = Quaternion(0.37574682, -0.10311318, 0.10850723, 0.9145536)
+bones/34/rotation = Quaternion(0.3716611, -0.1834129, 0.045047585, 0.9089546)
+bones/36/rotation = Quaternion(-0.09324411, 0.029828979, 0.9902155, -0.099444136)
+bones/37/rotation = Quaternion(-0.104114905, -0.015729725, -0.033651344, 0.99387133)
+bones/38/rotation = Quaternion(0.4394531, 0.11722928, -0.17472385, 0.8732754)
+bones/39/rotation = Quaternion(0.38125202, 0.16774325, -0.061034635, 0.90707433)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=581548126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0919474, -0.07126352)
+
+[editable path="Caminar Niña"]

@@ -1,90 +1,81 @@
 extends CharacterBody3D
 
+# --- VARIABLES DE MOVIMIENTO ---
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-
-# Obtenemos la gravedad de los ajustes del proyecto
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-# Sensibilidad del ratón para mirar alrededor
+# --- VARIABLES DE CÁMARA ---
 var mouse_sensitivity = 0.002
 
-# Conectamos la cámara que acabas de crear
+# --- REFERENCIAS A NODOS ---
 @onready var camera = $Camera3D
-
-# Conectar el personaje con las animaciones
 @onready var animation_player: AnimationPlayer = $"Animacion niño/AnimationPlayer"
-
-#Conectar cuerpo con el código
-@onready var animacion_niño: Node3D = $"Animacion niño"
 @onready var modelo = $"Animacion niño"
 
 func _ready():
-	# Esto atrapa el mouse y lo oculta para poder girar la cámara
+	# Atrapamos el mouse al inicio para que no se salga de la ventana
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _input(event):
+	# 1. CONTROL DE CÁMARA (MOUSE PC)
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		if camera != null:
 			rotate_y(-event.relative.x * mouse_sensitivity)
 			camera.rotate_x(-event.relative.y * mouse_sensitivity)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
-	# ... el resto de tu código de rotación ...
-	# 2. Movimiento tocando la pantalla (Para el Celular)
+			
+	# 2. CONTROL DE CÁMARA (TÁCTIL CELULAR)
 	if event is InputEventScreenDrag:
-		# Solo mueve la cámara si deslizamos el dedo en la MITAD DERECHA de la pantalla
+		# Solo si deslizamos en la mitad derecha de la pantalla
 		if event.position.x > get_viewport().size.x / 2:
-			# El celular es más sensible, bajamos un poco la velocidad multiplicando por 0.5
 			rotate_y(-event.relative.x * mouse_sensitivity * 0.5)
 			camera.rotate_x(-event.relative.y * mouse_sensitivity * 0.5)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 			
-	# Liberar el ratón con la tecla ESC
+	# 3. LIBERAR EL MOUSE (TECLA ESCAPE)
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _physics_process(delta):
-	# Añadir gravedad si no estamos tocando el piso
+	# Aplicar gravedad
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	# Saltar con la barra espaciadora
+	# Salto
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# 1. Escuchamos las teclas WASD que acabamos de crear
+	# Obtener dirección de entrada (WASD / Flechas)
 	var input_dir = Input.get_vector("derecha", "izquierda", "adelante", "atras")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	# 2. Si hay dirección (estamos presionando alguna tecla)
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 		
-		# ¡Arrancamos a caminar!
+		# Animación de caminar y rotación del modelo
 		animation_player.play("walk_com") 
-		
-		# (Aquí mantienes la rotación que te funcionó en el paso anterior, por ejemplo 180 o 90)
 		modelo.rotation_degrees.y = 180 
-		
-	# 3. Si NO hay dirección (soltamos las teclas)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
-		# ¡Nos quedamos quietos respirando!
+		# Animación de estar quieto y rotación de descanso
 		animation_player.play("Idle_com_001")
-		
-		# Mantenemos la misma rotación para que no se voltee al parar
 		modelo.rotation_degrees.y = 90 
 
-	# Aplicamos todo el movimiento y colisiones al final
 	move_and_slide()
 
+# --- FUNCIONES DE TELETRANSPORTACIÓN (SEÑALES) ---
+
+# Esta función se activa cuando entras al portal del Mapa 1/2 hacia el Mapa 3
 func _on_portal_hacia_3_body_entered(body: Node3D) -> void:
 	if body.name == "CharacterBody3D":
 		get_tree().change_scene_to_file("res://MAPA 3.tscn")
 
-func _on_body_portal_hacia_4_entered(body: Node3D) -> void:
+# Esta función se activa cuando entras al bote (u otro portal) del Mapa 3 hacia el Mapa 3 y 4
+func _on_hacia_mapa_4_y_5_body_entered(body: Node3D) -> void:
 	if body.name == "CharacterBody3D":
+		# Asegúrate de que el nombre del archivo sea exacto
 		get_tree().change_scene_to_file("res://MAPA 3 Y 4.tscn")

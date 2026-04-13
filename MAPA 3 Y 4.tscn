@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://bhk4xldcg0qnr" path="res://MODELOS/MAPA 3/Familia orando.glb" id="26_g0a14"]
 [ext_resource type="Script" uid="uid://b18yx66jgj5os" path="res://familiaorando.gd" id="27_2bpxn"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="27_v5w4w"]
+[ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="28_v5w4w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -102,16 +103,10 @@ environment = SubResource("Environment_v1v01")
 [node name="Fondo mapa 3" parent="Seccion1" unique_id=2121909699 instance=ExtResource("1_st7ml")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.180943, 0.37781048, -5.516509)
 
-[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=529613081]
+[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=746569204]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030014038, 1.9073486e-06, 0.083227634)
 
 [node name="Interfaz" type="CanvasLayer" parent="Seccion1/Fondo mapa 3/MAPA 3" index="0" unique_id=529851940]
-
-[node name="CajaTexto" type="Panel" parent="Seccion1/Fondo mapa 3/MAPA 3/Interfaz" unique_id=1078042445]
-offset_left = 51.0
-offset_top = 46.0
-offset_right = 1088.0
-offset_bottom = 592.0
 
 [node name="Biblia" parent="Seccion1/Fondo mapa 3" unique_id=1262992799 instance=ExtResource("2_0mjx0")]
 transform = Transform3D(0.5672687, 0, -0.30360615, -0.027041633, 0.6408481, -0.05052556, 0.3023995, 0.05730692, 0.5650141, 8.532297, 1.2444409, 26.367334)
@@ -251,13 +246,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.88243, 0.7545209, 20.6256
 [node name="Arboles altos fondo4" parent="Seccion1" unique_id=1497707258 instance=ExtResource("5_tvgrj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.62981, 0.7545209, 21.205507)
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Seccion1" unique_id=585360214]
+light_energy = 1.5
+light_angular_distance = 90.0
+shadow_enabled = true
+shadow_bias = 0.263
+
 [node name="Fogata" parent="." unique_id=2033573339 instance=ExtResource("6_qsgys")]
-transform = Transform3D(0.8376605, 0, 0, 0, 0.83017117, 0, 0, 0, 0.47329068, -25.516676, 0.8458965, 24.92127)
+transform = Transform3D(0.8376605, 0, 0, 0, 0.83017117, 0, 0, 0, 0.56777215, -25.516676, 0.8458965, 24.92127)
 
 [node name="MAPA 4 Y 52" parent="." unique_id=1723137936 instance=ExtResource("8_u2r3v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.26569, 0.42946243, -5.8137546)
 
-[node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=36781098]
+[node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=238985656]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064582825, -2.3841858e-07, -0.009017944)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MAPA 4 Y 52/MAPA 4 Y 5" index="0" unique_id=2096005067]
@@ -277,7 +278,7 @@ transform = Transform3D(0.50467825, 0, -0.8633075, 0, 1, 0, 0.8633075, 0, 0.5046
 [node name="Puente2" parent="." unique_id=1304290962 instance=ExtResource("10_mcfre")]
 transform = Transform3D(0.08957413, -0.011247669, -0.9959166, -0.040485296, 0.99906874, -0.014924578, 0.99515694, 0.04165682, 0.0890353, -48.94463, 0.4302101, -20.470646)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(1304290962, 455166493) index="0" unique_id=173740716]
+[node name="StaticBody3D" type="StaticBody3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(1304290962, 1600469754) index="0" unique_id=173740716]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60/StaticBody3D" unique_id=1130597439]
 shape = SubResource("ConcavePolygonShape3D_ckwyc")
@@ -285,7 +286,7 @@ shape = SubResource("ConcavePolygonShape3D_ckwyc")
 [node name="Puente4" parent="." unique_id=319397750 instance=ExtResource("10_mcfre")]
 transform = Transform3D(0.14689444, 0, 0.98915243, 0, 1, 0, -0.98915243, 0, 0.14689444, -49.030033, 0.5056534, -24.403038)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Puente4/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(319397750, 455166493) index="0" unique_id=622038296]
+[node name="StaticBody3D" type="StaticBody3D" parent="Puente4/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(319397750, 1600469754) index="0" unique_id=622038296]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puente4/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60/StaticBody3D" unique_id=1261127010]
 shape = SubResource("ConcavePolygonShape3D_43ba2")
@@ -293,7 +294,7 @@ shape = SubResource("ConcavePolygonShape3D_43ba2")
 [node name="Canoa baja calidad" parent="." unique_id=1712415807 instance=ExtResource("12_43ba2")]
 transform = Transform3D(0.8935125, 0, 0.44903833, 0, 1, 0, -0.44903833, 0, 0.8935125, -10.381029, 0.28720677, 4.2728705)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13" parent_id_path=PackedInt32Array(1712415807, 1183322696) index="0" unique_id=43486033]
+[node name="StaticBody3D" type="StaticBody3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13" parent_id_path=PackedInt32Array(1712415807, 1878337873) index="0" unique_id=43486033]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13/StaticBody3D" unique_id=291132987]
 shape = SubResource("ConcavePolygonShape3D_2bpxn")
@@ -1875,6 +1876,9 @@ script = ExtResource("27_2bpxn")
 
 [node name="MAPA ESCALA sec 7 y 8" parent="." unique_id=1098457689 instance=ExtResource("27_v5w4w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.611298, 0.63658714, -5.660187)
+
+[node name="CharacterBody3D" parent="." unique_id=595004463 instance=ExtResource("28_v5w4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96832, 0.5550978, 5.9740424)
 
 [connection signal="input_event" from="Familia orando/StaticBody3D" to="Familia orando/StaticBody3D/CollisionShape3D" method="_on_static_body_3d_input_event"]
 
