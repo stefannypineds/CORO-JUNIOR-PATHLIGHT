@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dt6w2m4knc2j4"
-path="res://.godot/imported/MAPA 7 Y 8.glb-be0140a930c9ec0ad29a70b84a36e23c.scn"
+uid="uid://dpmqu1nbixhek"
+path="res://.godot/imported/MAPA ESCALA Seccion 7 y 8.glb-6063a8a120e7af2d417e8407b075d022.scn"
 
 [deps]
 
-source_file="res://MODELOS/MAPA 7 Y 8/MAPA 7 Y 8.glb"
-dest_files=["res://.godot/imported/MAPA 7 Y 8.glb-be0140a930c9ec0ad29a70b84a36e23c.scn"]
+source_file="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA Seccion 7 y 8.glb"
+dest_files=["res://.godot/imported/MAPA ESCALA Seccion 7 y 8.glb-6063a8a120e7af2d417e8407b075d022.scn"]
 
 [params]
 

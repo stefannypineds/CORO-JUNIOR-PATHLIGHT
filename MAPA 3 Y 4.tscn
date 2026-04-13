@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://dv8n8mdbmxxyc" path="res://MODELOS/MAPA 3/MAPA 3.glb" id="1_st7ml"]
 [ext_resource type="PackedScene" uid="uid://w3x3ox0jwsfv" path="res://MODELOS/MAPA 1 Y 2/Biblia.glb" id="2_0mjx0"]
-[ext_resource type="PackedScene" uid="uid://dt6w2m4knc2j4" path="res://MODELOS/MAPA 7 Y 8/MAPA 7 Y 8.glb" id="2_4y8sk"]
 [ext_resource type="PackedScene" uid="uid://ccd1n16ewgfvm" path="res://MODELOS/MAPA 3/Pinos fondo.glb" id="3_4mxis"]
 [ext_resource type="PackedScene" uid="uid://jdqlsraj7lo" path="res://MODELOS/MAPA 3/Pez.glb" id="3_dlugu"]
 [ext_resource type="PackedScene" uid="uid://bo32tk7dstad5" path="res://MODELOS/MAPA 3/Arboles fondo.glb" id="4_qx52d"]
@@ -27,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://p20qtgipjllq" path="res://MODELOS/MAPA 3/Moises.glb" id="25_bm6qn"]
 [ext_resource type="PackedScene" uid="uid://bhk4xldcg0qnr" path="res://MODELOS/MAPA 3/Familia orando.glb" id="26_g0a14"]
 [ext_resource type="Script" uid="uid://b18yx66jgj5os" path="res://familiaorando.gd" id="27_2bpxn"]
+[ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="27_v5w4w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -124,9 +124,6 @@ transform = Transform3D(0.52901053, 0.017490106, -0.28490403, -0.04073502, 0.598
 
 [node name="Pez" parent="Seccion1/Fondo mapa 3" unique_id=1373434885 instance=ExtResource("3_dlugu")]
 transform = Transform3D(-3.4750047, -0.19171523, 0.61739403, -0.37074858, 3.482957, -1.072822, -0.5323472, -1.1742151, -3.2830074, 8.497112, -0.4408189, 16.700615)
-
-[node name="Fondo mapa montaña" parent="Seccion1" unique_id=284371775 instance=ExtResource("2_4y8sk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.22803, 0.487648, -5.321668)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Seccion1" unique_id=1737390671]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.690384, 3.5327637, 30.653044)
@@ -1875,6 +1872,9 @@ transform = Transform3D(0.99581766, 5.186885e-10, -0.09136256, -0.0066339783, 0.
 transform = Transform3D(1.0000005, 4.656613e-10, 2.9802322e-08, -2.7939677e-09, 1.0000005, -2.9802322e-08, -1.4901161e-08, 0, 1, -0.022109985, 1.732718, -0.12464905)
 shape = SubResource("BoxShape3D_v5w4w")
 script = ExtResource("27_2bpxn")
+
+[node name="MAPA ESCALA sec 7 y 8" parent="." unique_id=1098457689 instance=ExtResource("27_v5w4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.611298, 0.63658714, -5.660187)
 
 [connection signal="input_event" from="Familia orando/StaticBody3D" to="Familia orando/StaticBody3D/CollisionShape3D" method="_on_static_body_3d_input_event"]
 
