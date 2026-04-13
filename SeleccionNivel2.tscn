@@ -27,7 +27,7 @@ offset_bottom = 653.0
 texture = ExtResource("1_ylfya")
 expand_mode = 1
 
-[node name="Button" type="Button" parent="TextureRect" unique_id=1767027984]
+[node name="Button2" type="Button" parent="TextureRect" unique_id=1767027984]
 layout_mode = 0
 offset_left = 305.0
 offset_top = 291.0

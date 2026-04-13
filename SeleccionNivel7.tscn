@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://naj03sg8nhwr"]
+
+[ext_resource type="Texture2D" uid="uid://dspmkesorfdjn" path="res://38.png" id="1_atxgy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjinf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nt6qf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nw5sk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47vjh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f6xru"]
+
+[node name="Control" type="Control" unique_id=1123603767]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1761090595]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 661.0
+texture = ExtResource("1_atxgy")
+expand_mode = 1
+
+[node name="Button7" type="Button" parent="." unique_id=889677120]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 294.0
+offset_right = 878.0
+offset_bottom = 389.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gjinf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nt6qf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nw5sk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_47vjh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f6xru")
