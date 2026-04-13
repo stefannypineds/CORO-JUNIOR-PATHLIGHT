@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bjg8xknx485sr"]
+
+[ext_resource type="Script" uid="uid://cjcqh10ukbjdd" path="res://Menu_de_juego2.tscn.gd" id="1_ds26w"]
+[ext_resource type="Texture2D" uid="uid://ccu4htctkrgpy" path="res://30.png" id="2_tnvlt"]
+
+[node name="Control" type="Control" unique_id=1348923227]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ds26w")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=638034195]
+layout_mode = 0
+offset_top = -9.0
+offset_right = 1155.0
+offset_bottom = 650.0
+texture = ExtResource("2_tnvlt")
+expand_mode = 1
+
+[node name="Timer" type="Timer" parent="TextureRect" unique_id=1870408941]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="TextureRect/Timer" to="." method="_on_timer_timeout"]
