@@ -1,21 +1,24 @@
 extends Control
 
-# Función para cuando presionan "Nueva Partida"
+# --- FUNCIONES DE LOS BOTONES ---
+
 func _on_nueva_partida_pressed() -> void:
-	# Nos lleva a la escena de selección de Theo y Joy
+	# Esta línea es la que hace la magia de cambiar de pantalla
+	# Asegúrate de que el nombre del archivo sea exactamente este
 	get_tree().change_scene_to_file("res://SeleccionPersonaje.tscn")
 
-# Función para cuando presionan "Reanudar Partida"
 func _on_reanudar_partida_pressed() -> void:
-	# Por ahora, que te mande directo al mapa principal
-	get_tree().change_scene_to_file("res://MAPA 1 Y 2.tscn")
+	# Por si quieres que reanudar vaya directo al nivel 1
+	get_tree().change_scene_to_file("res://SeleccionNivel.tscn")
 
-# Función para cuando presionan "Ayuda"
 func _on_ayuda_pressed() -> void:
-	# Aquí podrías abrir un panel o una escena de instrucciones
-	print("Botón Ayuda presionado")
+	print("Botón de ayuda presionado")
+	# Aquí podrías poner un código para mostrar un cartel de instrucciones
 
-# Función para cuando presionan "Créditos" (o Salir)
 func _on_creditos_button_pressed() -> void:
-	# Aquí corregí el error de la comilla extra que tenías
+	# Cerramos el juego correctamente sin comillas extra
 	get_tree().quit()
+
+
+func _on_creditos_pressed() -> void:
+	pass # Replace with function body.

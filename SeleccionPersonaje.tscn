@@ -23,19 +23,20 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hgmqn"]
 
-[node name="Control" type="Control" unique_id=517157931]
+[node name="Control2" type="Control" unique_id=517157931]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bw7nc")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=247258312]
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 649.0
+offset_right = 1164.0
+offset_bottom = 662.0
 texture = ExtResource("1_iq6wu")
 expand_mode = 1
 stretch_mode = 5
