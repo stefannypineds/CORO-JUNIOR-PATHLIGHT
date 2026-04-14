@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bm67k20vr356o"]
+[gd_scene format=3 uid="uid://bd8nc5ad55jqp"]
 
 [ext_resource type="PackedScene" uid="uid://n6frjub3dfuf" path="res://MODELOS/MAPA 6/MAPA 6.glb" id="1_wg0gf"]
 [ext_resource type="Texture2D" uid="uid://vq8a53028tgl" path="res://MODELOS/Niebla 2.webp" id="3_0dbrp"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://d4dvcpyrglsyf" path="res://MODELOS/MAPA 7 Y 8/Letrero 8a.glb" id="11_rag1x"]
 [ext_resource type="PackedScene" uid="uid://iqfklldfsit7" path="res://MODELOS/MAPA 7 Y 8/Tesoros.glb" id="12_eqtjf"]
 [ext_resource type="PackedScene" uid="uid://bnt80415vrri8" path="res://MODELOS/MAPA 7 Y 8/Estrella.glb" id="13_ca3ql"]
+[ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="14_f7hgi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -76,6 +77,8 @@ size = Vector3(0.001, 12.099121, 13.975586)
 [sub_resource type="BoxShape3D" id="BoxShape3D_g6kva"]
 size = Vector3(0.001, 12.099121, 13.975586)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_j0ig6"]
+
 [node name="Node3D2" type="Node3D" unique_id=978302472]
 
 [node name="Seccion1" type="Node3D" parent="." unique_id=561212832]
@@ -94,7 +97,7 @@ shape = SubResource("BoxShape3D_14amg")
 [node name="MAPA 62" parent="." unique_id=654540168 instance=ExtResource("1_wg0gf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.270184, 0.5539274, -5.781687)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 1399633031) index="0" unique_id=85689587]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 310382042) index="0" unique_id=85689587]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA 62/MAPA 6/StaticBody3D" unique_id=1758604841]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04605484, 0.07115173, -0.032754898)
@@ -103,42 +106,42 @@ shape = SubResource("ConcavePolygonShape3D_swncp")
 [node name="MAPA ESCALA sec 7 y 8" parent="." unique_id=1098457689 instance=ExtResource("5_88omp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.301903, 0.5301151, -5.7450056)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_001" parent_id_path=PackedInt32Array(1098457689, 344568223) index="0" unique_id=798170615]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_001" parent_id_path=PackedInt32Array(1098457689, 1035240823) index="0" unique_id=798170615]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_001/StaticBody3D" unique_id=394533656]
 shape = SubResource("ConcavePolygonShape3D_g6kva")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_004" parent_id_path=PackedInt32Array(1098457689, 1647078555) index="0" unique_id=1536658052]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_004" parent_id_path=PackedInt32Array(1098457689, 213902127) index="0" unique_id=1536658052]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_004/StaticBody3D" unique_id=967661040]
 shape = SubResource("ConcavePolygonShape3D_hdhv6")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_005" parent_id_path=PackedInt32Array(1098457689, 1501106594) index="0" unique_id=389968203]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_005" parent_id_path=PackedInt32Array(1098457689, 1267994906) index="0" unique_id=389968203]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_005/StaticBody3D" unique_id=1423812120]
 shape = SubResource("ConcavePolygonShape3D_jyr5m")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_006" parent_id_path=PackedInt32Array(1098457689, 1162891888) index="0" unique_id=961268754]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_006" parent_id_path=PackedInt32Array(1098457689, 1223598942) index="0" unique_id=961268754]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_006/StaticBody3D" unique_id=205780612]
 shape = SubResource("ConcavePolygonShape3D_fmnsc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_007" parent_id_path=PackedInt32Array(1098457689, 1795726882) index="0" unique_id=1842767101]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_007" parent_id_path=PackedInt32Array(1098457689, 1935806507) index="0" unique_id=1842767101]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_007/StaticBody3D" unique_id=583103152]
 shape = SubResource("ConcavePolygonShape3D_hb082")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_008" parent_id_path=PackedInt32Array(1098457689, 477236457) index="0" unique_id=1265682469]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_008" parent_id_path=PackedInt32Array(1098457689, 5467564) index="0" unique_id=1265682469]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_008/StaticBody3D" unique_id=1516396271]
 shape = SubResource("ConcavePolygonShape3D_0e5rk")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA" parent_id_path=PackedInt32Array(1098457689, 859262455) index="0" unique_id=1387095682]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA" parent_id_path=PackedInt32Array(1098457689, 1605422330) index="0" unique_id=1387095682]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/MAPA/StaticBody3D" unique_id=1222786019]
 shape = SubResource("ConcavePolygonShape3D_mbgvd")
 
-[node name="Mball_074" parent="MAPA ESCALA sec 7 y 8" index="7" unique_id=737018032]
+[node name="Mball_074" parent="MAPA ESCALA sec 7 y 8" index="7" unique_id=1835716622]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.466679, 1.894975, -33.373814)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Mball_074" index="0" unique_id=900086889]
@@ -167,7 +170,7 @@ transform = Transform3D(0.23017025, 0, 0.5676936, 0, 0.61258, 0, -0.5676936, 0, 
 [node name="Templo" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=761868094 instance=ExtResource("7_oap3w")]
 transform = Transform3D(-0.9551803, 0, 0.29602477, 0.07526356, 0.96713924, 0.24285221, -0.2862971, 0.2542475, -0.92379236, 32.55794, 4.9142246, 2.790886)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA 7 Y 8" parent_id_path=PackedInt32Array(1098457689, 337015026) index="0" unique_id=1849414728]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA 7 Y 8" parent_id_path=PackedInt32Array(1098457689, 223418655) index="0" unique_id=1849414728]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/MAPA 7 Y 8/StaticBody3D" unique_id=896919886]
 shape = SubResource("ConcavePolygonShape3D_hrasw")
@@ -368,6 +371,15 @@ texture = ExtResource("3_0dbrp")
 transform = Transform3D(-0.017103344, 0, -0.9998538, 0, 1, 0, 0.9998538, 0, -0.017103344, 29.24973, 9.539609, -23.395267)
 modulate = Color(1, 1, 1, 0.5882353)
 texture = ExtResource("3_0dbrp")
+
+[node name="CharacterBody3D" parent="." unique_id=595004463 instance=ExtResource("14_f7hgi")]
+transform = Transform3D(0.10095208, 0, 0.9948912, 0, 1, 0, -0.9948912, 0, 0.10095208, 20.926765, 6.4672117, -46.168316)
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=901926690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1452637, 3728.2266, 668.86194)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=403144689]
+shape = SubResource("BoxShape3D_j0ig6")
 
 [editable path="MAPA 62"]
 [editable path="MAPA ESCALA sec 7 y 8"]

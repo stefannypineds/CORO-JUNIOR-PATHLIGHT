@@ -1331,9 +1331,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.661417, 6.465475, -46.3680
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Portal hacia 8" unique_id=24291461]
 shape = SubResource("BoxShape3D_hdhv6")
 
-[node name="CharacterBody3D2" parent="." unique_id=1010900271 instance=ExtResource("5_e758g")]
-transform = Transform3D(-0.16991709, 0, 0.9854584, 0, 1, 0, -0.9854584, 0, -0.16991709, 20.769516, 6.356369, -46.07407)
-
 [connection signal="body_entered" from="Portal hacia 8" to="CharacterBody3D" method="_on_portal_hacia_8_body_entered"]
 
 [editable path="MAPA 62"]
