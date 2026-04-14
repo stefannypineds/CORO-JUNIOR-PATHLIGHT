@@ -4,15 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://b4w4ruyeny4n7" path="res://MODELOS/Personaje/Animacion niño.glb" id="1_yglsv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x43mf"]
-height = 1.9022217
+height = 1.6073608
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=595004463]
 script = ExtResource("1_x43mf")
 
 [node name="Animacion niño" parent="." unique_id=405823233 instance=ExtResource("1_yglsv")]
-transform = Transform3D(-1.1082304, 0, -0.02225233, 0, 1.0833744, 0, 0.0246075, 0, -1.0021622, 0, 0.054724574, 0)
+transform = Transform3D(-1.1082304, 0, -0.02225233, 0, 0.9697189, 0, 0.0246075, 0, -1.0021622, 0, 0.054724574, 0)
 
-[node name="Skeleton3D" parent="Animacion niño/Armature" parent_id_path=PackedInt32Array(405823233, 1175196249) index="0" unique_id=1969708081]
+[node name="Skeleton3D" parent="Animacion niño/Armature" parent_id_path=PackedInt32Array(405823233, 58148497) index="0" unique_id=608500997]
 bones/0/position = Vector3(-0.0009527318, 0.7561981, 0.0024108412)
 bones/0/rotation = Quaternion(0.025682896, -0.0040456047, 0.024266772, 0.99936736)
 bones/1/rotation = Quaternion(0.02877187, 0.015332682, 0.008503165, 0.99943227)
@@ -68,10 +68,10 @@ bones/62/rotation = Quaternion(0.47833425, 0.18705468, -0.14466327, 0.8457419)
 bones/63/rotation = Quaternion(0.36915258, 0.22513072, -0.086981885, 0.8974835)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1439610098]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.94013846, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.79270804, 0)
 shape = SubResource("CapsuleShape3D_x43mf")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1907279388]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0757525, 1.4148821, -0.25025415)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0757525, 1.2026327, -0.25025415)
 
 [editable path="Animacion niño"]
