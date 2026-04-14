@@ -24,7 +24,11 @@
 [ext_resource type="PackedScene" uid="uid://d4ks62ugunra7" path="res://MODELOS/MAPA 3/Jesus.glb" id="23_1n8ho"]
 [ext_resource type="PackedScene" uid="uid://b0cosxsx7dn7a" path="res://MODELOS/MAPA 3/David.glb" id="24_uhr15"]
 [ext_resource type="PackedScene" uid="uid://p20qtgipjllq" path="res://MODELOS/MAPA 3/Moises.glb" id="25_bm6qn"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://65vsc3q8stcc" path="res://color_rect.gd" id="26_dlugu"]
+=======
+[ext_resource type="Script" uid="uid://65vsc3q8stcc" path="res://color_rect.gd" id="27_1n8ho"]
+>>>>>>> ccbf7103ab274d22a91b7f5249ebdf7fe7cf6f86
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="27_v5w4w"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="28_v5w4w"]
 
@@ -47,8 +51,13 @@ fog_density = 1.0
 fog_depth_begin = 0.0
 fog_depth_end = 240.9
 
+<<<<<<< HEAD
 [sub_resource type="BoxShape3D" id="BoxShape3D_dlugu"]
 size = Vector3(1.1990356, 0.27246094, 0.9267578)
+=======
+[sub_resource type="BoxShape3D" id="BoxShape3D_uhr15"]
+size = Vector3(1, 0.652771, 0.97021484)
+>>>>>>> ccbf7103ab274d22a91b7f5249ebdf7fe7cf6f86
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rqdt1"]
 size = Vector3(23.253471, 10.232208, 0.07421875)
@@ -106,13 +115,25 @@ environment = SubResource("Environment_v1v01")
 [node name="Fondo mapa 3" parent="Seccion1" unique_id=2121909699 instance=ExtResource("1_st7ml")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.180943, 0.37781048, -5.516509)
 
+<<<<<<< HEAD
 [node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=1725735256]
+=======
+[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=1842946025]
+>>>>>>> ccbf7103ab274d22a91b7f5249ebdf7fe7cf6f86
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030014038, 1.9073486e-06, 0.083227634)
 
 [node name="Interfaz" type="CanvasLayer" parent="Seccion1/Fondo mapa 3/MAPA 3" index="0" unique_id=529851940]
 
 [node name="Biblia2" parent="Seccion1/Fondo mapa 3" unique_id=2007595348 instance=ExtResource("2_0mjx0")]
 transform = Transform3D(0.20965771, -0.025174875, -0.6068901, -0.043545406, 0.6397503, -0.04158127, 0.60584915, 0.054693975, 0.20702934, 6.222681, 0.90328634, -2.5326009)
+
+[node name="Area3D" type="Area3D" parent="Seccion1/Fondo mapa 3/Biblia2" unique_id=1077077109 node_paths=PackedStringArray("cuadro_texto")]
+script = ExtResource("3_2bpxn")
+cuadro_texto = NodePath("../../../../Interfaz/ColorRect")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Fondo mapa 3/Biblia2/Area3D" unique_id=476511553]
+transform = Transform3D(0.9999999, 0, 0, -2.2351742e-08, 1, -5.5879354e-09, -5.9604645e-08, -7.8231096e-08, 1, 0, -0.057953358, 0.025634766)
+shape = SubResource("BoxShape3D_uhr15")
 
 [node name="Biblia3" parent="Seccion1/Fondo mapa 3" unique_id=1594445627 instance=ExtResource("2_0mjx0")]
 transform = Transform3D(0.52299255, 0.020413239, -0.28180918, -0.04027162, 0.6984826, -0.03847511, 0.27930495, 0.062487464, 0.52213424, 21.31194, 0.5625454, 10.029437)
@@ -264,7 +285,11 @@ transform = Transform3D(0.8376605, 0, 0, 0, 0.83017117, 0, 0, 0, 0.69258064, -25
 [node name="MAPA 4 Y 52" parent="." unique_id=1723137936 instance=ExtResource("8_u2r3v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.26569, 0.42946243, -5.8137546)
 
+<<<<<<< HEAD
 [node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=883628332]
+=======
+[node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=833492811]
+>>>>>>> ccbf7103ab274d22a91b7f5249ebdf7fe7cf6f86
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064582825, -2.3841858e-07, -0.009017944)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MAPA 4 Y 52/MAPA 4 Y 5" index="0" unique_id=2096005067]
@@ -284,7 +309,11 @@ transform = Transform3D(0.50467825, 0, -0.8633075, 0, 1, 0, 0.8633075, 0, 0.5046
 [node name="Puente2" parent="." unique_id=1304290962 instance=ExtResource("10_mcfre")]
 transform = Transform3D(0.08957413, -0.011247669, -0.9959166, -0.040485296, 0.99906874, -0.014924578, 0.99515694, 0.04165682, 0.0890353, -48.94463, 0.4302101, -20.470646)
 
+<<<<<<< HEAD
 [node name="StaticBody3D" type="StaticBody3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(1304290962, 580036181) index="0" unique_id=173740716]
+=======
+[node name="StaticBody3D" type="StaticBody3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(1304290962, 1422453384) index="0" unique_id=173740716]
+>>>>>>> ccbf7103ab274d22a91b7f5249ebdf7fe7cf6f86
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60/StaticBody3D" unique_id=1130597439]
 shape = SubResource("ConcavePolygonShape3D_ckwyc")
@@ -292,7 +321,11 @@ shape = SubResource("ConcavePolygonShape3D_ckwyc")
 [node name="Puente4" parent="." unique_id=319397750 instance=ExtResource("10_mcfre")]
 transform = Transform3D(0.14689444, 0, 0.98915243, 0, 1, 0, -0.98915243, 0, 0.14689444, -49.030033, 0.5056534, -24.403038)
 
+<<<<<<< HEAD
 [node name="StaticBody3D" type="StaticBody3D" parent="Puente4/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(319397750, 580036181) index="0" unique_id=622038296]
+=======
+[node name="StaticBody3D" type="StaticBody3D" parent="Puente4/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(319397750, 1422453384) index="0" unique_id=622038296]
+>>>>>>> ccbf7103ab274d22a91b7f5249ebdf7fe7cf6f86
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puente4/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60/StaticBody3D" unique_id=1261127010]
 shape = SubResource("ConcavePolygonShape3D_43ba2")
@@ -300,7 +333,11 @@ shape = SubResource("ConcavePolygonShape3D_43ba2")
 [node name="Canoa baja calidad" parent="." unique_id=1712415807 instance=ExtResource("12_43ba2")]
 transform = Transform3D(0.8935125, 0, 0.44903833, 0, 1, 0, -0.44903833, 0, 0.8935125, -10.381029, 0.28720677, 4.2728705)
 
+<<<<<<< HEAD
 [node name="StaticBody3D" type="StaticBody3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13" parent_id_path=PackedInt32Array(1712415807, 1357295565) index="0" unique_id=43486033]
+=======
+[node name="StaticBody3D" type="StaticBody3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13" parent_id_path=PackedInt32Array(1712415807, 1286266184) index="0" unique_id=43486033]
+>>>>>>> ccbf7103ab274d22a91b7f5249ebdf7fe7cf6f86
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13/StaticBody3D" unique_id=291132987]
 shape = SubResource("ConcavePolygonShape3D_2bpxn")
@@ -1877,6 +1914,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.67109, 0, -27.71465)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9126663, 3.6235352, 0)
 shape = SubResource("BoxShape3D_1n8ho")
 
+<<<<<<< HEAD
 [node name="Interfaz" type="CanvasLayer" parent="." unique_id=1935722770]
 
 [node name="ColorRect" type="ColorRect" parent="Interfaz" unique_id=1248797111]
@@ -1915,6 +1953,48 @@ offset_bottom = 43.0
 text = "x"
 
 [connection signal="input_event" from="Seccion1/Fondo mapa 3/Biblia3/Area3D" to="Seccion1/Fondo mapa 3/Biblia3/Area3D" method="_on_input_event"]
+=======
+[node name="Interfaz" type="CanvasLayer" parent="." unique_id=563398352]
+
+[node name="ColorRect" type="ColorRect" parent="Interfaz" unique_id=1502491163]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.0
+offset_top = -104.75
+offset_right = 271.0
+offset_bottom = 104.75
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("27_1n8ho")
+
+[node name="Label" type="Label" parent="Interfaz/ColorRect" unique_id=1636723706]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 40.75
+offset_right = 548.0
+offset_bottom = 178.25
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+text = "Efesios 6:1-3 
+“Hijos, obedezcan a sus padres como lo manda el Señor,
+porque esto es justo\" Respeta a tu papá y a tu mamá, ese es 
+el primer mandamiento que está acompañado por una promesa:
+\"Así te irá bien en todo y tendrás una larga vida en la tierra”"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Interfaz/ColorRect" unique_id=2027969998]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 12.75
+offset_right = 532.0
+offset_bottom = 50.75
+text = "X"
+
+[connection signal="input_event" from="Seccion1/Fondo mapa 3/Biblia2/Area3D" to="Seccion1/Fondo mapa 3/Biblia2/Area3D" method="_on_input_event"]
+>>>>>>> ccbf7103ab274d22a91b7f5249ebdf7fe7cf6f86
 [connection signal="body_entered" from="Portal hacia 6" to="CharacterBody3D" method="_on_portal_hacia_6_body_entered"]
 [connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
 
