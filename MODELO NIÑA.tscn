@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c8kairutbn80o"]
 
-[ext_resource type="PackedScene" uid="uid://jlbq5mtfvwj2" path="res://MODELOS/Personajes prueba/Caminar Niña.glb" id="1_318t7"]
+[ext_resource type="PackedScene" uid="uid://jlbq5mtfvwj2" path="res://MODELOS/Personajes prueba/Joy.glb" id="1_318t7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_go5fv"]
 

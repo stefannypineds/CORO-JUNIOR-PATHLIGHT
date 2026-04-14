@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dyjllryf7x8wc"
-path="res://.godot/imported/ANIMACION_NINO_1.glb-2114666c3d1d1904f1fca05846bc42a2.scn"
+path="res://.godot/imported/Theo.glb-378966edc1e0b5a4392b60e1b2e09013.scn"
 
 [deps]
 
-source_file="res://MODELOS/Personajes prueba/ANIMACION_NINO_1.glb"
-dest_files=["res://.godot/imported/ANIMACION_NINO_1.glb-2114666c3d1d1904f1fca05846bc42a2.scn"]
+source_file="res://MODELOS/Personajes prueba/Theo.glb"
+dest_files=["res://.godot/imported/Theo.glb-378966edc1e0b5a4392b60e1b2e09013.scn"]
 
 [params]
 

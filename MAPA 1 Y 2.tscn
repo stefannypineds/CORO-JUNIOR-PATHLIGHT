@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bb0e7fwy2uqxj" path="res://seccion_1y2.tscn" id="1_bh17j"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="2_wmqtt"]
-[ext_resource type="Script" path="res://portal_hacia_3.gd" id="3_rpkj6"]
+[ext_resource type="Script" uid="uid://3exigo218luq" path="res://portal_hacia_3.gd" id="3_rpkj6"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="4_4tp43"]
 [ext_resource type="PackedScene" uid="uid://jdqlsraj7lo" path="res://MODELOS/MAPA 3/Pez.glb" id="5_7mx0f"]
 [ext_resource type="PackedScene" uid="uid://c8kairutbn80o" path="res://MODELO NIÑA.tscn" id="6_ieipr"]
@@ -21,7 +21,7 @@ size = Vector3(1.972168, 2.0297852, 15.3905945)
 [node name="Seccion1" parent="." unique_id=561212832 instance=ExtResource("1_bh17j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14452791, 0, -0.4316411)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="Seccion1/MAPA 1 Y 22/MAPA 1 Y 2" parent_id_path=PackedInt32Array(561212832, 616135401, 1721443301) index="1" unique_id=1394976610]
+[node name="StaticBody3D2" type="StaticBody3D" parent="Seccion1/MAPA 1 Y 22/MAPA 1 Y 2" parent_id_path=PackedInt32Array(561212832, 616135401, 17269051) index="1" unique_id=1394976610]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/MAPA 1 Y 22/MAPA 1 Y 2/StaticBody3D2" unique_id=2062439330]
 shape = SubResource("ConcavePolygonShape3D_wmqtt")
@@ -29,7 +29,7 @@ shape = SubResource("ConcavePolygonShape3D_wmqtt")
 [node name="Mandamientos" parent="Seccion1" index="3" unique_id=999986881]
 transform = Transform3D(0.45070767, 0.06345452, -0.8904135, -0.0007744563, 0.99749774, 0.07069375, 0.89267135, -0.031172628, 0.44962892, 15.815756, 0.21399069, 10.621023)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Seccion1/Mandamientos/tripo_node_9f0c6252-e072-4081-985f-db1e336f778b" parent_id_path=PackedInt32Array(561212832, 999986881, 227046741) index="0" unique_id=679709062]
+[node name="StaticBody3D" type="StaticBody3D" parent="Seccion1/Mandamientos/tripo_node_9f0c6252-e072-4081-985f-db1e336f778b" parent_id_path=PackedInt32Array(561212832, 999986881, 610709150) index="0" unique_id=679709062]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Mandamientos/tripo_node_9f0c6252-e072-4081-985f-db1e336f778b/StaticBody3D" unique_id=336725855]
 shape = SubResource("ConcavePolygonShape3D_rpkj6")
