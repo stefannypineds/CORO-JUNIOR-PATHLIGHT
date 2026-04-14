@@ -11,9 +11,8 @@ func _on_reanudar_partida_pressed() -> void:
 	# Por si quieres que reanudar vaya directo al nivel 1
 	get_tree().change_scene_to_file("res://SeleccionNivel.tscn")
 
-func _on_ayuda_pressed() -> void:
-	print("Botón de ayuda presionado")
-	# Aquí podrías poner un código para mostrar un cartel de instrucciones
+func _on_ayuda_pressed():
+	get_tree().change_scene_to_file("res://Ayuda.tscn")
 
 func _on_creditos_button_pressed() -> void:
 	# Cerramos el juego correctamente sin comillas extra

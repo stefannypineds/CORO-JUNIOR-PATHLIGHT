@@ -1,27 +1,30 @@
 extends Node3D
 
-# Usa rutas sencillas. Si están justo debajo del nodo principal, déjalos así:
-@onready var theo = $Theo 
-@onready var joy = $Joy
-
 func _ready():
-	# Primero verificamos si los nodos existen para que no de error
-	if theo == null or joy == null:
-		print("ERROR: No encontré a Theo o Joy en los nodos. Revisa los nombres.")
-		return
+	# Mensajes para que tú mismo veas qué está pasando en la consola
+	print("--- MAPA CARGADO ---")
+	print("El Global dice que el personaje es: ", Global.personaje_seleccionado)
 
-	# Ahora leemos el Global
-	if Global.personaje_seleccionado == "Theo":
-		theo.show()
-		joy.hide()
-		print("Iniciando Nivel 1 con Theo")
-	elif Global.personaje_seleccionado == "Joy":
-		joy.show()
-		theo.hide()
-		print("Iniciando Nivel 1 con Joy")
+	# 1. Definimos las rutas de tus escenas
+	var ruta_niño = "res://JUGADOR NIÑO.tscn"
+	var ruta_niña = "res://MODELO NIÑA.tscn"
+	var escena_a_cargar
+
+	# 2. El "Interruptor" que decide
+	if Global.personaje_seleccionado == "Joy":
+		escena_a_cargar = load(ruta_niña)
+		print("Cargando Escena: MODELO NIÑA")
 	else:
-		# Por si pruebas el nivel solo, que no se rompa
-		theo.show()
-		joy.hide()
-		print("No se seleccionó nadie, cargando Theo por defecto")
+		# Si no es Joy (o si hay error), cargamos a Theo
+		escena_a_cargar = load(ruta_niño)
+		print("Cargando Escena: JUGADOR NIÑO (Por defecto)")
+
+	# 3. Ponemos al personaje en el mundo
+	if escena_a_cargar:
+		var personaje = escena_a_cargar.instantiate()
+		add_child(personaje)
 		
+		# IMPORTANTE: Cambia estos números a la posición de inicio de tu nivel
+		# personaje.global_position = Vector3(0, 5, 0)
+	else:
+		print("ERROR: No se encontró ninguno de los archivos .tscn")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cmj4f118e2s8s"]
 
 [ext_resource type="Script" uid="uid://d0h7hwht4gks3" path="res://jugador_niño.gd" id="1_x43mf"]
-[ext_resource type="PackedScene" uid="uid://b4w4ruyeny4n7" path="res://MODELOS/Personaje/Animacion niño.glb" id="1_yglsv"]
+[ext_resource type="PackedScene" uid="uid://b4w4ruyeny4n7" path="res://MODELOS/Personaje/Theo.glb" id="1_yglsv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x43mf"]
 height = 1.6073608
