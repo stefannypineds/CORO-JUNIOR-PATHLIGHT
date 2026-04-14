@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bm67k20vr356o"]
 
 [ext_resource type="PackedScene" uid="uid://n6frjub3dfuf" path="res://MODELOS/MAPA 6/MAPA 6.glb" id="1_wg0gf"]
+[ext_resource type="Texture2D" uid="uid://vq8a53028tgl" path="res://MODELOS/Niebla 2.webp" id="3_0dbrp"]
 [ext_resource type="PackedScene" uid="uid://qnlgfsu8yud1" path="res://MODELOS/MAPA 1 Y 2/Binoculares.glb" id="3_ajm1c"]
 [ext_resource type="PackedScene" uid="uid://cu54xoc21qaou" path="res://MODELOS/MAPA 7 Y 8/Letrero 7.glb" id="4_f7hgi"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="5_88omp"]
@@ -212,6 +213,161 @@ transform = Transform3D(0.073481865, 0, 0.9972966, 0, 1, 0, -0.9972966, 0, 0.073
 
 [node name="Estrella" parent="." unique_id=986449774 instance=ExtResource("13_ca3ql")]
 transform = Transform3D(-0.04670546, 0, -0.9989087, 0, 1, 0, 0.9989087, 0, -0.04670546, 24.64177, 9.380726, -21.387253)
+
+[node name="Sprite3D214" type="Sprite3D" parent="." unique_id=515196155]
+transform = Transform3D(-0.017103344, 0, -0.9998538, 0, 1, 0, 0.9998538, 0, -0.017103344, 27.998436, 10.533877, -41.861942)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D217" type="Sprite3D" parent="." unique_id=1192671891]
+transform = Transform3D(-0.017103344, 0, -0.9998538, 0, 1, 0, 0.9998538, 0, -0.017103344, 27.998436, 12.932976, -41.861942)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D215" type="Sprite3D" parent="." unique_id=1153739201]
+transform = Transform3D(-0.017103344, 0, -0.9998538, 0, 1, 0, 0.9998538, 0, -0.017103344, 27.998436, 11.800695, -41.07039)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D216" type="Sprite3D" parent="." unique_id=1841497691]
+transform = Transform3D(-0.017103344, 0, -0.9998538, 0, 1, 0, 0.9998538, 0, -0.017103344, 29.24973, 8.544647, -32.355083)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D218" type="Sprite3D" parent="." unique_id=991237128]
+transform = Transform3D(-0.017103344, 0, -0.9998538, 0, 1, 0, 0.9998538, 0, -0.017103344, 29.24973, 10.0437355, -33.189255)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D219" type="Sprite3D" parent="." unique_id=80130461]
+transform = Transform3D(-0.017103344, 0, -0.9998538, 0, 1, 0, 0.9998538, 0, -0.017103344, 29.24973, 8.27311, -28.629204)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D221" type="Sprite3D" parent="." unique_id=910126445]
+transform = Transform3D(-0.017103344, 0, -0.9998538, 0, 1, 0, 0.9998538, 0, -0.017103344, 29.24973, 8.27311, -22.840548)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D223" type="Sprite3D" parent="." unique_id=1695575242]
+transform = Transform3D(-0.6617438, 0, -0.7497301, 0, 1, 0, 0.7497301, 0, -0.6617438, 27.213882, 9.15261, -22.03437)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D225" type="Sprite3D" parent="." unique_id=1910561918]
+transform = Transform3D(-0.999511, 0, -0.03127119, 0, 1, 0, 0.03127119, 0, -0.999511, 24.448324, 9.543825, -20.4447)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D242" type="Sprite3D" parent="." unique_id=979207297]
+transform = Transform3D(-0.999511, 0, -0.03127119, 0, 1, 0, 0.03127119, 0, -0.999511, 24.448324, 11.276512, -20.4447)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D227" type="Sprite3D" parent="." unique_id=994075815]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 23.027916, 8.891511, -20.4447)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D229" type="Sprite3D" parent="." unique_id=2003745532]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 22.132734, 6.8869586, -24.994246)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D232" type="Sprite3D" parent="." unique_id=32271910]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 19.976416, 6.8869586, -31.119406)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D233" type="Sprite3D" parent="." unique_id=1210878050]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 19.976416, 8.04468, -31.119406)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D234" type="Sprite3D" parent="." unique_id=1742655365]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 19.976416, 8.04468, -34.425)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D236" type="Sprite3D" parent="." unique_id=440842551]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 19.976416, 9.180187, -29.512522)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D237" type="Sprite3D" parent="." unique_id=1637654422]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 19.976416, 9.580248, -24.787804)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D238" type="Sprite3D" parent="." unique_id=405876676]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 18.302591, 9.580248, -32.61046)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D239" type="Sprite3D" parent="." unique_id=168112240]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 18.302591, 9.580248, -36.135853)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D240" type="Sprite3D" parent="." unique_id=325573635]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 19.497812, 9.580248, -20.742615)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D235" type="Sprite3D" parent="." unique_id=1603868166]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 19.543346, 9.284252, -34.425)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D231" type="Sprite3D" parent="." unique_id=1093688428]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 21.13818, 8.3485155, -24.994246)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D230" type="Sprite3D" parent="." unique_id=1999300980]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 22.167263, 7.986249, -24.88172)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D241" type="Sprite3D" parent="." unique_id=764063216]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 22.167263, 10.860594, -24.88172)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D243" type="Sprite3D" parent="." unique_id=1786540631]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 22.167263, 10.860594, -28.498861)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D228" type="Sprite3D" parent="." unique_id=2112308526]
+transform = Transform3D(-0.31430727, 0, 0.9493214, 0, 1, 0, -0.9493214, 0, -0.31430727, 21.86622, 9.436024, -20.4447)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D226" type="Sprite3D" parent="." unique_id=585338232]
+transform = Transform3D(-0.999511, 0, -0.03127119, 0, 1, 0, 0.03127119, 0, -0.999511, 25.820015, 10.6252985, -20.4447)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D224" type="Sprite3D" parent="." unique_id=570098079]
+transform = Transform3D(-0.6617438, 0, -0.7497301, 0, 1, 0, 0.7497301, 0, -0.6617438, 27.286661, 10.518866, -21.45267)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D220" type="Sprite3D" parent="." unique_id=1663195862]
+transform = Transform3D(-0.017103344, 0, -0.9998538, 0, 1, 0, 0.9998538, 0, -0.017103344, 29.24973, 9.539609, -28.629204)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D244" type="Sprite3D" parent="." unique_id=136585776]
+transform = Transform3D(-0.017103344, 0, -0.9998538, 0, 1, 0, 0.9998538, 0, -0.017103344, 29.24973, 10.677766, -28.629204)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
+
+[node name="Sprite3D222" type="Sprite3D" parent="." unique_id=1039605208]
+transform = Transform3D(-0.017103344, 0, -0.9998538, 0, 1, 0, 0.9998538, 0, -0.017103344, 29.24973, 9.539609, -23.395267)
+modulate = Color(1, 1, 1, 0.5882353)
+texture = ExtResource("3_0dbrp")
 
 [editable path="MAPA 62"]
 [editable path="MAPA ESCALA sec 7 y 8"]
