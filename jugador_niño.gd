@@ -94,4 +94,6 @@ func _on_portal_hacia_7_body_entered(body: Node3D) -> void:
 
 
 func _on_portal_hacia_8_body_entered(body: Node3D) -> void:
-	pass # Replace with function body.
+	if body.name == "CharacterBody3D":
+		# ¡Nos vamos al mapa 6!
+		get_tree().change_scene_to_file("res://MAPA 8 FINAL.tscn")
