@@ -10,11 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://dvnls3d7dsu3o" path="res://MODELOS/MAPA 7 Y 8/Templo.glb" id="7_oap3w"]
 [ext_resource type="PackedScene" uid="uid://w3x3ox0jwsfv" path="res://MODELOS/MAPA 1 Y 2/Biblia.glb" id="8_ctyqp"]
 [ext_resource type="PackedScene" uid="uid://duxdgb8kt3ydy" path="res://MODELOS/MAPA 7 Y 8/bread+loaves+3d+model.glb" id="9_11ok7"]
+[ext_resource type="Script" uid="uid://c1gurxlw1immd" path="res://area_3d1.gd" id="9_oap3w"]
 [ext_resource type="PackedScene" uid="uid://ck15ig2g6bsbg" path="res://MODELOS/MAPA 7 Y 8/Canasta peces.glb" id="10_wumo3"]
 [ext_resource type="PackedScene" uid="uid://d4dvcpyrglsyf" path="res://MODELOS/MAPA 7 Y 8/Letrero 8a.glb" id="11_rag1x"]
 [ext_resource type="PackedScene" uid="uid://iqfklldfsit7" path="res://MODELOS/MAPA 7 Y 8/Tesoros.glb" id="12_eqtjf"]
 [ext_resource type="PackedScene" uid="uid://bnt80415vrri8" path="res://MODELOS/MAPA 7 Y 8/Estrella.glb" id="13_ca3ql"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="14_f7hgi"]
+[ext_resource type="Script" uid="uid://civqabr566kal" path="res://color_rect1.gd" id="17_ctyqp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -76,6 +78,8 @@ size = Vector3(0.001, 12.099121, 13.975586)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g6kva"]
 size = Vector3(0.001, 12.099121, 13.975586)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_11ok7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j0ig6"]
 
@@ -201,6 +205,14 @@ transform = Transform3D(0.4138758, 0, 0.6807596, 0, 0.79669744, 0, -0.6807596, 0
 
 [node name="Biblia" parent="Biblia" unique_id=1713950616 instance=ExtResource("8_ctyqp")]
 transform = Transform3D(0.45638543, 0.2095181, 0.6184995, -0.06740001, 0.7656611, -0.20963538, -0.64953566, 0.06776419, 0.4563315, -6.2623444, 0.663002, 10.035009)
+
+[node name="Area3D" type="Area3D" parent="Biblia" unique_id=1102011465 node_paths=PackedStringArray("cuadro_texto")]
+script = ExtResource("9_oap3w")
+cuadro_texto = NodePath("../../Interfaz 1/ColorRect")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Biblia/Area3D" unique_id=1666420737]
+transform = Transform3D(1, 0, 2.9802322e-08, 0, 0.48270035, 0, -2.9802322e-08, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_11ok7")
 
 [node name="bread+loaves+3d+model" parent="." unique_id=449541418 instance=ExtResource("9_11ok7")]
 transform = Transform3D(0.30140483, 0, 0.9534963, 0, 1, 0, -0.9534963, 0, 0.30140483, 22.661226, 7.746619, -32.353428)
@@ -380,6 +392,47 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.807417, 7.203243, -46.4056
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=403144689]
 shape = SubResource("BoxShape3D_j0ig6")
+
+[node name="Interfaz 1" type="CanvasLayer" parent="." unique_id=27873401]
+
+[node name="ColorRect" type="ColorRect" parent="Interfaz 1" unique_id=1906224785]
+visible = false
+custom_minimum_size = Vector2(0.055, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -54.0
+offset_right = 100.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("17_ctyqp")
+
+[node name="Label" type="Label" parent="Interfaz 1/ColorRect" unique_id=1946988353]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 23.0
+offset_right = 182.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Hay más bendición
+en dar que en recibir”
+Hechos 20:35c"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Interfaz 1/ColorRect" unique_id=156579070]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 5.0
+offset_right = 194.0
+offset_bottom = 36.0
+text = "X"
+
+[connection signal="input_event" from="Biblia/Area3D" to="Biblia/Area3D" method="_on_input_event"]
+[connection signal="pressed" from="Interfaz 1/ColorRect/Button" to="Interfaz 1/ColorRect" method="_on_button_pressed"]
 
 [editable path="MAPA 62"]
 [editable path="MAPA ESCALA sec 7 y 8"]
