@@ -68,7 +68,6 @@ size = Vector3(0.001, 12.099121, 13.975586)
 size = Vector3(0.001, 12.099121, 13.975586)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hdhv6"]
-size = Vector3(3.05233, 39.162598, 7.1741667)
 
 [node name="Node3D2" type="Node3D" unique_id=978302472]
 
@@ -1327,13 +1326,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9234543, 5.549561, 1.87925
 shape = SubResource("BoxShape3D_g6kva")
 
 [node name="Portal hacia 8" type="Area3D" parent="." unique_id=10615935]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8710365, 1.9073486e-06, -59.955494)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.335458, 9.536743e-07, -53.691406)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Portal hacia 8" unique_id=24291461]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6392574, 19.081297, 7.4727745)
 shape = SubResource("BoxShape3D_hdhv6")
-
-[connection signal="body_entered" from="Portal hacia 8" to="CharacterBody3D" method="_on_portal_hacia_8_body_entered"]
 
 [editable path="MAPA 62"]
 [editable path="MAPA ESCALA sec 7 y 8"]
