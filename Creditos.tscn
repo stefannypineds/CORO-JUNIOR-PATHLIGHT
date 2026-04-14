@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dwg6d3os2usam"]
+
+[ext_resource type="Script" uid="uid://cn7rffqueghn2" path="res://creditos.gd" id="1_x6jei"]
+[ext_resource type="Texture2D" uid="uid://c3e3ky54psu4n" path="res://CREDITOS.png" id="1_xau7l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x6jei"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ed3ks"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_odpve"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2e87f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3d6ng"]
+
+[node name="Control" type="Control" unique_id=529804358]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x6jei")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1661194481]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 656.0
+texture = ExtResource("1_xau7l")
+expand_mode = 1
+
+[node name="Salir" type="Button" parent="." unique_id=1159833547]
+layout_mode = 0
+offset_left = 1006.0
+offset_top = 549.0
+offset_right = 1123.0
+offset_bottom = 596.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jei")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ed3ks")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_odpve")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2e87f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3d6ng")
+
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

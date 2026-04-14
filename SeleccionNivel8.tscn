@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cd0ucplkwisal"]
 
+[ext_resource type="Script" uid="uid://cgy2qh5e87jbl" path="res://seleccion_nivel_8.gd" id="1_hvbak"]
 [ext_resource type="Texture2D" uid="uid://dslypyl1t2yi6" path="res://39.png" id="1_wdc48"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hvbak"]
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hvbak")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1423352079]
 layout_mode = 0
@@ -38,3 +40,5 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_ymosb")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5lfyv")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_m5vx6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_n3st1")
+
+[connection signal="pressed" from="Button8" to="." method="_on_button_8_pressed"]

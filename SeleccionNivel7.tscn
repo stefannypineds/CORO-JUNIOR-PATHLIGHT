@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://naj03sg8nhwr"]
 
 [ext_resource type="Texture2D" uid="uid://dspmkesorfdjn" path="res://38.png" id="1_atxgy"]
+[ext_resource type="Script" uid="uid://cu4k2wgoukt3h" path="res://seleccion_nivel_7.gd" id="1_gjinf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjinf"]
 
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gjinf")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1761090595]
 layout_mode = 0
@@ -38,3 +40,5 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_nt6qf")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_nw5sk")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_47vjh")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_f6xru")
+
+[connection signal="pressed" from="Button7" to="." method="_on_button_7_pressed"]

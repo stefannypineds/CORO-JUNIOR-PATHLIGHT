@@ -14,10 +14,7 @@ func _on_reanudar_partida_pressed() -> void:
 func _on_ayuda_pressed():
 	get_tree().change_scene_to_file("res://Ayuda.tscn")
 
-func _on_creditos_button_pressed() -> void:
-	# Cerramos el juego correctamente sin comillas extra
-	get_tree().quit()
-
-
-func _on_creditos_pressed() -> void:
-	pass # Replace with function body.
+func _on_creditos_pressed():
+	# Revisa en tu carpeta de archivos si la escena se llama 'Ayuda.tscn' 
+	# o si creaste una nueva llamada 'Creditos.tscn'
+	get_tree().change_scene_to_file("res://Creditos.tscn")

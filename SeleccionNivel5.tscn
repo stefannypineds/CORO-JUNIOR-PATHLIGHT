@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dtg687cv4ylo2"]
 
 [ext_resource type="Texture2D" uid="uid://dloinuimrynpa" path="res://36.png" id="1_mcfpv"]
+[ext_resource type="Script" uid="uid://gepti5rygdmx" path="res://seleccion_nivel_5.gd" id="1_ycwym"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ycwym"]
 
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ycwym")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1301416727]
 layout_mode = 0
@@ -40,3 +42,5 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_fytfn")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_l8d65")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_0rw3p")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_g5jp1")
+
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
