@@ -79,3 +79,15 @@ func _on_hacia_mapa_4_y_5_body_entered(body: Node3D) -> void:
 	if body.name == "CharacterBody3D":
 		# Asegúrate de que el nombre del archivo sea exacto
 		get_tree().change_scene_to_file("res://MAPA 3 Y 4.tscn")
+
+
+func _on_portal_hacia_6_body_entered(body: Node3D) -> void:
+	if body.name == "CharacterBody3D":
+		# ¡Nos vamos al mapa 6!
+		get_tree().change_scene_to_file("res://MAPA 6.tscn")
+
+
+func _on_portal_hacia_7_body_entered(body: Node3D) -> void:
+	if body.name == "CharacterBody3D":
+		# ¡Nos vamos al mapa 6!
+		get_tree().change_scene_to_file("res://MAPA 7 Y 8.tscn")
