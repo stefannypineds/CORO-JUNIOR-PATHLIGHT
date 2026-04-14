@@ -15,7 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://dvgy244nscapg" path="res://MODELOS/MAPA 4 Y 5/Canoa baja calidad.glb" id="14_k4wfn"]
 [ext_resource type="Texture2D" uid="uid://vq8a53028tgl" path="res://MODELOS/Niebla 2.webp" id="15_qy7de"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="16_6hbkg"]
-[ext_resource type="Script" path="res://hacia_mapa_4_y_5.gd" id="17_2pv8m"]
+[ext_resource type="Script" uid="uid://codviaqne8qcn" path="res://hacia_mapa_4_y_5.gd" id="17_2pv8m"]
+[ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="17_7xj8a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -71,7 +72,7 @@ environment = SubResource("Environment_v1v01")
 [node name="Fondo mapa 3" parent="Seccion1" unique_id=2121909699 instance=ExtResource("3_01mhm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.180943, 0.37781048, -5.516509)
 
-[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=746569204]
+[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=529613081]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030014038, 1.9073486e-06, 0.083227634)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Seccion1/Fondo mapa 3/MAPA 3" index="0" unique_id=1182644870]
@@ -929,6 +930,9 @@ script = ExtResource("17_2pv8m")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Portal hacia 4" unique_id=231885116]
 transform = Transform3D(1, 0, 0, 0, -0.1191318, 0.9928785, 0, -0.9928785, -0.1191318, 0.41200256, -1.5550537, 1.7941523)
 shape = SubResource("BoxShape3D_7xj8a")
+
+[node name="MAPA ESCALA sec 7 y 8" parent="." unique_id=1098457689 instance=ExtResource("17_7xj8a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.273827, 0.17472124, -5.394544)
 
 [connection signal="body_entered" from="Portal hacia 4" to="CharacterBody3D" method="_on_hacia_mapa_4_y_5_body_entered"]
 

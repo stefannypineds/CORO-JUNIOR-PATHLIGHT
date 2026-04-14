@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://w3x3ox0jwsfv" path="res://MODELOS/MAPA 1 Y 2/Biblia.glb" id="6_trnem"]
 [ext_resource type="PackedScene" uid="uid://bh7tswmnmdocv" path="res://MODELOS/MAPA 1 Y 2/Fogata.glb" id="7_cj2vl"]
 [ext_resource type="PackedScene" uid="uid://dv8n8mdbmxxyc" path="res://MODELOS/MAPA 3/MAPA 3.glb" id="8_xovbl"]
-[ext_resource type="PackedScene" uid="uid://dt6w2m4knc2j4" path="res://MODELOS/MAPA 7 Y 8/MAPA 7 Y 8.glb" id="9_e8cge"]
+[ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="9_e8cge"]
 [ext_resource type="PackedScene" uid="uid://ccd1n16ewgfvm" path="res://MODELOS/MAPA 3/Pinos fondo.glb" id="12_hfjo1"]
 [ext_resource type="PackedScene" uid="uid://cbm34q5j54ldg" path="res://MODELOS/MAPA 1 Y 2/Pintura.glb" id="12_l1lul"]
 [ext_resource type="PackedScene" uid="uid://7nj4i0k2dmib" path="res://MODELOS/MAPA 1 Y 2/Paso.glb" id="13_1l5xk"]
