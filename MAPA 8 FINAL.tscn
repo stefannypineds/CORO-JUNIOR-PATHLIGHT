@@ -1,7 +1,18 @@
 [gd_scene format=3 uid="uid://bm67k20vr356o"]
 
 [ext_resource type="PackedScene" uid="uid://n6frjub3dfuf" path="res://MODELOS/MAPA 6/MAPA 6.glb" id="1_wg0gf"]
+[ext_resource type="PackedScene" uid="uid://qnlgfsu8yud1" path="res://MODELOS/MAPA 1 Y 2/Binoculares.glb" id="3_ajm1c"]
+[ext_resource type="PackedScene" uid="uid://cu54xoc21qaou" path="res://MODELOS/MAPA 7 Y 8/Letrero 7.glb" id="4_f7hgi"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="5_88omp"]
+[ext_resource type="PackedScene" uid="uid://cbm34q5j54ldg" path="res://MODELOS/MAPA 1 Y 2/Pintura.glb" id="5_j0ig6"]
+[ext_resource type="PackedScene" uid="uid://dgkt2su5oabm0" path="res://MODELOS/MAPA 7 Y 8/Modelo+corazon.glb" id="6_wgsdw"]
+[ext_resource type="PackedScene" uid="uid://dvnls3d7dsu3o" path="res://MODELOS/MAPA 7 Y 8/Templo.glb" id="7_oap3w"]
+[ext_resource type="PackedScene" uid="uid://w3x3ox0jwsfv" path="res://MODELOS/MAPA 1 Y 2/Biblia.glb" id="8_ctyqp"]
+[ext_resource type="PackedScene" uid="uid://duxdgb8kt3ydy" path="res://MODELOS/MAPA 7 Y 8/bread+loaves+3d+model.glb" id="9_11ok7"]
+[ext_resource type="PackedScene" uid="uid://ck15ig2g6bsbg" path="res://MODELOS/MAPA 7 Y 8/Canasta peces.glb" id="10_wumo3"]
+[ext_resource type="PackedScene" uid="uid://d4dvcpyrglsyf" path="res://MODELOS/MAPA 7 Y 8/Letrero 8a.glb" id="11_rag1x"]
+[ext_resource type="PackedScene" uid="uid://iqfklldfsit7" path="res://MODELOS/MAPA 7 Y 8/Tesoros.glb" id="12_eqtjf"]
+[ext_resource type="PackedScene" uid="uid://bnt80415vrri8" path="res://MODELOS/MAPA 7 Y 8/Estrella.glb" id="13_ca3ql"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -134,6 +145,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.466679, 1.894975, -33.3738
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=2053969408]
 shape = SubResource("ConcavePolygonShape3D_b2xhe")
 
+[node name="Binoculares" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=1671950966 instance=ExtResource("3_ajm1c")]
+transform = Transform3D(0.5890271, 0, 0.8081132, 0, 0.6346008, 0, -0.8081132, 0, 0.5890271, 26.98389, 4.9633217, 5.9761887)
+
+[node name="Binoculares" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares" unique_id=357605870 instance=ExtResource("3_ajm1c")]
+transform = Transform3D(0.4155503, 0.2693035, 0.8045065, -0.15923159, 0.5741689, -0.39500836, -0.8955236, 0.022872925, 0.44355112, -4.41243, 0.9643688, 8.437306)
+
+[node name="Letrero 7" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=624312630 instance=ExtResource("4_f7hgi")]
+transform = Transform3D(0.18192665, 0, 0.98331213, 0, 1, 0, -0.98331213, 0, 0.18192665, 29.217506, 4.7890196, 7.4944897)
+
+[node name="Pintura" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=1485286137 instance=ExtResource("5_j0ig6")]
+transform = Transform3D(0.6730695, 0, 0, 0, 0.6730695, 0, 0, 0, 0.6730695, 27.915056, 5.038872, 5.9692154)
+
+[node name="Pintura" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura" unique_id=1864827140 instance=ExtResource("5_j0ig6")]
+transform = Transform3D(0.6348893, 0.22346771, 0, -0.22063471, 0.6268405, 0.10683409, 0.035470296, -0.10077391, 0.6645365, 5.7481575, 0.81689835, 13.41296)
+
+[node name="Modelo+corazon" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=845930955 instance=ExtResource("6_wgsdw")]
+transform = Transform3D(0.23017025, 0, 0.5676936, 0, 0.61258, 0, -0.5676936, 0, 0.23017025, 29.387812, 6.3896475, 13.403671)
+
+[node name="Templo" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=761868094 instance=ExtResource("7_oap3w")]
+transform = Transform3D(-0.9551803, 0, 0.29602477, 0.07526356, 0.96713924, 0.24285221, -0.2862971, 0.2542475, -0.92379236, 32.55794, 4.9142246, 2.790886)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA 7 Y 8" parent_id_path=PackedInt32Array(1098457689, 337015026) index="0" unique_id=1849414728]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/MAPA 7 Y 8/StaticBody3D" unique_id=896919886]
@@ -159,6 +191,27 @@ transform = Transform3D(-0.003909502, 0, -0.9999924, 0, 1, 0, 0.9999924, 0, -0.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=529153785]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9234543, 5.549561, 1.8792539)
 shape = SubResource("BoxShape3D_g6kva")
+
+[node name="Biblia" parent="." unique_id=359187133 instance=ExtResource("8_ctyqp")]
+transform = Transform3D(0.4138758, 0, 0.6807596, 0, 0.79669744, 0, -0.6807596, 0, 0.4138758, 22.137709, 7.4479823, -33.16147)
+
+[node name="Biblia" parent="Biblia" unique_id=1713950616 instance=ExtResource("8_ctyqp")]
+transform = Transform3D(0.45638543, 0.2095181, 0.6184995, -0.06740001, 0.7656611, -0.20963538, -0.64953566, 0.06776419, 0.4563315, -6.2623444, 0.663002, 10.035009)
+
+[node name="bread+loaves+3d+model" parent="." unique_id=449541418 instance=ExtResource("9_11ok7")]
+transform = Transform3D(0.30140483, 0, 0.9534963, 0, 1, 0, -0.9534963, 0, 0.30140483, 22.661226, 7.746619, -32.353428)
+
+[node name="Canasta peces" parent="." unique_id=867802219 instance=ExtResource("10_wumo3")]
+transform = Transform3D(0.9981592, 0.060647856, 0, -0.060647856, 0.9981592, 0, 0, 0, 1, 23.52372, 7.408103, -32.370056)
+
+[node name="Letrero 8a" parent="." unique_id=551932670 instance=ExtResource("11_rag1x")]
+transform = Transform3D(-0.28690913, 0, 0.9579578, 0, 1, 0, -0.9579578, 0, -0.28690913, 27.387537, 7.601758, -24.876253)
+
+[node name="Tesoros" parent="." unique_id=1315267246 instance=ExtResource("12_eqtjf")]
+transform = Transform3D(0.073481865, 0, 0.9972966, 0, 1, 0, -0.9972966, 0, 0.073481865, 24.544466, 9.053262, -21.21359)
+
+[node name="Estrella" parent="." unique_id=986449774 instance=ExtResource("13_ca3ql")]
+transform = Transform3D(-0.04670546, 0, -0.9989087, 0, 1, 0, 0.9989087, 0, -0.04670546, 24.64177, 9.380726, -21.387253)
 
 [editable path="MAPA 62"]
 [editable path="MAPA ESCALA sec 7 y 8"]
