@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://chq1fl4oavdlj"]
+[gd_scene format=3 uid="uid://c1mvnm8aw0s18"]
 
 [ext_resource type="PackedScene" uid="uid://dv8n8mdbmxxyc" path="res://MODELOS/MAPA 3/MAPA 3.glb" id="1_ckwyc"]
 [ext_resource type="PackedScene" uid="uid://ccd1n16ewgfvm" path="res://MODELOS/MAPA 3/Pinos fondo.glb" id="3_uraf5"]
