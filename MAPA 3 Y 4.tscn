@@ -1,8 +1,11 @@
-[gd_scene format=3 uid="uid://c1mvnm8aw0s18"]
+[gd_scene format=3 uid="uid://chq1fl4oavdlj"]
 
 [ext_resource type="PackedScene" uid="uid://dv8n8mdbmxxyc" path="res://MODELOS/MAPA 3/MAPA 3.glb" id="1_ckwyc"]
 [ext_resource type="PackedScene" uid="uid://ccd1n16ewgfvm" path="res://MODELOS/MAPA 3/Pinos fondo.glb" id="3_uraf5"]
 [ext_resource type="PackedScene" uid="uid://bi1h7f7e5fvgh" path="res://MODELOS/MAPA 3/Arboles altos fondo.glb" id="5_2bpxn"]
+[ext_resource type="PackedScene" uid="uid://ddgxo126dmmr5" path="res://MODELOS/MAPA 4 Y 5/Letrero 4.glb" id="5_43ba2"]
+[ext_resource type="PackedScene" uid="uid://b0cosxsx7dn7a" path="res://MODELOS/MAPA 3/David.glb" id="6_uraf5"]
+[ext_resource type="PackedScene" uid="uid://d4ks62ugunra7" path="res://MODELOS/MAPA 3/Jesus.glb" id="7_dlugu"]
 [ext_resource type="PackedScene" uid="uid://c78w2t3bb002h" path="res://MODELOS/MAPA 4 Y 5/MAPA 4 Y 5.glb" id="8_uhr15"]
 [ext_resource type="PackedScene" uid="uid://cp4hthiwbr4lq" path="res://MODELOS/MAPA 4 Y 5/Puente.glb" id="10_g0a14"]
 [ext_resource type="PackedScene" uid="uid://d1gxqkui0c6lk" path="res://MODELOS/MAPA 4 Y 5/Casas baja calidad.glb" id="11_77xge"]
@@ -11,9 +14,16 @@
 [ext_resource type="PackedScene" uid="uid://d3dun3bx62lv2" path="res://MODELOS/MAPA FONDO/FONDO 2/MAPA FONDO 2.glb" id="14_4y8sk"]
 [ext_resource type="Texture2D" uid="uid://vq8a53028tgl" path="res://MODELOS/Niebla 2.webp" id="14_wvqk8"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="15_rfkex"]
-[ext_resource type="Script" uid="uid://codviaqne8qcn" path="res://hacia_mapa_4_y_5.gd" id="16_8wiew"]
+[ext_resource type="Script" path="res://hacia_mapa_4_y_5.gd" id="16_8wiew"]
+[ext_resource type="PackedScene" uid="uid://w3x3ox0jwsfv" path="res://MODELOS/MAPA 1 Y 2/Biblia.glb" id="18_2bpxn"]
+[ext_resource type="PackedScene" uid="uid://qnlgfsu8yud1" path="res://MODELOS/MAPA 1 Y 2/Binoculares.glb" id="19_v5w4w"]
+[ext_resource type="PackedScene" uid="uid://cbm34q5j54ldg" path="res://MODELOS/MAPA 1 Y 2/Pintura.glb" id="20_1n8ho"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="20_txkw7"]
+[ext_resource type="PackedScene" uid="uid://p20qtgipjllq" path="res://MODELOS/MAPA 3/Moises.glb" id="21_uhr15"]
+[ext_resource type="PackedScene" uid="uid://d32mhr5o8yflq" path="res://MODELOS/MAPA 3/Nube.glb" id="22_bm6qn"]
+[ext_resource type="PackedScene" uid="uid://4fob251dk3ur" path="res://MODELOS/MAPA 4 Y 5/Letrero 5.glb" id="23_g0a14"]
 [ext_resource type="Script" uid="uid://65vsc3q8stcc" path="res://color_rect.gd" id="23_tr0bq"]
+[ext_resource type="PackedScene" uid="uid://bmw53gnklgvy7" path="res://MODELOS/MAPA 3/Familia.glb" id="24_77xge"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -78,7 +88,7 @@ environment = SubResource("Environment_v1v01")
 [node name="Fondo mapa 3" parent="Seccion1" unique_id=2121909699 instance=ExtResource("1_ckwyc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.180943, 0.37781048, -5.516509)
 
-[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=529613081]
+[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=746569204]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030014038, 1.9073486e-06, 0.083227634)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Seccion1" unique_id=1737390671]
@@ -144,10 +154,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.62981, 0.7545209, 21.2055
 [node name="MAPA 4 Y 52" parent="." unique_id=1723137936 instance=ExtResource("8_uhr15")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.142197, 0.44542027, -5.5192122)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 4 Y 52/MAPA 4 Y 5" parent_id_path=PackedInt32Array(1723137936, 36781098) index="0" unique_id=1850405585]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 4 Y 52/MAPA 4 Y 5" parent_id_path=PackedInt32Array(1723137936, 238985656) index="0" unique_id=1850405585]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA 4 Y 52/MAPA 4 Y 5/StaticBody3D" unique_id=873128335]
 shape = SubResource("ConcavePolygonShape3D_nquu4")
+
+[node name="Letrero 4" parent="MAPA 4 Y 52/MAPA 4 Y 5/StaticBody3D" unique_id=967879690 instance=ExtResource("5_43ba2")]
+transform = Transform3D(0.6016896, 0, -0.79873, 0, 1, 0, 0.79873, 0, 0.6016896, 20.930836, -0.010176599, 11.2046385)
+
+[node name="David" parent="MAPA 4 Y 52" unique_id=2031659204 instance=ExtResource("6_uraf5")]
+transform = Transform3D(0.91095746, 0, -0.41250035, 0, 1, 0, 0.41250035, 0, 0.91095746, 14.518944, 0.016349196, 3.9364483)
+
+[node name="Jesus" parent="MAPA 4 Y 52" unique_id=337888289 instance=ExtResource("7_dlugu")]
+transform = Transform3D(0.48140183, 0, -0.8765, 0, 1, 0, 0.8765, 0, 0.48140183, 14.940378, 0.05517018, 3.0429983)
 
 [node name="Puente" parent="." unique_id=2006147892 instance=ExtResource("10_g0a14")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.730366, 0.42469072, -6.106226)
@@ -158,7 +177,7 @@ transform = Transform3D(0.50467825, 0, -0.8633075, 0, 1, 0, 0.8633075, 0, 0.5046
 [node name="Puente2" parent="." unique_id=1304290962 instance=ExtResource("10_g0a14")]
 transform = Transform3D(0.34588787, 0, -0.938276, 0, 1, 0, 0.938276, 0, 0.34588787, -50.592777, 0, -20.043455)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(1304290962, 455166493) index="0" unique_id=540410094]
+[node name="StaticBody3D" type="StaticBody3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(1304290962, 1600469754) index="0" unique_id=540410094]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60/StaticBody3D" unique_id=148832648]
 shape = SubResource("ConcavePolygonShape3D_p8ue7")
@@ -166,7 +185,7 @@ shape = SubResource("ConcavePolygonShape3D_p8ue7")
 [node name="Puente3" parent="." unique_id=262785027 instance=ExtResource("10_g0a14")]
 transform = Transform3D(-0.3355339, 0, 0.9420283, 0, 1, 0, -0.9420283, 0, -0.3355339, -51.969166, 0, -23.746542)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Puente3/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(262785027, 455166493) index="0" unique_id=1798111380]
+[node name="StaticBody3D" type="StaticBody3D" parent="Puente3/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(262785027, 1600469754) index="0" unique_id=1798111380]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puente3/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60/StaticBody3D" unique_id=847663710]
 shape = SubResource("ConcavePolygonShape3D_uqkuc")
@@ -174,9 +193,10 @@ shape = SubResource("ConcavePolygonShape3D_uqkuc")
 [node name="Canoa baja calidad" parent="." unique_id=1712415807 instance=ExtResource("12_0yi3k")]
 transform = Transform3D(0.8935125, 0, 0.44903833, 0, 1, 0, -0.44903833, 0, 0.8935125, -10.381029, 0.28720677, 4.2728705)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13" parent_id_path=PackedInt32Array(1712415807, 1183322696) index="0" unique_id=1960663743]
+[node name="StaticBody3D" type="StaticBody3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13" parent_id_path=PackedInt32Array(1712415807, 1878337873) index="0" unique_id=1960663743]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13/StaticBody3D" unique_id=873884067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014982224, 0, -0.0015692711)
 shape = SubResource("ConcavePolygonShape3D_6gnwc")
 
 [node name="Mandamientos baja calidad" parent="." unique_id=1046993413 instance=ExtResource("13_urrac")]
@@ -983,6 +1003,36 @@ text = "X"
 
 [node name="MAPA FONDO 2" parent="." unique_id=898464111 instance=ExtResource("14_4y8sk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.172718, 0.2905445, -5.644167)
+
+[node name="Biblia" parent="." unique_id=359187133 instance=ExtResource("18_2bpxn")]
+transform = Transform3D(0.42468244, 0, -0.21769524, 0, 0.4772278, 0, 0.21769524, 0, 0.42468244, -11.147427, 0.9586232, 4.099)
+
+[node name="Biblia2" parent="." unique_id=1399051394 instance=ExtResource("18_2bpxn")]
+transform = Transform3D(0.66955125, 0, -0.34321675, 0, 0.7523939, 0, 0.34321675, 0, 0.66955125, -27.804497, 0.9586232, -3.6098533)
+
+[node name="Binoculares" parent="." unique_id=1671950966 instance=ExtResource("19_v5w4w")]
+transform = Transform3D(0.7296646, 0, -0.31326246, 0.014450836, 0.79322255, 0.03365952, 0.31292897, -0.036630455, 0.72888786, -11.226903, 0.7402493, 4.0707655)
+
+[node name="Pintura" parent="." unique_id=1485286137 instance=ExtResource("20_1n8ho")]
+transform = Transform3D(0.6028094, 0, 0, 0, 0.6028094, 0, 0, 0, 0.6028094, -10.2193985, 0.95346487, 3.7236288)
+
+[node name="Moises" parent="." unique_id=1878796068 instance=ExtResource("21_uhr15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.022554, 0.4521191, -0.8584242)
+
+[node name="Nube" parent="." unique_id=1386771673 instance=ExtResource("22_bm6qn")]
+transform = Transform3D(0.145496, 0, -0.98935884, 0, 1, 0, 0.98935884, 0, 0.145496, -10.287274, 1.1548073, 2.45887)
+
+[node name="Letrero 5" parent="." unique_id=1456521379 instance=ExtResource("23_g0a14")]
+transform = Transform3D(0.880618, 0, -0.47382694, 0, 1, 0, 0.47382694, 0, 0.880618, -25.669449, 0.6465114, -2.1161838)
+
+[node name="Binoculares2" parent="." unique_id=2058149926 instance=ExtResource("19_v5w4w")]
+transform = Transform3D(0.8908242, 0, -0.45434815, 0, 1, 0, 0.45434815, 0, 0.8908242, -27.834356, 0.7212938, -3.6709216)
+
+[node name="Pintura2" parent="." unique_id=121952355 instance=ExtResource("20_1n8ho")]
+transform = Transform3D(1, 0, 0, 0, 0.99725276, -0.07407368, 0, 0.07407368, 0.99725276, -25.904099, 1.1967063, -6.9385657)
+
+[node name="Familia" parent="." unique_id=1051441791 instance=ExtResource("24_77xge")]
+transform = Transform3D(1.1200753, 0, -0.597286, 0, 1.2693776, 0, 0.597286, 0, 1.1200753, -33.227463, 1.5476189, -10.938291)
 
 [connection signal="body_entered" from="Portal hacia 6" to="CharacterBody3D" method="_on_portal_hacia_6_body_entered"]
 [connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
