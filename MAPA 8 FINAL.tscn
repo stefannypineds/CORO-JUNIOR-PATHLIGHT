@@ -174,7 +174,7 @@ transform = Transform3D(0.6730695, 0, 0, 0, 0.6730695, 0, 0, 0, 0.6730695, 27.91
 transform = Transform3D(0.6348893, 0.22346771, 0, -0.22063471, 0.6268405, 0.10683409, 0.035470296, -0.10077391, 0.6645365, 5.7481575, 0.81689835, 13.41296)
 
 [node name="Modelo+corazon" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=845930955 instance=ExtResource("6_wgsdw")]
-transform = Transform3D(0.23017025, 0, 0.5676936, 0, 0.61258, 0, -0.5676936, 0, 0.23017025, 29.387812, 6.3896475, 13.403671)
+transform = Transform3D(0.23017025, 0, 0.5676936, 0, 0.61258, 0, -0.5676936, 0, 0.23017025, 28.503365, 6.3896475, 13.403671)
 
 [node name="Templo" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=761868094 instance=ExtResource("7_oap3w")]
 transform = Transform3D(-0.9551803, 0, 0.29602477, 0.07526356, 0.96713924, 0.24285221, -0.2862971, 0.2542475, -0.92379236, 32.55794, 4.9142246, 2.790886)
