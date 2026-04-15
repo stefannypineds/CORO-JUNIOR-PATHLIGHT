@@ -77,6 +77,15 @@ data = PackedVector3Array(-0.031999998, -0.54039997, 0.13419999, -0.031999998, -
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xj8a"]
 size = Vector3(10.617958, 0.001, 5.5319824)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_43ba2"]
+size = Vector3(0.001, 10.059967, 39.780434)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uraf5"]
+size = Vector3(14.212158, 5.522705, 0.001)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dlugu"]
+size = Vector3(0.001, 2.2038574, 3.2871094)
+
 [node name="Node3D" type="Node3D" unique_id=978302472]
 
 [node name="Seccion1" type="Node3D" parent="." unique_id=561212832]
@@ -2313,6 +2322,31 @@ transform = Transform3D(1, 0, 0, 0, 0.99725276, -0.07407368, 0, 0.07407368, 0.99
 
 [node name="Familia" parent="." unique_id=1051441791 instance=ExtResource("24_77xge")]
 transform = Transform3D(1.1200753, 0, -0.597286, 0, 1.2693776, 0, 0.597286, 0, 1.1200753, -33.227463, 1.5476189, -10.938291)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=163377898]
+transform = Transform3D(0.90409005, 0, 0.42734212, 0, 1, 0, -0.42734212, 0, 0.90409005, -48.52012, -0.72471476, -10.749095)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=749308745]
+transform = Transform3D(0.99999964, 0, 0, 0, 1, 0, 0, 0, 0.99999964, -1.2682533, 4.5299835, 9.841915)
+shape = SubResource("BoxShape3D_43ba2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=322778700]
+transform = Transform3D(0.64839876, 0, -0.76130044, 0, 1, 0, 0.76130044, 0, 0.64839876, 44.30624, 4.5299835, 6.444689)
+shape = SubResource("BoxShape3D_43ba2")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1998533220]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2325325, 3.198398, -22.8982)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1753590704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3440962, 0.10616803, -0.49950027)
+shape = SubResource("BoxShape3D_uraf5")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=853075182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.225193, 1.9799259, -14.646269)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=1173090655]
+transform = Transform3D(0.5506993, 0, -0.8347037, 0, 1, 0, 0.8347037, 0, 0.5506993, -0.7101021, -0.5582528, -3.3838978)
+shape = SubResource("BoxShape3D_dlugu")
 
 [connection signal="body_entered" from="Portal hacia 6" to="CharacterBody3D" method="_on_portal_hacia_6_body_entered"]
 [connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
