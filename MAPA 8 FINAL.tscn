@@ -187,8 +187,9 @@ transform = Transform3D(0.6348893, 0.22346771, 0, -0.22063471, 0.6268405, 0.1068
 [node name="Modelo+corazon" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=845930955 instance=ExtResource("6_wgsdw")]
 transform = Transform3D(0.23017025, 0, 0.5676936, 0, 0.61258, 0, -0.5676936, 0, 0.23017025, 28.503365, 6.3896475, 13.403671)
 
-[node name="Area3D" type="Area3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Modelo+corazon" unique_id=1625573480]
+[node name="Area3D" type="Area3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Modelo+corazon" unique_id=1625573480 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("13_rag1x")
+cuadro_texto = NodePath("../../../../../Interfaz 4/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Modelo+corazon/Area3D" unique_id=1285123539]
 transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, 3.8146973e-06, -0.029387474, 0.014537811)
@@ -565,14 +566,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -22.0
-offset_right = 168.0
-offset_bottom = 58.0
+offset_left = -37.0
+offset_top = -20.0
+offset_right = 163.0
+offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("20_wumo3")
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Interfaz 4/ColorRect" unique_id=1981392666]
 layout_mode = 0
