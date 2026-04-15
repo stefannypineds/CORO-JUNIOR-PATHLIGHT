@@ -87,7 +87,7 @@ shape = SubResource("BoxShape3D_14amg")
 [node name="MAPA 62" parent="." unique_id=654540168 instance=ExtResource("2_nk4ce")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.270184, 0.5539274, -5.781687)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 696936981) index="0" unique_id=85689587]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 1903520241) index="0" unique_id=85689587]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA 62/MAPA 6/StaticBody3D" unique_id=1758604841]
 shape = SubResource("ConcavePolygonShape3D_swncp")
@@ -1256,42 +1256,42 @@ transform = Transform3D(-0.03673089, 0, -0.9993252, 0, 1, 0, 0.9993252, 0, -0.03
 [node name="MAPA ESCALA sec 7 y 8" parent="." unique_id=1098457689 instance=ExtResource("5_8rm53")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.301903, 0.5301151, -5.7450056)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_001" parent_id_path=PackedInt32Array(1098457689, 1754683214) index="0" unique_id=798170615]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_001" parent_id_path=PackedInt32Array(1098457689, 2113432369) index="0" unique_id=798170615]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_001/StaticBody3D" unique_id=394533656]
 shape = SubResource("ConcavePolygonShape3D_g6kva")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_004" parent_id_path=PackedInt32Array(1098457689, 1910556740) index="0" unique_id=1536658052]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_004" parent_id_path=PackedInt32Array(1098457689, 1146072920) index="0" unique_id=1536658052]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_004/StaticBody3D" unique_id=967661040]
 shape = SubResource("ConcavePolygonShape3D_hdhv6")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_005" parent_id_path=PackedInt32Array(1098457689, 448752248) index="0" unique_id=389968203]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_005" parent_id_path=PackedInt32Array(1098457689, 722206073) index="0" unique_id=389968203]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_005/StaticBody3D" unique_id=1423812120]
 shape = SubResource("ConcavePolygonShape3D_jyr5m")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_006" parent_id_path=PackedInt32Array(1098457689, 434385994) index="0" unique_id=961268754]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_006" parent_id_path=PackedInt32Array(1098457689, 423531982) index="0" unique_id=961268754]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_006/StaticBody3D" unique_id=205780612]
 shape = SubResource("ConcavePolygonShape3D_fmnsc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_007" parent_id_path=PackedInt32Array(1098457689, 312813230) index="0" unique_id=1842767101]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_007" parent_id_path=PackedInt32Array(1098457689, 970242166) index="0" unique_id=1842767101]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_007/StaticBody3D" unique_id=583103152]
 shape = SubResource("ConcavePolygonShape3D_hb082")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_008" parent_id_path=PackedInt32Array(1098457689, 1590988560) index="0" unique_id=1265682469]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_008" parent_id_path=PackedInt32Array(1098457689, 1590788203) index="0" unique_id=1265682469]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_008/StaticBody3D" unique_id=1516396271]
 shape = SubResource("ConcavePolygonShape3D_0e5rk")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA" parent_id_path=PackedInt32Array(1098457689, 381595881) index="0" unique_id=1387095682]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA" parent_id_path=PackedInt32Array(1098457689, 108721369) index="0" unique_id=1387095682]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/MAPA/StaticBody3D" unique_id=1222786019]
 shape = SubResource("ConcavePolygonShape3D_mbgvd")
 
-[node name="Mball_074" parent="MAPA ESCALA sec 7 y 8" index="7" unique_id=1687107255]
+[node name="Mball_074" parent="MAPA ESCALA sec 7 y 8" index="7" unique_id=692803863]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.466679, 1.894975, -33.373814)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Mball_074" index="0" unique_id=900086889]
@@ -1299,7 +1299,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.466679, 1.894975, -33.3738
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=2053969408]
 shape = SubResource("ConcavePolygonShape3D_b2xhe")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA 7 Y 8" parent_id_path=PackedInt32Array(1098457689, 1021898113) index="0" unique_id=1849414728]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA 7 Y 8" parent_id_path=PackedInt32Array(1098457689, 1529504070) index="0" unique_id=1849414728]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/MAPA 7 Y 8/StaticBody3D" unique_id=896919886]
 shape = SubResource("ConcavePolygonShape3D_hrasw")
