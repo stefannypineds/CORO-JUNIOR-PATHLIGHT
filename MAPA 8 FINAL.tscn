@@ -11,12 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://w3x3ox0jwsfv" path="res://MODELOS/MAPA 1 Y 2/Biblia.glb" id="8_ctyqp"]
 [ext_resource type="PackedScene" uid="uid://duxdgb8kt3ydy" path="res://MODELOS/MAPA 7 Y 8/bread+loaves+3d+model.glb" id="9_11ok7"]
 [ext_resource type="Script" uid="uid://c1gurxlw1immd" path="res://area_3d1.gd" id="9_oap3w"]
+[ext_resource type="Script" uid="uid://cv4dafxp6pld8" path="res://area_3d3.gd" id="9_wumo3"]
 [ext_resource type="PackedScene" uid="uid://ck15ig2g6bsbg" path="res://MODELOS/MAPA 7 Y 8/Canasta peces.glb" id="10_wumo3"]
 [ext_resource type="PackedScene" uid="uid://d4dvcpyrglsyf" path="res://MODELOS/MAPA 7 Y 8/Letrero 8a.glb" id="11_rag1x"]
 [ext_resource type="PackedScene" uid="uid://iqfklldfsit7" path="res://MODELOS/MAPA 7 Y 8/Tesoros.glb" id="12_eqtjf"]
 [ext_resource type="PackedScene" uid="uid://bnt80415vrri8" path="res://MODELOS/MAPA 7 Y 8/Estrella.glb" id="13_ca3ql"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="14_f7hgi"]
 [ext_resource type="Script" uid="uid://civqabr566kal" path="res://color_rect1.gd" id="17_ctyqp"]
+[ext_resource type="Script" uid="uid://bmjy2t1na4g0n" path="res://color_rect3.gd" id="18_ctyqp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -79,6 +81,9 @@ size = Vector3(0.001, 12.099121, 13.975586)
 [sub_resource type="BoxShape3D" id="BoxShape3D_g6kva"]
 size = Vector3(0.001, 12.099121, 13.975586)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ctyqp"]
+size = Vector3(1.1872559, 0.7854004, 0.94873047)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_11ok7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j0ig6"]
@@ -101,7 +106,7 @@ shape = SubResource("BoxShape3D_14amg")
 [node name="MAPA 62" parent="." unique_id=654540168 instance=ExtResource("1_wg0gf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.270184, 0.5539274, -5.781687)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 1399633031) index="0" unique_id=85689587]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 696936981) index="0" unique_id=85689587]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA 62/MAPA 6/StaticBody3D" unique_id=1758604841]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04605484, 0.07115173, -0.032754898)
@@ -110,42 +115,42 @@ shape = SubResource("ConcavePolygonShape3D_swncp")
 [node name="MAPA ESCALA sec 7 y 8" parent="." unique_id=1098457689 instance=ExtResource("5_88omp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.301903, 0.5301151, -5.7450056)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_001" parent_id_path=PackedInt32Array(1098457689, 344568223) index="0" unique_id=798170615]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_001" parent_id_path=PackedInt32Array(1098457689, 1754683214) index="0" unique_id=798170615]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_001/StaticBody3D" unique_id=394533656]
 shape = SubResource("ConcavePolygonShape3D_g6kva")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_004" parent_id_path=PackedInt32Array(1098457689, 1647078555) index="0" unique_id=1536658052]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_004" parent_id_path=PackedInt32Array(1098457689, 1910556740) index="0" unique_id=1536658052]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_004/StaticBody3D" unique_id=967661040]
 shape = SubResource("ConcavePolygonShape3D_hdhv6")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_005" parent_id_path=PackedInt32Array(1098457689, 1501106594) index="0" unique_id=389968203]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_005" parent_id_path=PackedInt32Array(1098457689, 448752248) index="0" unique_id=389968203]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_005/StaticBody3D" unique_id=1423812120]
 shape = SubResource("ConcavePolygonShape3D_jyr5m")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_006" parent_id_path=PackedInt32Array(1098457689, 1162891888) index="0" unique_id=961268754]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_006" parent_id_path=PackedInt32Array(1098457689, 434385994) index="0" unique_id=961268754]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_006/StaticBody3D" unique_id=205780612]
 shape = SubResource("ConcavePolygonShape3D_fmnsc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_007" parent_id_path=PackedInt32Array(1098457689, 1795726882) index="0" unique_id=1842767101]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_007" parent_id_path=PackedInt32Array(1098457689, 312813230) index="0" unique_id=1842767101]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_007/StaticBody3D" unique_id=583103152]
 shape = SubResource("ConcavePolygonShape3D_hb082")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_008" parent_id_path=PackedInt32Array(1098457689, 477236457) index="0" unique_id=1265682469]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Plane_008" parent_id_path=PackedInt32Array(1098457689, 1590988560) index="0" unique_id=1265682469]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Plane_008/StaticBody3D" unique_id=1516396271]
 shape = SubResource("ConcavePolygonShape3D_0e5rk")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA" parent_id_path=PackedInt32Array(1098457689, 859262455) index="0" unique_id=1387095682]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA" parent_id_path=PackedInt32Array(1098457689, 381595881) index="0" unique_id=1387095682]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/MAPA/StaticBody3D" unique_id=1222786019]
 shape = SubResource("ConcavePolygonShape3D_mbgvd")
 
-[node name="Mball_074" parent="MAPA ESCALA sec 7 y 8" index="7" unique_id=737018032]
+[node name="Mball_074" parent="MAPA ESCALA sec 7 y 8" index="7" unique_id=1687107255]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.466679, 1.894975, -33.373814)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/Mball_074" index="0" unique_id=900086889]
@@ -169,12 +174,12 @@ transform = Transform3D(0.6730695, 0, 0, 0, 0.6730695, 0, 0, 0, 0.6730695, 27.91
 transform = Transform3D(0.6348893, 0.22346771, 0, -0.22063471, 0.6268405, 0.10683409, 0.035470296, -0.10077391, 0.6645365, 5.7481575, 0.81689835, 13.41296)
 
 [node name="Modelo+corazon" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=845930955 instance=ExtResource("6_wgsdw")]
-transform = Transform3D(0.23017025, 0, 0.5676936, 0, 0.61258, 0, -0.5676936, 0, 0.23017025, 29.387812, 6.3896475, 13.403671)
+transform = Transform3D(0.23017025, 0, 0.5676936, 0, 0.61258, 0, -0.5676936, 0, 0.23017025, 28.503365, 6.3896475, 13.403671)
 
 [node name="Templo" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=761868094 instance=ExtResource("7_oap3w")]
 transform = Transform3D(-0.9551803, 0, 0.29602477, 0.07526356, 0.96713924, 0.24285221, -0.2862971, 0.2542475, -0.92379236, 32.55794, 4.9142246, 2.790886)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA 7 Y 8" parent_id_path=PackedInt32Array(1098457689, 337015026) index="0" unique_id=1849414728]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA ESCALA sec 7 y 8/MAPA 7 Y 8" parent_id_path=PackedInt32Array(1098457689, 1021898113) index="0" unique_id=1849414728]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/MAPA 7 Y 8/StaticBody3D" unique_id=896919886]
 shape = SubResource("ConcavePolygonShape3D_hrasw")
@@ -205,6 +210,14 @@ transform = Transform3D(0.4138758, 0, 0.6807596, 0, 0.79669744, 0, -0.6807596, 0
 
 [node name="Biblia" parent="Biblia" unique_id=1713950616 instance=ExtResource("8_ctyqp")]
 transform = Transform3D(0.45638543, 0.2095181, 0.6184995, -0.06740001, 0.7656611, -0.20963538, -0.64953566, 0.06776419, 0.4563315, -6.2623444, 0.663002, 10.035009)
+
+[node name="Area3D" type="Area3D" parent="Biblia/Biblia" unique_id=1096397961 node_paths=PackedStringArray("cuadro_texto")]
+script = ExtResource("9_wumo3")
+cuadro_texto = NodePath("../../../Interfaz 2/ColorRect")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Biblia/Biblia/Area3D" unique_id=1510419836]
+transform = Transform3D(0.99999213, -1.4901161e-08, -8.940697e-08, -7.748604e-07, 0.9999999, 5.2154064e-08, -4.708767e-06, 3.7252903e-08, 0.9999999, 0.0064811707, -0.10730934, -0.025634766)
+shape = SubResource("BoxShape3D_ctyqp")
 
 [node name="Area3D" type="Area3D" parent="Biblia" unique_id=1102011465 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("9_oap3w")
@@ -431,8 +444,40 @@ offset_right = 194.0
 offset_bottom = 36.0
 text = "X"
 
+[node name="Interfaz 2" type="CanvasLayer" parent="." unique_id=1030418626]
+
+[node name="ColorRect" type="ColorRect" parent="Interfaz 2" unique_id=1293453670]
+visible = false
+offset_left = 389.0
+offset_top = 48.0
+offset_right = 735.0
+offset_bottom = 178.0
+script = ExtResource("18_ctyqp")
+
+[node name="Label" type="Label" parent="Interfaz 2/ColorRect" unique_id=696644676]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 20.0
+offset_right = 319.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+text = "“Tú creaste las delicadas partes internas 
+de mi cuerpo y me entretejiste en el 
+vientre de mi madre.\"
+Salmos 139:13-14 "
+
+[node name="Button" type="Button" parent="Interfaz 2/ColorRect/Label" unique_id=1546646309]
+layout_mode = 0
+offset_left = 311.0
+offset_top = -18.0
+offset_right = 341.0
+offset_bottom = 13.0
+text = "x"
+
+[connection signal="input_event" from="Biblia/Biblia/Area3D" to="Biblia/Biblia/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Biblia/Area3D" to="Biblia/Area3D" method="_on_input_event"]
 [connection signal="pressed" from="Interfaz 1/ColorRect/Button" to="Interfaz 1/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Interfaz 2/ColorRect/Label/Button" to="Interfaz 2/ColorRect" method="_on_button_pressed"]
 
 [editable path="MAPA 62"]
 [editable path="MAPA ESCALA sec 7 y 8"]
