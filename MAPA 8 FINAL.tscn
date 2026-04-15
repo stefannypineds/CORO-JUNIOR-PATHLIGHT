@@ -88,6 +88,9 @@ size = Vector3(1.1872559, 0.7854004, 0.94873047)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j0ig6"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wumo3"]
+size = Vector3(0.001, 4.826172, 20.010132)
+
 [node name="Node3D2" type="Node3D" unique_id=978302472]
 
 [node name="Seccion1" type="Node3D" parent="." unique_id=561212832]
@@ -473,6 +476,25 @@ offset_top = -18.0
 offset_right = 341.0
 offset_bottom = 13.0
 text = "x"
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="." unique_id=323752113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.897633, 8.114872, -18.668179)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5" unique_id=1493348783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1826706, 0.9731121, -9.505066)
+shape = SubResource("BoxShape3D_wumo3")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D5" unique_id=1906786536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30970955, 0.9731121, -4.7868633)
+shape = SubResource("BoxShape3D_wumo3")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D5" unique_id=1904255594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5799103, 0.9731121, -5.270666)
+shape = SubResource("BoxShape3D_wumo3")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D5" unique_id=1387366199]
+transform = Transform3D(0.10060483, 0, -0.99492645, 0, 1, 0, 0.99492645, 0, 0.10060483, 5.061905, 0.14901447, -0.9956856)
+shape = SubResource("BoxShape3D_wumo3")
 
 [connection signal="input_event" from="Biblia/Biblia/Area3D" to="Biblia/Biblia/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Biblia/Area3D" to="Biblia/Area3D" method="_on_input_event"]
