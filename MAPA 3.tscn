@@ -70,6 +70,9 @@ size = Vector3(21.680817, 0.001, 5.5319824)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pujur"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0jsfg"]
+size = Vector3(1, 0.9780426, 1.4455261)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_rnjqh"]
 size = Vector3(1.3579712, 0.49523926, 0.9274597)
 
@@ -956,6 +959,14 @@ transform = Transform3D(1.0000005, 4.656613e-10, 2.9802322e-08, -2.7939677e-09, 
 shape = SubResource("BoxShape3D_pujur")
 script = ExtResource("19_0jsfg")
 
+[node name="Area3D" type="Area3D" parent="Portal hacia 4/Familia orando" unique_id=148410620 node_paths=PackedStringArray("cuadro_texto")]
+script = ExtResource("22_0jsfg")
+cuadro_texto = NodePath("../../../Interfaz 2/ColorRect")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Portal hacia 4/Familia orando/Area3D" unique_id=613103279]
+transform = Transform3D(1.0000001, -1.8626451e-08, 0, 9.313226e-10, 1.0000092, 0, 0, 1.7881393e-07, 1.0000001, -1.9073486e-05, 0.46567798, -0.03853035)
+shape = SubResource("BoxShape3D_0jsfg")
+
 [node name="MAPA ESCALA sec 7 y 8" parent="." unique_id=1098457689 instance=ExtResource("17_7xj8a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.273827, 0.17472124, -5.394544)
 
@@ -1013,9 +1024,48 @@ offset_right = 259.0
 offset_bottom = 38.0
 text = "X"
 
+[node name="Interfaz 2" type="CanvasLayer" parent="." unique_id=609032963]
+
+[node name="ColorRect" type="ColorRect" parent="Interfaz 2" unique_id=1800030268]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.5
+offset_top = -49.5
+offset_right = 129.5
+offset_bottom = 49.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("24_wy8ug")
+
+[node name="Label" type="Label" parent="Interfaz 2/ColorRect" unique_id=1953460316]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 14.0
+offset_right = 243.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+text = "“Orar en familia, 
+fortalece nuestra unión y
+ nos ayuda a confiar en Dios”"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Interfaz 2/ColorRect" unique_id=1481622190]
+layout_mode = 0
+offset_left = 237.5
+offset_top = 6.5
+offset_right = 255.5
+offset_bottom = 37.5
+text = "X"
+
 [connection signal="body_entered" from="Portal hacia 4" to="CharacterBody3D" method="_on_hacia_mapa_4_y_5_body_entered"]
 [connection signal="input_event" from="Portal hacia 4/Familia orando/StaticBody3D" to="Portal hacia 4/Familia orando/StaticBody3D/CollisionShape3D" method="_on_static_body_3d_input_event"]
+[connection signal="input_event" from="Portal hacia 4/Familia orando/Area3D" to="Portal hacia 4/Familia orando/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Biblia/Area3D" to="Biblia/Area3D" method="_on_input_event"]
 [connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Interfaz 2/ColorRect/Button" to="Interfaz 2/ColorRect" method="_on_button_pressed"]
 
 [editable path="Seccion1/Fondo mapa 3"]
