@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://cbm34q5j54ldg" path="res://MODELOS/MAPA 1 Y 2/Pintura.glb" id="14_4007m"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="15_jmva6"]
 [ext_resource type="Script" uid="uid://dh6w836cm4ycy" path="res://color_rect2.gd" id="16_1ipgx"]
+[ext_resource type="Script" uid="uid://dfhxf163o34ps" path="res://area_3d15.gd" id="16_fpnkm"]
+[ext_resource type="Script" uid="uid://douxjemcfkkdh" path="res://area_3d16.gd" id="18_n6yrs"]
 [ext_resource type="Script" uid="uid://s2hwi070wq5l" path="res://color_rectregalo.gd" id="19_4007m"]
 [ext_resource type="Script" uid="uid://bf6hk0dwmy471" path="res://color_rectflor.gd" id="20_itoc3"]
 
@@ -70,6 +72,12 @@ size = Vector3(0.34161377, 1.4481201, 0.2607422)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4007m"]
 size = Vector3(1.0998535, 0.9536133, 13.378906)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n6yrs"]
+size = Vector3(0.92578125, 0.18164063, 0.57888794)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rw4hq"]
+size = Vector3(1, 0.15722656, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_swncp"]
 size = Vector3(1, 13.067505, 12.394531)
@@ -127,7 +135,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.62981, 0.7545209, 21.2055
 [node name="MAPA 4 Y 52" parent="." unique_id=1723137936 instance=ExtResource("3_wl5jl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.26569, 0.42946243, -5.8137546)
 
-[node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=883628332]
+[node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=238985656]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08642244, -0.014123917)
 
 [node name="Casas baja calidad" parent="." unique_id=1523019399 instance=ExtResource("4_3g7tv")]
@@ -142,7 +150,7 @@ transform = Transform3D(0.14689444, 0, 0.98915243, 0, 1, 0, -0.98915243, 0, 0.14
 [node name="MAPA 62" parent="." unique_id=654540168 instance=ExtResource("6_ywa86")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.270184, 0.5539274, -5.781687)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 696936981) index="0" unique_id=85689587]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 1399633031) index="0" unique_id=85689587]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA 62/MAPA 6/StaticBody3D" unique_id=1758604841]
 shape = SubResource("ConcavePolygonShape3D_swncp")
@@ -704,8 +712,22 @@ shape = SubResource("BoxShape3D_4007m")
 [node name="Binoculares" parent="." unique_id=293745786 instance=ExtResource("13_swncp")]
 transform = Transform3D(-0.9020135, 0, -0.43170786, 0, 1, 0, 0.43170786, 0, -0.9020135, -20.658937, 1.3751745, -42.734806)
 
+[node name="Area3D" type="Area3D" parent="Binoculares" unique_id=809820476]
+script = ExtResource("16_fpnkm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Binoculares/Area3D" unique_id=145162024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037109375, 0.5247295, -0.025642395)
+shape = SubResource("BoxShape3D_n6yrs")
+
 [node name="Pintura" parent="." unique_id=430946237 instance=ExtResource("14_4007m")]
 transform = Transform3D(0.77401346, 0, 0, 0, 0.7567721, -0.16245894, 0, 0.16245894, 0.7567721, -20.309233, 1.3917663, -38.53632)
+
+[node name="Area3D" type="Area3D" parent="Pintura" unique_id=131104396]
+script = ExtResource("18_n6yrs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pintura/Area3D" unique_id=539453926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0793314, -0.06724167)
+shape = SubResource("BoxShape3D_rw4hq")
 
 [node name="MAPA ESCALA sec 7 y 8" parent="." unique_id=1098457689 instance=ExtResource("14_4a02i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.4626, 0.50575924, -5.7733474)
@@ -816,6 +838,8 @@ text = "x"
 [connection signal="input_event" from="modelo regalo/Area3D" to="modelo regalo/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Rosa/Area3D" to="Rosa/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Biblia/Area3D" to="Biblia/Area3D" method="_on_input_event"]
+[connection signal="input_event" from="Binoculares/Area3D" to="Binoculares/Area3D" method="_on_input_event"]
+[connection signal="input_event" from="Pintura/Area3D" to="Pintura/Area3D" method="_on_input_event"]
 [connection signal="body_entered" from="Portal hacia 7" to="CharacterBody3D" method="_on_portal_hacia_7_body_entered"]
 [connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz2/ColorRect/Label/Button" to="Interfaz2/ColorRect" method="_on_button_pressed"]
