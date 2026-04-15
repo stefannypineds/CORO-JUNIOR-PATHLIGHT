@@ -15,3 +15,7 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 			
 			# Centramos el cuadro
 			cuadro_texto.global_position = posicion_pantalla - (cuadro_texto.size / 2.0)
+
+
+func _on_area_3d_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	pass # Replace with function body.
