@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cv4dafxp6pld8" path="res://area_3d3.gd" id="2_ptqfw"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="2_wmqtt"]
 [ext_resource type="Script" uid="uid://denqvnplyaojp" path="res://area_3d2.gd" id="3_6ifq2"]
-[ext_resource type="Script" path="res://portal_hacia_3.gd" id="3_rpkj6"]
+[ext_resource type="Script" uid="uid://3exigo218luq" path="res://portal_hacia_3.gd" id="3_rpkj6"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="4_4tp43"]
 [ext_resource type="PackedScene" uid="uid://jdqlsraj7lo" path="res://MODELOS/MAPA 3/Pez.glb" id="5_7mx0f"]
 [ext_resource type="PackedScene" uid="uid://c8kairutbn80o" path="res://MODELO NIÑA.tscn" id="6_ieipr"]
@@ -26,6 +26,9 @@ size = Vector3(1, 1, 0.8149414)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ptqfw"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pr80j"]
+size = Vector3(1.1976318, 0.12950134, 0.6021118)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_wmqtt"]
 size = Vector3(1.972168, 2.0297852, 15.3905945)
 
@@ -34,7 +37,7 @@ size = Vector3(1.972168, 2.0297852, 15.3905945)
 [node name="Seccion1" parent="." unique_id=561212832 instance=ExtResource("1_bh17j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14452791, 0, -0.4316411)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="Seccion1/MAPA 1 Y 22/MAPA 1 Y 2" parent_id_path=PackedInt32Array(561212832, 616135401, 1721443301) index="1" unique_id=1394976610]
+[node name="StaticBody3D2" type="StaticBody3D" parent="Seccion1/MAPA 1 Y 22/MAPA 1 Y 2" parent_id_path=PackedInt32Array(561212832, 616135401, 1722175782) index="1" unique_id=1394976610]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/MAPA 1 Y 22/MAPA 1 Y 2/StaticBody3D2" unique_id=2062439330]
 shape = SubResource("ConcavePolygonShape3D_wmqtt")
@@ -42,7 +45,7 @@ shape = SubResource("ConcavePolygonShape3D_wmqtt")
 [node name="Mandamientos" parent="Seccion1" index="3" unique_id=999986881]
 transform = Transform3D(0.45070767, 0.06345452, -0.8904135, -0.0007744563, 0.99749774, 0.07069375, 0.89267135, -0.031172628, 0.44962892, 15.815756, 0.21399069, 10.621023)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Seccion1/Mandamientos/tripo_node_9f0c6252-e072-4081-985f-db1e336f778b" parent_id_path=PackedInt32Array(561212832, 999986881, 227046741) index="0" unique_id=679709062]
+[node name="StaticBody3D" type="StaticBody3D" parent="Seccion1/Mandamientos/tripo_node_9f0c6252-e072-4081-985f-db1e336f778b" parent_id_path=PackedInt32Array(561212832, 999986881, 749464718) index="0" unique_id=679709062]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Mandamientos/tripo_node_9f0c6252-e072-4081-985f-db1e336f778b/StaticBody3D" unique_id=336725855]
 shape = SubResource("ConcavePolygonShape3D_rpkj6")
@@ -64,9 +67,8 @@ shape = SubResource("BoxShape3D_16u3s")
 [node name="Biblia" parent="Seccion1" index="6" unique_id=1262992799]
 transform = Transform3D(-0.36226416, 0.09197839, 0.7962982, 0.0723791, 1.0065846, -0.05006574, -0.71095246, 0.0556088, -0.4108489, 19.332577, 1.0905786, 25.700209)
 
-[node name="Area3D" type="Area3D" parent="Seccion1/Biblia" index="1" unique_id=1738152331 node_paths=PackedStringArray("cuadro_texto")]
+[node name="Area3D" type="Area3D" parent="Seccion1/Biblia" index="1" unique_id=1738152331]
 script = ExtResource("2_aon06")
-cuadro_texto = NodePath("../../../Interfaz/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Biblia/Area3D" unique_id=989963471]
 transform = Transform3D(0.97880614, -6.3329935e-08, 3.2782555e-07, 2.6077032e-08, 0.49028307, 3.7252903e-09, -1.1920929e-07, 2.7939677e-09, 1.0105258, 0.0058403015, 0.021618843, -0.007191658)
@@ -94,6 +96,14 @@ transform = Transform3D(0.5789825, 0, -0.81534016, 0, 1, 0, 0.81534016, 0, 0.578
 
 [node name="Pintura" parent="Seccion1" index="17" unique_id=430946237]
 transform = Transform3D(0.5758046, 0, -0.8175873, 0, 1, 0, 0.8175873, 0, 0.5758046, 14.885054, 2.1159935, 17.638893)
+
+[node name="Area3D" type="Area3D" parent="Seccion1/Paso" parent_id_path=PackedInt32Array(561212832, 1966226286) index="1" unique_id=1408873243 node_paths=PackedStringArray("cuadro_texto")]
+script = ExtResource("2_aon06")
+cuadro_texto = NodePath("../../../Interfaz 4/ColorRect")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Paso/Area3D" unique_id=1002514351]
+transform = Transform3D(1, 0, 0, -4.8428774e-07, 1, 0, 0, 0, 1, 0.011892319, -0.008230209, -0.02933979)
+shape = SubResource("BoxShape3D_pr80j")
 
 [node name="Letrero 2" parent="Seccion1" index="166" unique_id=246655698]
 transform = Transform3D(0.6682352, 0, -0.74395007, 0, 1, 0, 0.74395007, 0, 0.6682352, 12.802973, 2.7919655, 17.141123)
@@ -237,13 +247,52 @@ offset_right = 246.5
 offset_bottom = 37.5
 text = "X"
 
+[node name="Interfaz 4" type="CanvasLayer" parent="." unique_id=391852630]
+
+[node name="ColorRect" type="ColorRect" parent="Interfaz 4" unique_id=1059807519]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.5
+offset_top = -49.0
+offset_right = 128.5
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_2kvg2")
+
+[node name="Label" type="Label" parent="Interfaz 4/ColorRect" unique_id=1149552151]
+layout_mode = 0
+offset_left = 29.5
+offset_top = 15.0
+offset_right = 228.5
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+text = "“Cada paso que damos 
+en obediencia nos acerca
+ mas al verdadero tesoro”"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Interfaz 4/ColorRect" unique_id=872939275]
+layout_mode = 0
+offset_left = 232.5
+offset_top = 8.0
+offset_right = 250.5
+offset_bottom = 39.0
+text = "X"
+
 [connection signal="input_event" from="Seccion1/Ovejas/Area3D" to="Seccion1/Ovejas/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Seccion1/Biblia/Area3D" to="Seccion1/Biblia/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Seccion1/Biblia2/Area3D" to="Seccion1/Biblia2/Area3D" method="_on_input_event"]
+[connection signal="input_event" from="Seccion1/Paso/Area3D" to="Seccion1/Paso/Area3D" method="_on_input_event"]
 [connection signal="body_entered" from="Portal hacia 3" to="CharacterBody3D" method="_on_portal_hacia_3_body_entered"]
 [connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz 2/ColorRect/Button" to="Interfaz 2/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz 3/ColorRect/Button" to="Interfaz 3/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Interfaz 4/ColorRect/Button" to="Interfaz 4/ColorRect" method="_on_button_pressed"]
 
 [editable path="Seccion1"]
 [editable path="Seccion1/MAPA 1 Y 22"]
