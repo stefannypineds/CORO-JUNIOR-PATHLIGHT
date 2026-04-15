@@ -32,6 +32,9 @@ size = Vector3(1.1976318, 0.12950134, 0.6021118)
 [sub_resource type="BoxShape3D" id="BoxShape3D_wmqtt"]
 size = Vector3(1.972168, 2.0297852, 15.3905945)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_n5ty3"]
+size = Vector3(0.4781494, 0.50439453, 1.0362549)
+
 [node name="Node3D" type="Node3D" unique_id=978302472]
 
 [node name="Seccion1" parent="." unique_id=561212832 instance=ExtResource("1_bh17j")]
@@ -97,9 +100,8 @@ transform = Transform3D(0.5789825, 0, -0.81534016, 0, 1, 0, 0.81534016, 0, 0.578
 [node name="Pintura" parent="Seccion1" index="17" unique_id=430946237]
 transform = Transform3D(0.5758046, 0, -0.8175873, 0, 1, 0, 0.8175873, 0, 0.5758046, 14.885054, 2.1159935, 17.638893)
 
-[node name="Area3D" type="Area3D" parent="Seccion1/Paso" parent_id_path=PackedInt32Array(561212832, 1966226286) index="1" unique_id=1408873243 node_paths=PackedStringArray("cuadro_texto")]
+[node name="Area3D" type="Area3D" parent="Seccion1/Paso" parent_id_path=PackedInt32Array(561212832, 1966226286) index="1" unique_id=1408873243]
 script = ExtResource("2_aon06")
-cuadro_texto = NodePath("../../../Interfaz 4/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Paso/Area3D" unique_id=1002514351]
 transform = Transform3D(1, 0, 0, -4.8428774e-07, 1, 0, 0, 0, 1, 0.011892319, -0.008230209, -0.02933979)
@@ -131,6 +133,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.957294, -0.0043239594, -5
 
 [node name="Pez" parent="." unique_id=289150865 instance=ExtResource("5_7mx0f")]
 transform = Transform3D(1.0510932, 1.9519734, 3.6610157, -0.5386589, 3.808915, -1.8761789, -4.1137676, 0, 1.1810801, 24.860933, 0.12223005, 16.662106)
+
+[node name="Area3D" type="Area3D" parent="Pez" unique_id=596468136 node_paths=PackedStringArray("cuadro_texto")]
+script = ExtResource("2_aon06")
+cuadro_texto = NodePath("../../Interfaz 5/ColorRect")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pez/Area3D" unique_id=1597794043]
+transform = Transform3D(1, -3.9802944e-06, 2.9802322e-08, 6.825074e-08, 0.99999726, 2.7001676e-07, -2.9802322e-08, -1.1805523e-06, 1.0000001, -0.008118153, 0.24780202, 0.018126965)
+shape = SubResource("BoxShape3D_n5ty3")
 
 [node name="CharacterBody3D2" parent="." unique_id=544758080 instance=ExtResource("6_ieipr")]
 transform = Transform3D(-0.033626102, 0, 0.9994345, 0, 1, 0, -0.9994345, 0, -0.033626102, 22.521473, 0.63847303, 21.524885)
@@ -284,15 +294,53 @@ offset_right = 250.5
 offset_bottom = 39.0
 text = "X"
 
+[node name="Interfaz 5" type="CanvasLayer" parent="." unique_id=742909100]
+
+[node name="ColorRect" type="ColorRect" parent="Interfaz 5" unique_id=1234639958]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -40.0
+offset_right = 100.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_2kvg2")
+
+[node name="Label" type="Label" parent="Interfaz 5/ColorRect" unique_id=676496839]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 14.0
+offset_right = 198.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+text = "Jonás 1-3 
+Ejemplo de Jonás"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Interfaz 5/ColorRect" unique_id=652027252]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 6.0
+offset_right = 196.0
+offset_bottom = 37.0
+text = "X"
+
 [connection signal="input_event" from="Seccion1/Ovejas/Area3D" to="Seccion1/Ovejas/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Seccion1/Biblia/Area3D" to="Seccion1/Biblia/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Seccion1/Biblia2/Area3D" to="Seccion1/Biblia2/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Seccion1/Paso/Area3D" to="Seccion1/Paso/Area3D" method="_on_input_event"]
 [connection signal="body_entered" from="Portal hacia 3" to="CharacterBody3D" method="_on_portal_hacia_3_body_entered"]
+[connection signal="input_event" from="Pez/Area3D" to="Pez/Area3D" method="_on_input_event"]
 [connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz 2/ColorRect/Button" to="Interfaz 2/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz 3/ColorRect/Button" to="Interfaz 3/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz 4/ColorRect/Button" to="Interfaz 4/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Interfaz 5/ColorRect/Button" to="Interfaz 5/ColorRect" method="_on_button_pressed"]
 
 [editable path="Seccion1"]
 [editable path="Seccion1/MAPA 1 Y 22"]
