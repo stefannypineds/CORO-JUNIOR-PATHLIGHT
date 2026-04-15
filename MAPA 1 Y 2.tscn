@@ -45,7 +45,7 @@ size = Vector3(1, 0.1303711, 0.86572266)
 size = Vector3(0.8823242, 0.2780304, 1.0081787)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pr80j"]
-size = Vector3(1.1976318, 0.12950134, 0.6021118)
+size = Vector3(1.048523, 0.21526337, 0.54065704)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wmqtt"]
 size = Vector3(1.972168, 2.0297852, 15.3905945)
@@ -86,7 +86,7 @@ transform = Transform3D(0.25333887, -0.08092457, 1.2392366, 0.017670747, 1.16018
 
 [node name="Area3D" type="Area3D" parent="Seccion1/Ovejas" index="1" unique_id=1229735560 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("2_ptqfw")
-cuadro_texto = NodePath("../../../Interfaz 3/ColorRect")
+cuadro_texto = NodePath("../../../Interfaz Oveja/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Ovejas/Area3D" unique_id=1432490720]
 transform = Transform3D(0.93191254, 7.936297e-09, -1.0430813e-07, -9.313226e-08, 1.3384538, -1.6763806e-07, 1.4901161e-08, -9.674115e-08, 0.7352212, -0.024396896, 1.7988935, 0.021718979)
@@ -97,7 +97,7 @@ transform = Transform3D(-0.36226416, 0.09197839, 0.7962982, 0.0723791, 1.0065846
 
 [node name="Area3D" type="Area3D" parent="Seccion1/Biblia" index="1" unique_id=1738152331 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("2_aon06")
-cuadro_texto = NodePath("../../../Interfaz/ColorRect")
+cuadro_texto = NodePath("../../../Interfaz Biblia 1/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Biblia/Area3D" unique_id=989963471]
 transform = Transform3D(0.97880614, -6.3329935e-08, 3.2782555e-07, 2.6077032e-08, 0.49028307, 3.7252903e-09, -1.1920929e-07, 2.7939677e-09, 1.0105258, 0.0058403015, 0.021618843, -0.007191658)
@@ -118,7 +118,7 @@ transform = Transform3D(0.1587849, 0.009477154, -0.7579239, 0.002545813, 0.88348
 
 [node name="Area3D" type="Area3D" parent="Seccion1/Biblia2" index="1" unique_id=394858415 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("3_6ifq2")
-cuadro_texto = NodePath("../../../Interfaz 2/ColorRect")
+cuadro_texto = NodePath("../../../Interfaz Biblia 2/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Biblia2/Area3D" unique_id=1407435330]
 transform = Transform3D(0.99779856, -4.656613e-10, 2.9802322e-08, -4.656613e-10, 0.49724394, -1.6298145e-09, 5.9604645e-08, 1.3969839e-09, 0.99376917, 3.4332275e-05, 0.0038416386, 5.4359436e-05)
@@ -147,11 +147,12 @@ script = ExtResource("6_pr80j")
 transform = Transform3D(1, 5.9604645e-08, 3.2782555e-07, 0, 1, 1.0803342e-07, 0, -1.4901161e-08, 1.0000062, 0.17490387, 0.01149869, -0.052606583)
 shape = SubResource("BoxShape3D_en1el")
 
-[node name="Area3D" type="Area3D" parent="Seccion1/Paso" parent_id_path=PackedInt32Array(561212832, 1966226286) index="1" unique_id=1408873243]
+[node name="Area3D" type="Area3D" parent="Seccion1/Paso" parent_id_path=PackedInt32Array(561212832, 1966226286) index="1" unique_id=1408873243 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("2_aon06")
+cuadro_texto = NodePath("../../../Interfaz Pies/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Paso/Area3D" unique_id=1002514351]
-transform = Transform3D(1, 0, 0, -4.8428774e-07, 1, 0, 0, 0, 1, 0.011892319, -0.008230209, -0.02933979)
+transform = Transform3D(1, 0, 0, -4.8428774e-07, 1, 0, 0, 0, 1, -0.000120162964, 0.09937, 0.010813713)
 shape = SubResource("BoxShape3D_pr80j")
 
 [node name="Letrero 2" parent="Seccion1" index="166" unique_id=246655698]
@@ -183,7 +184,7 @@ transform = Transform3D(1.0510932, 1.9519734, 3.6610157, -0.5386589, 3.808915, -
 
 [node name="Area3D" type="Area3D" parent="Pez" unique_id=596468136 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("2_aon06")
-cuadro_texto = NodePath("../../Interfaz 5/ColorRect")
+cuadro_texto = NodePath("../../Interfaz Pez/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pez/Area3D" unique_id=1597794043]
 transform = Transform3D(1, -4.5788865e-06, 2.9802322e-08, 6.825074e-08, 0.99999714, 2.7001676e-07, -2.9802322e-08, -1.1066575e-06, 1.0000001, 0.0065989494, 0.22228909, 0.07279968)
@@ -192,9 +193,9 @@ shape = SubResource("BoxShape3D_n5ty3")
 [node name="CharacterBody3D2" parent="." unique_id=544758080 instance=ExtResource("6_ieipr")]
 transform = Transform3D(-0.033626102, 0, 0.9994345, 0, 1, 0, -0.9994345, 0, -0.033626102, 22.521473, 0.63847303, 21.524885)
 
-[node name="Interfaz" type="CanvasLayer" parent="." unique_id=1863494185]
+[node name="Interfaz Biblia 1" type="CanvasLayer" parent="." unique_id=1863494185]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz" unique_id=1330336040]
+[node name="ColorRect" type="ColorRect" parent="Interfaz Biblia 1" unique_id=1330336040]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -210,7 +211,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 script = ExtResource("8_2kvg2")
 
-[node name="Label" type="Label" parent="Interfaz/ColorRect" unique_id=1646039994]
+[node name="Label" type="Label" parent="Interfaz Biblia 1/ColorRect" unique_id=1646039994]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 19.0
@@ -222,7 +223,7 @@ mi voz... y me siguen\".
 Juan 10:27"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz/ColorRect" unique_id=755003108]
+[node name="Button" type="Button" parent="Interfaz Biblia 1/ColorRect" unique_id=755003108]
 layout_mode = 0
 offset_left = 198.0
 offset_top = 5.0
@@ -230,9 +231,9 @@ offset_right = 222.0
 offset_bottom = 36.0
 text = "X"
 
-[node name="Interfaz 2" type="CanvasLayer" parent="." unique_id=990701799]
+[node name="Interfaz Biblia 2" type="CanvasLayer" parent="." unique_id=990701799]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz 2" unique_id=1525739535]
+[node name="ColorRect" type="ColorRect" parent="Interfaz Biblia 2" unique_id=1525739535]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -247,7 +248,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("10_jtvy8")
 
-[node name="Label" type="Label" parent="Interfaz 2/ColorRect" unique_id=1445109746]
+[node name="Label" type="Label" parent="Interfaz Biblia 2/ColorRect" unique_id=1445109746]
 layout_mode = 0
 offset_left = 33.0
 offset_top = 25.25
@@ -259,7 +260,7 @@ mis mandamientos.\"
 Juan 14:15"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz 2/ColorRect" unique_id=1674336338]
+[node name="Button" type="Button" parent="Interfaz Biblia 2/ColorRect" unique_id=1674336338]
 layout_mode = 0
 offset_left = 214.0
 offset_top = 10.5
@@ -267,9 +268,9 @@ offset_right = 232.0
 offset_bottom = 41.5
 text = "X"
 
-[node name="Interfaz 3" type="CanvasLayer" parent="." unique_id=1302666555]
+[node name="Interfaz Oveja" type="CanvasLayer" parent="." unique_id=1302666555]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz 3" unique_id=1063242216]
+[node name="ColorRect" type="ColorRect" parent="Interfaz Oveja" unique_id=1063242216]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -284,7 +285,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("11_jtvy8")
 
-[node name="Label" type="Label" parent="Interfaz 3/ColorRect" unique_id=1505012186]
+[node name="Label" type="Label" parent="Interfaz Oveja/ColorRect" unique_id=1505012186]
 layout_mode = 0
 offset_left = 16.5
 offset_top = 21.75
@@ -296,7 +297,7 @@ reconoce la voz... También
 decide seguirla"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz 3/ColorRect" unique_id=1521636518]
+[node name="Button" type="Button" parent="Interfaz Oveja/ColorRect" unique_id=1521636518]
 layout_mode = 0
 offset_left = 228.5
 offset_top = 6.5
@@ -304,9 +305,9 @@ offset_right = 246.5
 offset_bottom = 37.5
 text = "X"
 
-[node name="Interfaz 4" type="CanvasLayer" parent="." unique_id=391852630]
+[node name="Interfaz Pies" type="CanvasLayer" parent="." unique_id=391852630]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz 4" unique_id=1059807519]
+[node name="ColorRect" type="ColorRect" parent="Interfaz Pies" unique_id=1059807519]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -321,7 +322,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_2kvg2")
 
-[node name="Label" type="Label" parent="Interfaz 4/ColorRect" unique_id=1149552151]
+[node name="Label" type="Label" parent="Interfaz Pies/ColorRect" unique_id=1149552151]
 layout_mode = 0
 offset_left = 29.5
 offset_top = 15.0
@@ -333,7 +334,7 @@ en obediencia nos acerca
  mas al verdadero tesoro”"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz 4/ColorRect" unique_id=872939275]
+[node name="Button" type="Button" parent="Interfaz Pies/ColorRect" unique_id=872939275]
 layout_mode = 0
 offset_left = 232.5
 offset_top = 8.0
@@ -341,9 +342,9 @@ offset_right = 250.5
 offset_bottom = 39.0
 text = "X"
 
-[node name="Interfaz 5" type="CanvasLayer" parent="." unique_id=742909100]
+[node name="Interfaz Pez" type="CanvasLayer" parent="." unique_id=742909100]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz 5" unique_id=1234639958]
+[node name="ColorRect" type="ColorRect" parent="Interfaz Pez" unique_id=1234639958]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -358,7 +359,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_2kvg2")
 
-[node name="Label" type="Label" parent="Interfaz 5/ColorRect" unique_id=676496839]
+[node name="Label" type="Label" parent="Interfaz Pez/ColorRect" unique_id=676496839]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 14.0
@@ -369,7 +370,7 @@ text = "Jonás 1-3
 Ejemplo de Jonás"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz 5/ColorRect" unique_id=652027252]
+[node name="Button" type="Button" parent="Interfaz Pez/ColorRect" unique_id=652027252]
 layout_mode = 0
 offset_left = 178.0
 offset_top = 6.0
@@ -415,11 +416,11 @@ text = "X"
 [connection signal="input_event" from="Seccion1/Paso/Area3D" to="Seccion1/Paso/Area3D" method="_on_input_event"]
 [connection signal="body_entered" from="Portal hacia 3" to="CharacterBody3D" method="_on_portal_hacia_3_body_entered"]
 [connection signal="input_event" from="Pez/Area3D" to="Pez/Area3D" method="_on_input_event"]
-[connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
-[connection signal="pressed" from="Interfaz 2/ColorRect/Button" to="Interfaz 2/ColorRect" method="_on_button_pressed"]
-[connection signal="pressed" from="Interfaz 3/ColorRect/Button" to="Interfaz 3/ColorRect" method="_on_button_pressed"]
-[connection signal="pressed" from="Interfaz 4/ColorRect/Button" to="Interfaz 4/ColorRect" method="_on_button_pressed"]
-[connection signal="pressed" from="Interfaz 5/ColorRect/Button" to="Interfaz 5/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Interfaz Biblia 1/ColorRect/Button" to="Interfaz Biblia 1/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Interfaz Biblia 2/ColorRect/Button" to="Interfaz Biblia 2/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Interfaz Oveja/ColorRect/Button" to="Interfaz Oveja/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Interfaz Pies/ColorRect/Button" to="Interfaz Pies/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Interfaz Pez/ColorRect/Button" to="Interfaz Pez/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Insignia 1/TextureRect/Button" to="Insignia 1/TextureRect" method="_on_button_pressed"]
 
 [editable path="Seccion1"]
