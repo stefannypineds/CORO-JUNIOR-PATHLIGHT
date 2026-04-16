@@ -1,9 +1,8 @@
 extends Area3D
 
 func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
-	
-	# Comprobamos si el jugador hizo clic izquierdo
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		
-		# ¡MAGIA! Esto abre el navegador con el video
-		OS.shell_open("https://www.youtube.com/watch?v=d-zXFCxSpD8&t=24s")
+		OS.shell_open("https://youtu.be/hPB0lnvHYtU?si=OILfPdkzgl-aWvOz")
+		
+	CerebroMisiones.m1.registrar_clic("Pintura2")
