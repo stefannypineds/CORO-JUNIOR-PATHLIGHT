@@ -5,5 +5,4 @@ func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3,
 		
 		OS.shell_open("https://www.youtube.com/watch?v=PNiUxdQKEVs&t=1146s")
 		
-		CerebroMisiones.Binoculares = true
-		CerebroMisiones.revisar_mision()
+		CerebroMisiones.m1.registrar_clic("Binoculares")
