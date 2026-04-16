@@ -38,6 +38,7 @@ size = Vector3(1, 1, 0.8149414)
 size = Vector3(0.673584, 0.14978027, 0.5786133)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ptqfw"]
+size = Vector3(1.5383301, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0838n"]
 size = Vector3(1, 0.1303711, 0.86572266)
@@ -149,7 +150,7 @@ script = ExtResource("3_6ifq2")
 cuadro_texto = NodePath("../../../Interfaz Biblia 2/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Biblia2/Area3D" unique_id=1407435330]
-transform = Transform3D(0.99779856, -4.656613e-10, 2.9802322e-08, -4.656613e-10, 0.49724394, -1.6298145e-09, 5.9604645e-08, 1.3969839e-09, 0.99376917, 3.4332275e-05, 0.0038416386, 5.4359436e-05)
+transform = Transform3D(0.99779856, 0, 5.9604645e-08, -4.656613e-10, 0.4972472, -4.8894435e-09, 5.9604645e-08, 2.363231e-08, 0.9937692, -0.024196625, 0.0038414001, 5.6266785e-05)
 shape = SubResource("BoxShape3D_ptqfw")
 
 [node name="Fondo mapa 3" parent="Seccion1" index="10" unique_id=2121909699]
@@ -260,9 +261,9 @@ offset_bottom = 36.0
 text = "X"
 
 [node name="Interfaz Biblia 2" type="CanvasLayer" parent="." unique_id=990701799]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Interfaz Biblia 2" unique_id=1525739535]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -297,9 +298,9 @@ offset_bottom = 41.5
 text = "X"
 
 [node name="Interfaz Oveja" type="CanvasLayer" parent="." unique_id=1302666555]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Interfaz Oveja" unique_id=1063242216]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
