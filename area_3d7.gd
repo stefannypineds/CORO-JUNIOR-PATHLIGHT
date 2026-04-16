@@ -7,3 +7,5 @@ func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3,
 		
 		# ¡MAGIA! Esto abre el navegador con el video
 		OS.shell_open("https://youtu.be/MO98oEIB6jA?si=q1HhJdXafXZbxwbL")
+
+	CerebroMisiones.m4.registrar_clic("Pintura")

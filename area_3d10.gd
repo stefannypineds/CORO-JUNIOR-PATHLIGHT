@@ -4,4 +4,5 @@ func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3,
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		
 		OS.shell_open("https://youtu.be/hPB0lnvHYtU?si=OILfPdkzgl-aWvOz")
-		CerebroMisiones.m7.registrar_clic("Binoculares")
+		
+	CerebroMisiones.m1.registrar_clic("Pintura2")

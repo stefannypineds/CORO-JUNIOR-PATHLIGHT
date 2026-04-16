@@ -30,15 +30,12 @@
 [ext_resource type="PackedScene" uid="uid://4fob251dk3ur" path="res://MODELOS/MAPA 4 Y 5/Letrero 5.glb" id="23_g0a14"]
 [ext_resource type="PackedScene" uid="uid://bmw53gnklgvy7" path="res://MODELOS/MAPA 3/Familia.glb" id="24_77xge"]
 [ext_resource type="Script" uid="uid://t0pl0m25f2ak" path="res://area_3d24.gd" id="25_urrac"]
-[ext_resource type="Script" uid="uid://hy82g6njdkru" path="res://area_3d8.gd" id="26_2bpxn"]
 [ext_resource type="Script" uid="uid://bdjfvjnlt8htl" path="res://area_3d23.gd" id="26_77xge"]
-[ext_resource type="Script" uid="uid://dxixetftuwwcd" path="res://area_3d9.gd" id="27_v5w4w"]
 [ext_resource type="Script" uid="uid://pjvs501riuq3" path="res://area_3d21.gd" id="29_1n8ho"]
-[ext_resource type="Script" uid="uid://cxk01gqr7nv00" path="res://color_rect21.gd" id="30_uhr15"]
-[ext_resource type="Script" uid="uid://bys701drnvnf0" path="res://color_rect22.gd" id="32_g0a14"]
-[ext_resource type="Script" uid="uid://qjvqgmcduj86" path="res://color_rect23.gd" id="34_0yi3k"]
-[ext_resource type="Script" uid="uid://cuingfvkryoc7" path="res://color_rect24.gd" id="36_wvqk8"]
-[ext_resource type="Script" uid="uid://drix7o7nj2efh" path="res://color_rect25.gd" id="38_8wiew"]
+[ext_resource type="Texture2D" uid="uid://bm6jr62dd6q7t" path="res://INSIGNIA 4.png" id="34_0yi3k"]
+[ext_resource type="Script" uid="uid://6pgbroivtnb8" path="res://texture_rect9.gd" id="35_urrac"]
+[ext_resource type="Texture2D" uid="uid://d23lfxedxibf" path="res://INSIGNIA 5.png" id="36_wvqk8"]
+[ext_resource type="Script" uid="uid://d1ppquljr8qn1" path="res://texture_rect6.gd" id="37_rfkex"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -103,7 +100,7 @@ script/source = "extends ColorRect
 
 func _on_button_pressed() -> void:
 	hide() 
-	CerebroMisiones.m4.registrar_clic(\"Biblia2\")
+	CerebroMisiones.m5.registrar_clic(\"Biblia2\")
 "
 
 [sub_resource type="GDScript" id="GDScript_1n8ho"]
@@ -132,8 +129,33 @@ size = Vector3(1, 1.8480225, 0.6359863)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0yi3k"]
 size = Vector3(0.6213379, 0.75231934, 1.046875)
 
+[sub_resource type="GDScript" id="GDScript_77xge"]
+script/source = "extends Area3D
+
+func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
+	
+	# Comprobamos si el jugador hizo clic izquierdo
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		
+		# ¡MAGIA! Esto abre el navegador con el video
+		OS.shell_open(\"https://youtu.be/S55AaajQGHo?si=0f1nNvsvIABzx-Ap\")
+
+	CerebroMisiones.m5.registrar_clic(\"Binoculares2\")
+"
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_1n8ho"]
 size = Vector3(0.602417, 0.2484436, 0.5540924)
+
+[sub_resource type="GDScript" id="GDScript_f4u52"]
+script/source = "extends Area3D
+
+func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		
+		OS.shell_open(\"https://www.youtube.com/watch?v=PNiUxdQKEVs&t=1146s\")
+		
+	CerebroMisiones.m5.registrar_clic(\"Pintura2\")
+"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uhr15"]
 size = Vector3(0.8754883, 0.12903595, 0.9163513)
@@ -149,6 +171,46 @@ size = Vector3(14.212158, 5.522705, 0.001)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dlugu"]
 size = Vector3(0.001, 2.2038574, 3.2871094)
+
+[sub_resource type="GDScript" id="GDScript_8wiew"]
+script/source = "extends ColorRect
+
+func _on_button_pressed() -> void:
+	hide()
+	CerebroMisiones.m4.registrar_clic(\"Biblia\")
+"
+
+[sub_resource type="GDScript" id="GDScript_wvqk8"]
+script/source = "extends ColorRect
+
+func _on_button_pressed() -> void:
+	hide()
+	CerebroMisiones.m4.registrar_clic(\"Nube\")
+"
+
+[sub_resource type="GDScript" id="GDScript_rfkex"]
+script/source = "extends ColorRect
+
+func _on_button_pressed() -> void:
+	hide()
+	CerebroMisiones.m4.registrar_clic(\"Moises\")
+"
+
+[sub_resource type="GDScript" id="GDScript_urrac"]
+script/source = "extends ColorRect
+
+func _on_button_pressed() -> void:
+	hide()
+	CerebroMisiones.m4.registrar_clic(\"David\")
+"
+
+[sub_resource type="GDScript" id="GDScript_0yi3k"]
+script/source = "extends ColorRect
+
+func _on_button_pressed() -> void:
+	hide()
+	CerebroMisiones.m4.registrar_clic(\"Jesus\")
+"
 
 [node name="Node3D2" type="Node3D" unique_id=978302472]
 
@@ -2444,7 +2506,7 @@ transform = Transform3D(0.880618, 0, -0.47382694, 0, 1, 0, 0.47382694, 0, 0.8806
 transform = Transform3D(0.8908242, 0, -0.45434815, 0, 1, 0, 0.45434815, 0, 0.8908242, -27.834356, 0.7212938, -3.6709216)
 
 [node name="Area3D" type="Area3D" parent="Binoculares2" unique_id=737575881]
-script = ExtResource("26_2bpxn")
+script = SubResource("GDScript_77xge")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Binoculares2/Area3D" unique_id=706474602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03401184, 0.56095886, 0.042759895)
@@ -2454,7 +2516,7 @@ shape = SubResource("BoxShape3D_1n8ho")
 transform = Transform3D(1, 0, 0, 0, 0.99725276, -0.07407368, 0, 0.07407368, 0.99725276, -25.904099, 1.1967063, -6.9385657)
 
 [node name="Area3D" type="Area3D" parent="Pintura2" unique_id=1198435118]
-script = ExtResource("27_v5w4w")
+script = SubResource("GDScript_f4u52")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pintura2/Area3D" unique_id=942055933]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046875, 0.06837857, -0.058005333)
@@ -2511,7 +2573,7 @@ offset_right = 119.5
 offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("30_uhr15")
+script = SubResource("GDScript_8wiew")
 
 [node name="Label" type="Label" parent="Interfaz Biblia 1/ColorRect" unique_id=161803931]
 layout_mode = 0
@@ -2548,7 +2610,7 @@ offset_right = 100.0
 offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("32_g0a14")
+script = SubResource("GDScript_wvqk8")
 
 [node name="Label" type="Label" parent="Interfaz Nube/ColorRect" unique_id=413750318]
 layout_mode = 0
@@ -2584,7 +2646,7 @@ offset_right = 142.0
 offset_bottom = 57.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("34_0yi3k")
+script = SubResource("GDScript_rfkex")
 
 [node name="Label" type="Label" parent="Interfaz Moises/ColorRect" unique_id=1907506778]
 layout_mode = 0
@@ -2621,7 +2683,7 @@ offset_right = 143.0
 offset_bottom = 39.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("36_wvqk8")
+script = SubResource("GDScript_urrac")
 
 [node name="Label" type="Label" parent="Interfaz David/ColorRect" unique_id=1496336636]
 layout_mode = 0
@@ -2656,7 +2718,7 @@ offset_right = 150.25
 offset_bottom = 51.75
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("38_8wiew")
+script = SubResource("GDScript_0yi3k")
 
 [node name="Label" type="Label" parent="Interfaz Jesus/ColorRect" unique_id=563169894]
 layout_mode = 0
@@ -2678,6 +2740,48 @@ offset_right = 295.25
 offset_bottom = 33.75
 text = "X"
 
+[node name="Insignia 4" type="CanvasLayer" parent="." unique_id=1906016098]
+
+[node name="TextureRect" type="TextureRect" parent="Insignia 4" unique_id=2058303399]
+visible = false
+offset_left = 41.000004
+offset_top = 37.0
+offset_right = 2041.0
+offset_bottom = 1090.0
+scale = Vector2(0.53710616, 0.546269)
+texture = ExtResource("34_0yi3k")
+script = ExtResource("35_urrac")
+
+[node name="Button" type="Button" parent="Insignia 4/TextureRect" unique_id=603628796]
+layout_mode = 0
+offset_left = 1377.7537
+offset_top = 91.53
+offset_right = 1395.7537
+offset_bottom = 122.53
+scale = Vector2(6.714286, 3.2)
+text = "X"
+
+[node name="Insignia 5" type="CanvasLayer" parent="." unique_id=464315754]
+
+[node name="TextureRect" type="TextureRect" parent="Insignia 5" unique_id=264173235]
+visible = false
+offset_left = 35.0
+offset_top = 28.0
+offset_right = 2035.0
+offset_bottom = 1081.0
+scale = Vector2(0.54059714, 0.56008595)
+texture = ExtResource("36_wvqk8")
+script = ExtResource("37_rfkex")
+
+[node name="Button" type="Button" parent="Insignia 5/TextureRect" unique_id=5353986]
+layout_mode = 0
+offset_left = 1391.0544
+offset_top = 85.70113
+offset_right = 1409.0544
+offset_bottom = 116.70113
+scale = Vector2(7.117647, 3.190909)
+text = "X"
+
 [connection signal="input_event" from="MAPA 4 Y 52/David/Area3D" to="MAPA 4 Y 52/David/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="MAPA 4 Y 52/Jesus/Area3D" to="MAPA 4 Y 52/Jesus/Area3D" method="_on_input_event"]
 [connection signal="body_entered" from="Portal hacia 6" to="CharacterBody3D" method="_on_portal_hacia_6_body_entered"]
@@ -2697,6 +2801,8 @@ text = "X"
 [connection signal="pressed" from="Interfaz Moises/ColorRect/Label/Button" to="Interfaz Moises/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz David/ColorRect/Button" to="Interfaz David/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz Jesus/ColorRect/Button" to="Interfaz Jesus/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Insignia 4/TextureRect/Button" to="Insignia 4/TextureRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Insignia 5/TextureRect/Button" to="Insignia 5/TextureRect" method="_on_button_pressed"]
 
 [editable path="Seccion1/Fondo mapa 3"]
 [editable path="MAPA 4 Y 52"]

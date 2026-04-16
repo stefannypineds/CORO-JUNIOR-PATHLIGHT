@@ -7,3 +7,5 @@ func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3,
 		
 		# ¡MAGIA! Esto abre el navegador con el video
 		OS.shell_open("https://youtu.be/S55AaajQGHo?si=0f1nNvsvIABzx-Ap")
+
+	CerebroMisiones.m5.registrar_clic("Binoculares2")
