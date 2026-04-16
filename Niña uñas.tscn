@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cwpkiwpcssidq"]
+
+[ext_resource type="PackedScene" uid="uid://cjymahnf0a1yc" path="res://Niña manos.glb" id="1_ecn85"]
+
+[node name="Node3D" type="Node3D" unique_id=1101002888]
+
+[node name="Niña manos" parent="." unique_id=1151207999 instance=ExtResource("1_ecn85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.046189904, -0.021534085, -0.03680873)
+
+[node name="Skeleton3D" parent="Niña manos/Armature_001" parent_id_path=PackedInt32Array(1151207999, 247421142) index="0" unique_id=676040714]
+bones/0/position = Vector3(0.01525332, -0.10059784, -5.0436554)
+bones/0/rotation = Quaternion(-0.71785986, 0.02766029, -0.068102375, 0.69229627)
+bones/1/rotation = Quaternion(-0.030690257, -0.00669841, 0.018756459, 0.9993305)
+bones/2/rotation = Quaternion(0.014010127, -0.0028429248, 0.030575149, 0.99943024)
+bones/3/rotation = Quaternion(0.014076891, -0.0018941603, 0.030421704, 0.99943626)
+bones/4/rotation = Quaternion(0.067902245, -0.024415335, 0.026304677, 0.99704635)
+bones/5/rotation = Quaternion(-0.10842992, -0.033376027, -0.025905771, 0.99320585)
+bones/7/rotation = Quaternion(-0.66771966, -0.3075526, 0.5807096, -0.34976897)
+bones/8/rotation = Quaternion(0.30732253, 0.12031445, -0.02449835, 0.943651)
+bones/9/rotation = Quaternion(0.017976763, -0.002183922, 0.18856649, 0.98189354)
+bones/10/rotation = Quaternion(0.08037128, 0.057695225, -0.038910344, 0.9943328)
+bones/11/rotation = Quaternion(0.04238009, 0.011755203, 0.30762517, 0.9504907)
+bones/12/rotation = Quaternion(0.0803228, -0.015957708, -0.17541443, 0.9810828)
+bones/13/rotation = Quaternion(-0.0869954, -0.018139571, 0.017348802, 0.9958925)
+bones/15/rotation = Quaternion(0.11431464, -0.017583087, 0.11329575, 0.9868065)
+bones/16/rotation = Quaternion(0.1480792, 0.00039215782, -0.0012900227, 0.9889746)
+bones/17/rotation = Quaternion(0.08282445, 0.003625938, 0.05092681, 0.9952555)
+bones/19/rotation = Quaternion(0.58645236, -0.4323569, 0.5788403, 0.36617637)
+bones/20/rotation = Quaternion(0.36474597, -0.10920988, 0.01218289, 0.9246)
+bones/21/rotation = Quaternion(0.017443074, 0.0026681945, -0.19108723, 0.98141444)
+bones/22/rotation = Quaternion(0.13770576, -0.24503604, -0.043130778, 0.95871496)
+bones/23/rotation = Quaternion(0.034208626, -0.00090663176, -0.3454967, 0.9377958)
+bones/24/rotation = Quaternion(0.08875337, 0.019073825, 0.24516267, 0.9652224)
+bones/25/rotation = Quaternion(-0.05535774, 0.015238509, -0.011787569, 0.99828076)
+bones/27/rotation = Quaternion(0.114201464, 0.015494613, -0.108476736, 0.987396)
+bones/28/rotation = Quaternion(0.14504343, 0.0008628624, -0.038445413, 0.9886777)
+bones/29/rotation = Quaternion(0.0812063, -0.0013255802, -0.02056733, 0.9964843)
+bones/31/rotation = Quaternion(0.09840182, 0.038298544, 0.98228914, -0.15478532)
+bones/32/rotation = Quaternion(-0.1359263, 0.0817196, 0.060872328, 0.9854647)
+bones/33/rotation = Quaternion(0.44784483, -0.11816229, -0.054025963, 0.88462085)
+bones/34/rotation = Quaternion(0.38793898, -0.15408425, 0.0587475, 0.90681326)
+bones/36/rotation = Quaternion(-0.045944475, 0.008243373, 0.9951946, -0.08607458)
+bones/37/rotation = Quaternion(-0.19027583, 0.08283083, 0.011031762, 0.9781679)
+bones/38/rotation = Quaternion(0.53410566, 0.11543885, -0.17907003, 0.8181315)
+bones/39/rotation = Quaternion(0.38070226, 0.1675259, -0.061083514, 0.9073422)
+
+[editable path="Niña manos"]

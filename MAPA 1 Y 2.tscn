@@ -234,7 +234,7 @@ shape = SubResource("BoxShape3D_pr80j")
 transform = Transform3D(0.6682352, 0, -0.74395007, 0, 1, 0, 0.74395007, 0, 0.6682352, 12.802973, 2.7919655, 17.141123)
 
 [node name="CharacterBody3D" parent="." unique_id=595004463 instance=ExtResource("2_wmqtt")]
-transform = Transform3D(-0.027625069, 0, 0.99961835, 0, 1, 0, -0.99961835, 0, -0.027625069, 22.608624, 0.63167286, 22.454422)
+transform = Transform3D(-0.027625069, 0, 0.99961835, 0, 1, 0, -0.99961835, 0, -0.027625069, 22.608624, 0.4351393, 22.454422)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1778515329]
 light_energy = 1.5
@@ -266,7 +266,7 @@ transform = Transform3D(1, -4.5788865e-06, 2.9802322e-08, 6.825074e-08, 0.999997
 shape = SubResource("BoxShape3D_n5ty3")
 
 [node name="CharacterBody3D2" parent="." unique_id=544758080 instance=ExtResource("6_ieipr")]
-transform = Transform3D(-0.033626102, 0, 0.9994345, 0, 1, 0, -0.9994345, 0, -0.033626102, 22.521473, 0.63847303, 21.524885)
+transform = Transform3D(-0.033626102, 0, 0.9994345, 0, 1, 0, -0.9994345, 0, -0.033626102, 22.521473, 0.5078525, 21.524885)
 
 [node name="Interfaz Biblia 1" type="CanvasLayer" parent="." unique_id=1863494185]
 
