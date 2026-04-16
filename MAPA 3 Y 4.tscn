@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://d3dun3bx62lv2" path="res://MODELOS/MAPA FONDO/FONDO 2/MAPA FONDO 2.glb" id="14_4y8sk"]
 [ext_resource type="Texture2D" uid="uid://vq8a53028tgl" path="res://MODELOS/Niebla 2.webp" id="14_wvqk8"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="15_rfkex"]
-[ext_resource type="Script" uid="uid://codviaqne8qcn" path="res://hacia_mapa_4_y_5.gd" id="16_8wiew"]
+[ext_resource type="Script" path="res://hacia_mapa_4_y_5.gd" id="16_8wiew"]
 [ext_resource type="PackedScene" uid="uid://w3x3ox0jwsfv" path="res://MODELOS/MAPA 1 Y 2/Biblia.glb" id="18_2bpxn"]
 [ext_resource type="PackedScene" uid="uid://qnlgfsu8yud1" path="res://MODELOS/MAPA 1 Y 2/Binoculares.glb" id="19_v5w4w"]
 [ext_resource type="PackedScene" uid="uid://cbm34q5j54ldg" path="res://MODELOS/MAPA 1 Y 2/Pintura.glb" id="20_1n8ho"]
@@ -28,6 +28,10 @@
 [ext_resource type="PackedScene" uid="uid://bmw53gnklgvy7" path="res://MODELOS/MAPA 3/Familia.glb" id="24_77xge"]
 [ext_resource type="Script" uid="uid://hy82g6njdkru" path="res://area_3d8.gd" id="26_2bpxn"]
 [ext_resource type="Script" uid="uid://dxixetftuwwcd" path="res://area_3d9.gd" id="27_v5w4w"]
+[ext_resource type="Texture2D" uid="uid://bm6jr62dd6q7t" path="res://INSIGNIA 4.png" id="29_uhr15"]
+[ext_resource type="Script" uid="uid://d36hgqbu68gt" path="res://texture_rect2.gd" id="30_bm6qn"]
+[ext_resource type="Texture2D" uid="uid://d23lfxedxibf" path="res://INSIGNIA 5.png" id="31_g0a14"]
+[ext_resource type="Script" uid="uid://c18y2b4546kvk" path="res://texture_rect4.gd" id="32_77xge"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -113,7 +117,7 @@ environment = SubResource("Environment_v1v01")
 [node name="Fondo mapa 3" parent="Seccion1" unique_id=2121909699 instance=ExtResource("1_ckwyc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.180943, 0.37781048, -5.516509)
 
-[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=1842946025]
+[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=746569204]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030014038, 1.9073486e-06, 0.083227634)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Seccion1" unique_id=1737390671]
@@ -179,7 +183,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.62981, 0.7545209, 21.2055
 [node name="MAPA 4 Y 52" parent="." unique_id=1723137936 instance=ExtResource("8_uhr15")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.142197, 0.44542027, -5.5192122)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 4 Y 52/MAPA 4 Y 5" parent_id_path=PackedInt32Array(1723137936, 833492811) index="0" unique_id=1850405585]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 4 Y 52/MAPA 4 Y 5" parent_id_path=PackedInt32Array(1723137936, 238985656) index="0" unique_id=1850405585]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA 4 Y 52/MAPA 4 Y 5/StaticBody3D" unique_id=873128335]
 shape = SubResource("ConcavePolygonShape3D_nquu4")
@@ -202,7 +206,7 @@ transform = Transform3D(0.50467825, 0, -0.8633075, 0, 1, 0, 0.8633075, 0, 0.5046
 [node name="Puente2" parent="." unique_id=1304290962 instance=ExtResource("10_g0a14")]
 transform = Transform3D(0.34588787, 0, -0.938276, 0, 1, 0, 0.938276, 0, 0.34588787, -50.592777, 0, -20.043455)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(1304290962, 1422453384) index="0" unique_id=540410094]
+[node name="StaticBody3D" type="StaticBody3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(1304290962, 1600469754) index="0" unique_id=540410094]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puente2/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60/StaticBody3D" unique_id=148832648]
 shape = SubResource("ConcavePolygonShape3D_p8ue7")
@@ -210,7 +214,7 @@ shape = SubResource("ConcavePolygonShape3D_p8ue7")
 [node name="Puente3" parent="." unique_id=262785027 instance=ExtResource("10_g0a14")]
 transform = Transform3D(-0.3355339, 0, 0.9420283, 0, 1, 0, -0.9420283, 0, -0.3355339, -51.969166, 0, -23.746542)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Puente3/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(262785027, 1422453384) index="0" unique_id=1798111380]
+[node name="StaticBody3D" type="StaticBody3D" parent="Puente3/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60" parent_id_path=PackedInt32Array(262785027, 1600469754) index="0" unique_id=1798111380]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puente3/tripo_node_a714cf0f-c74f-4be0-9b7f-090f90b4be60/StaticBody3D" unique_id=847663710]
 shape = SubResource("ConcavePolygonShape3D_uqkuc")
@@ -218,7 +222,7 @@ shape = SubResource("ConcavePolygonShape3D_uqkuc")
 [node name="Canoa baja calidad" parent="." unique_id=1712415807 instance=ExtResource("12_0yi3k")]
 transform = Transform3D(0.8935125, 0, 0.44903833, 0, 1, 0, -0.44903833, 0, 0.8935125, -10.381029, 0.28720677, 4.2728705)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13" parent_id_path=PackedInt32Array(1712415807, 1286266184) index="0" unique_id=1960663743]
+[node name="StaticBody3D" type="StaticBody3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13" parent_id_path=PackedInt32Array(1712415807, 1878337873) index="0" unique_id=1960663743]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Canoa baja calidad/tripo_node_6245126a-0814-4384-92db-79d8d68dac13/StaticBody3D" unique_id=873884067]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014982224, 0, -0.0015692711)
@@ -2392,6 +2396,48 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.225193, 1.9799259, -14.64
 transform = Transform3D(0.5506993, 0, -0.8347037, 0, 1, 0, 0.8347037, 0, 0.5506993, -0.7101021, -0.5582528, -3.3838978)
 shape = SubResource("BoxShape3D_dlugu")
 
+[node name="Insignia 4" type="CanvasLayer" parent="." unique_id=1988579470]
+
+[node name="TextureRect" type="TextureRect" parent="Insignia 4" unique_id=988744651]
+visible = false
+offset_left = 52.999996
+offset_top = 39.0
+offset_right = 2053.0
+offset_bottom = 1092.0
+scale = Vector2(0.5159619, 0.5500904)
+texture = ExtResource("29_uhr15")
+script = ExtResource("30_bm6qn")
+
+[node name="Button" type="Button" parent="Insignia 4/TextureRect" unique_id=477473659]
+layout_mode = 0
+offset_left = 1368.7091
+offset_top = 132.85764
+offset_right = 1386.7091
+offset_bottom = 163.85764
+scale = Vector2(4.523761, 2.268336)
+text = "X"
+
+[node name="Insignia 5" type="CanvasLayer" parent="." unique_id=1195645956]
+
+[node name="TextureRect" type="TextureRect" parent="Insignia 5" unique_id=805220770]
+visible = false
+offset_left = 32.0
+offset_top = 30.0
+offset_right = 2032.0
+offset_bottom = 1083.0
+scale = Vector2(0.53750265, 0.55733186)
+texture = ExtResource("31_g0a14")
+script = ExtResource("32_77xge")
+
+[node name="Button" type="Button" parent="Insignia 5/TextureRect" unique_id=370437114]
+layout_mode = 0
+offset_left = 1311.6213
+offset_top = 125.598404
+offset_right = 1329.6213
+offset_bottom = 156.5984
+scale = Vector2(4.118034, 2.0362408)
+text = "X"
+
 [connection signal="body_entered" from="Portal hacia 6" to="CharacterBody3D" method="_on_portal_hacia_6_body_entered"]
 [connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz 2/ColorRect/Button" to="Interfaz 2/ColorRect" method="_on_button_pressed"]
@@ -2399,6 +2445,8 @@ shape = SubResource("BoxShape3D_dlugu")
 [connection signal="input_event" from="Pintura/Area3D" to="Pintura/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Binoculares2/Area3D" to="Binoculares2/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Pintura2/Area3D" to="Pintura2/Area3D" method="_on_input_event"]
+[connection signal="pressed" from="Insignia 4/TextureRect/Button" to="Insignia 4/TextureRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Insignia 5/TextureRect/Button" to="Insignia 5/TextureRect" method="_on_button_pressed"]
 
 [editable path="Seccion1/Fondo mapa 3"]
 [editable path="MAPA 4 Y 52"]

@@ -7,24 +7,28 @@
 [ext_resource type="PackedScene" uid="uid://cu54xoc21qaou" path="res://MODELOS/MAPA 7 Y 8/Letrero 7.glb" id="4_f7hgi"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="5_88omp"]
 [ext_resource type="PackedScene" uid="uid://cbm34q5j54ldg" path="res://MODELOS/MAPA 1 Y 2/Pintura.glb" id="5_j0ig6"]
-[ext_resource type="Script" uid="uid://bykpl7dv5vdjh" path="res://area_3d12.gd" id="5_jadkt"]
+[ext_resource type="Script" uid="uid://bi0v0y5e4aq2e" path="res://area_3d17.gd" id="5_t0tnf"]
 [ext_resource type="PackedScene" uid="uid://dgkt2su5oabm0" path="res://MODELOS/MAPA 7 Y 8/Modelo+corazon.glb" id="6_wgsdw"]
 [ext_resource type="Script" uid="uid://brq17m3ay072v" path="res://area_3d11.gd" id="7_ca3ql"]
 [ext_resource type="PackedScene" uid="uid://dvnls3d7dsu3o" path="res://MODELOS/MAPA 7 Y 8/Templo.glb" id="7_oap3w"]
 [ext_resource type="PackedScene" uid="uid://w3x3ox0jwsfv" path="res://MODELOS/MAPA 1 Y 2/Biblia.glb" id="8_ctyqp"]
 [ext_resource type="PackedScene" uid="uid://duxdgb8kt3ydy" path="res://MODELOS/MAPA 7 Y 8/bread+loaves+3d+model.glb" id="9_11ok7"]
+[ext_resource type="Script" uid="uid://blfja8q1kbha5" path="res://area_3d18.gd" id="9_ke4pg"]
 [ext_resource type="Script" uid="uid://c1gurxlw1immd" path="res://area_3d1.gd" id="9_oap3w"]
-[ext_resource type="Script" uid="uid://cv4dafxp6pld8" path="res://area_3d3.gd" id="9_wumo3"]
-[ext_resource type="Script" uid="uid://h0vrmqte5dr4" path="res://area_3d13.gd" id="9_yox73"]
 [ext_resource type="PackedScene" uid="uid://ck15ig2g6bsbg" path="res://MODELOS/MAPA 7 Y 8/Canasta peces.glb" id="10_wumo3"]
 [ext_resource type="PackedScene" uid="uid://d4dvcpyrglsyf" path="res://MODELOS/MAPA 7 Y 8/Letrero 8a.glb" id="11_rag1x"]
 [ext_resource type="PackedScene" uid="uid://iqfklldfsit7" path="res://MODELOS/MAPA 7 Y 8/Tesoros.glb" id="12_eqtjf"]
 [ext_resource type="PackedScene" uid="uid://bnt80415vrri8" path="res://MODELOS/MAPA 7 Y 8/Estrella.glb" id="13_ca3ql"]
 [ext_resource type="Script" uid="uid://u7ox50hdcow2" path="res://area_3d.gd" id="13_rag1x"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="14_f7hgi"]
+[ext_resource type="Script" uid="uid://dxfj6i33uxvml" path="res://area_3d19.gd" id="15_ke4pg"]
 [ext_resource type="Script" uid="uid://civqabr566kal" path="res://color_rect1.gd" id="17_ctyqp"]
 [ext_resource type="Script" uid="uid://bmjy2t1na4g0n" path="res://color_rect3.gd" id="18_ctyqp"]
 [ext_resource type="Script" uid="uid://65vsc3q8stcc" path="res://color_rect.gd" id="20_wumo3"]
+[ext_resource type="Texture2D" uid="uid://dfcp5kxw71p7j" path="res://INSIGNIA 7.png" id="26_peuw5"]
+[ext_resource type="Script" uid="uid://da15vet7yo57u" path="res://texture_rect7.gd" id="27_t0tnf"]
+[ext_resource type="Texture2D" uid="uid://w06bra1stgdd" path="res://INSIGNIA 8.png" id="28_ke4pg"]
+[ext_resource type="Script" uid="uid://dui7q11qxxa0v" path="res://texture_rect8.gd" id="29_yoddv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -78,14 +82,8 @@ backface_collision = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_ca3ql"]
 size = Vector3(0.52453613, 0.15148926, 0.648468)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_yox73"]
-size = Vector3(0.54919434, 0.25897217, 0.6421814)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_jadkt"]
 size = Vector3(0.7865906, 0.11102295, 0.8959961)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_8r3u3"]
-size = Vector3(0.9239502, 0.090270996, 1.0125732)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rag1x"]
 size = Vector3(1, 1.0292358, 0.77075195)
@@ -102,10 +100,11 @@ size = Vector3(0.001, 12.099121, 13.975586)
 [sub_resource type="BoxShape3D" id="BoxShape3D_g6kva"]
 size = Vector3(0.001, 12.099121, 13.975586)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ctyqp"]
-size = Vector3(1.1872559, 0.7854004, 0.94873047)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_11ok7"]
+size = Vector3(1.3430176, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yoddv"]
+size = Vector3(1.3116455, 0.2939453, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eqtjf"]
 size = Vector3(0.9513092, 0.30529785, 1)
@@ -196,15 +195,16 @@ script = ExtResource("4_eqtjf")
 transform = Transform3D(1, 0, 0, 0, 0.99997693, 0, 0, 0, 1, -0.0014076233, 0.50738525, -0.01260376)
 shape = SubResource("BoxShape3D_ca3ql")
 
-[node name="Binoculares" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D" unique_id=357605870 instance=ExtResource("3_ajm1c")]
-transform = Transform3D(0.41555026, 0.2693035, 0.80450654, -0.1592316, 0.574169, -0.39500841, -0.89552367, 0.02287291, 0.44355112, -4.4124336, 0.9643688, 8.437305)
+[node name="Binoculares2" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=96966356 instance=ExtResource("3_ajm1c")]
+transform = Transform3D(0.68827915, 0.22043027, 0.6368814, -0.32810295, 0.59147674, -0.15375227, -0.64700866, -0.06545155, 0.7554748, 31.27977, 5.4431705, 14.506229)
 
-[node name="Area3D" type="Area3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D/Binoculares" unique_id=831390336]
-script = ExtResource("5_jadkt")
+[node name="Area3D" type="Area3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares2" unique_id=699889130]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("5_t0tnf")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D/Binoculares/Area3D" unique_id=269453331]
-transform = Transform3D(1, 4.4703484e-08, 5.9604645e-08, -2.9802322e-08, 0.9999999, -2.5331974e-07, -2.9802322e-08, 0, 1, 0.025465012, 0.5967064, -0.04273987)
-shape = SubResource("BoxShape3D_yox73")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares2/Area3D" unique_id=2105519755]
+transform = Transform3D(1, 0, 0, 0, 0.99997693, 0, 0, 0, 1, -0.0014076233, 0.50738525, -0.01260376)
+shape = SubResource("BoxShape3D_ca3ql")
 
 [node name="Letrero 7" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=624312630 instance=ExtResource("4_f7hgi")]
 transform = Transform3D(0.18192665, 0, 0.98331213, 0, 1, 0, -0.98331213, 0, 0.18192665, 29.217506, 4.7890196, 7.4944897)
@@ -220,20 +220,22 @@ script = ExtResource("7_ca3ql")
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0.04512024, 0.041168213, -0.05199814)
 shape = SubResource("BoxShape3D_jadkt")
 
-[node name="Pintura" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura" unique_id=1864827140 instance=ExtResource("5_j0ig6")]
-transform = Transform3D(0.6348893, 0.22346771, 0, -0.22063471, 0.6268405, 0.10683409, 0.035470296, -0.10077391, 0.6645365, 5.7481575, 0.81689835, 13.41296)
+[node name="Pintura2" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=1791872358 instance=ExtResource("5_j0ig6")]
+transform = Transform3D(0.64664674, 0.18500805, -0.025348265, -0.17240334, 0.62659043, 0.1751684, 0.07174672, -0.16179894, 0.6493811, 31.671665, 5.7298117, 15.285309)
 
-[node name="Area3D" type="Area3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura/Pintura" unique_id=182007445]
-script = ExtResource("9_yox73")
+[node name="Area3D" type="Area3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura2" unique_id=1018313677]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+script = ExtResource("9_ke4pg")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura/Pintura/Area3D" unique_id=885723465]
-transform = Transform3D(1.0000002, -1.21071935e-08, 1.4901161e-07, -5.6810677e-08, 1, 7.003546e-07, -1.9557774e-06, 7.4505806e-08, 0.9999963, 0.0727005, 0.0419693, -0.06399536)
-shape = SubResource("BoxShape3D_8r3u3")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura2/Area3D" unique_id=627782720]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0.04512024, 0.041168213, -0.05199814)
+shape = SubResource("BoxShape3D_jadkt")
 
 [node name="Modelo+corazon" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=845930955 instance=ExtResource("6_wgsdw")]
 transform = Transform3D(0.23017025, 0, 0.5676936, 0, 0.61258, 0, -0.5676936, 0, 0.23017025, 28.503365, 6.3896475, 13.403671)
 
 [node name="Area3D" type="Area3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Modelo+corazon" unique_id=1625573480 node_paths=PackedStringArray("cuadro_texto")]
+transform = Transform3D(0.83485156, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1.0669587, -0.044475555, -0.02916336, -0.060764313)
 script = ExtResource("13_rag1x")
 cuadro_texto = NodePath("../../../../../Interfaz 4/ColorRect")
 
@@ -273,17 +275,6 @@ shape = SubResource("BoxShape3D_g6kva")
 [node name="Biblia" parent="." unique_id=359187133 instance=ExtResource("8_ctyqp")]
 transform = Transform3D(0.4138758, 0, 0.6807596, 0, 0.79669744, 0, -0.6807596, 0, 0.4138758, 22.137709, 7.4479823, -33.16147)
 
-[node name="Biblia" parent="Biblia" unique_id=1713950616 instance=ExtResource("8_ctyqp")]
-transform = Transform3D(0.45638543, 0.2095181, 0.6184995, -0.06740001, 0.7656611, -0.20963538, -0.64953566, 0.06776419, 0.4563315, -6.2623444, 0.663002, 10.035009)
-
-[node name="Area3D" type="Area3D" parent="Biblia/Biblia" unique_id=1096397961 node_paths=PackedStringArray("cuadro_texto")]
-script = ExtResource("9_wumo3")
-cuadro_texto = NodePath("../../../Interfaz 2/ColorRect")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Biblia/Biblia/Area3D" unique_id=1510419836]
-transform = Transform3D(0.99999213, -1.4901161e-08, -8.940697e-08, -7.748604e-07, 0.9999999, 5.2154064e-08, -4.708767e-06, 3.7252903e-08, 0.9999999, 0.0064811707, -0.10730934, -0.025634766)
-shape = SubResource("BoxShape3D_ctyqp")
-
 [node name="Area3D" type="Area3D" parent="Biblia" unique_id=1102011465 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("9_oap3w")
 cuadro_texto = NodePath("../../Interfaz 1/ColorRect")
@@ -291,6 +282,17 @@ cuadro_texto = NodePath("../../Interfaz 1/ColorRect")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Biblia/Area3D" unique_id=1666420737]
 transform = Transform3D(1, 0, 2.9802322e-08, 0, 0.48270035, 0, -2.9802322e-08, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_11ok7")
+
+[node name="Biblia2" parent="." unique_id=1136988548 instance=ExtResource("8_ctyqp")]
+transform = Transform3D(0.35683855, 0.17455094, 0.40097126, -0.17829552, 0.5306225, -0.072319366, -0.3993202, -0.08094029, 0.39060426, 26.55329, 7.955532, -24.695244)
+
+[node name="Area3D" type="Area3D" parent="Biblia2" unique_id=1115936426 node_paths=PackedStringArray("cuadro_texto")]
+script = ExtResource("15_ke4pg")
+cuadro_texto = NodePath("../../Interfaz 2/ColorRect")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Biblia2/Area3D" unique_id=151642048]
+transform = Transform3D(1, 7.450581e-09, 2.9802322e-08, 3.7252903e-08, 1, 1.4901161e-08, -2.9802322e-08, 0, 1, 0.0018043518, 0.13171005, -0.062459946)
+shape = SubResource("BoxShape3D_yoddv")
 
 [node name="bread+loaves+3d+model" parent="." unique_id=449541418 instance=ExtResource("9_11ok7")]
 transform = Transform3D(0.30140483, 0, 0.9534963, 0, 1, 0, -0.9534963, 0, 0.30140483, 22.661226, 7.746619, -32.353428)
@@ -529,22 +531,23 @@ script = ExtResource("18_ctyqp")
 
 [node name="Label" type="Label" parent="Interfaz 2/ColorRect" unique_id=696644676]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 20.0
-offset_right = 319.0
-offset_bottom = 121.0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 321.0
+offset_bottom = 124.0
 theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 text = "“Tú creaste las delicadas partes internas 
 de mi cuerpo y me entretejiste en el 
 vientre de mi madre.\"
 Salmos 139:13-14 "
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Interfaz 2/ColorRect/Label" unique_id=1546646309]
 layout_mode = 0
 offset_left = 311.0
-offset_top = -18.0
+offset_top = -23.0
 offset_right = 341.0
-offset_bottom = 13.0
+offset_bottom = 8.0
 text = "x"
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="." unique_id=323752113]
@@ -638,18 +641,62 @@ offset_right = 198.0
 offset_bottom = 34.0
 text = "X"
 
+[node name="Insignia 7" type="CanvasLayer" parent="." unique_id=393818649]
+
+[node name="TextureRect" type="TextureRect" parent="Insignia 7" unique_id=446434759]
+visible = false
+offset_left = 31.0
+offset_top = 28.000002
+offset_right = 2031.0
+offset_bottom = 1081.0
+scale = Vector2(0.5394872, 0.5592588)
+texture = ExtResource("26_peuw5")
+script = ExtResource("27_t0tnf")
+
+[node name="Button" type="Button" parent="Insignia 7/TextureRect" unique_id=1937585245]
+layout_mode = 0
+offset_left = 1321.6254
+offset_top = 78.67556
+offset_right = 1339.6254
+offset_bottom = 109.67556
+scale = Vector2(5.3371634, 2.7078137)
+text = "X"
+
+[node name="Insignia 8" type="CanvasLayer" parent="." unique_id=1084651656]
+
+[node name="TextureRect" type="TextureRect" parent="Insignia 8" unique_id=1537582698]
+visible = false
+offset_left = 30.0
+offset_top = 31.000004
+offset_right = 2030.0
+offset_bottom = 1084.0
+scale = Vector2(0.54295504, 0.5577946)
+texture = ExtResource("28_ke4pg")
+script = ExtResource("29_yoddv")
+
+[node name="Button" type="Button" parent="Insignia 8/TextureRect" unique_id=263934624]
+layout_mode = 0
+offset_left = 1342.6526
+offset_top = 112.94479
+offset_right = 1360.6526
+offset_bottom = 143.9448
+scale = Vector2(4.8842134, 2.6194074)
+text = "X"
+
 [connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D" method="_on_input_event"]
-[connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D/Binoculares/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D/Binoculares/Area3D" method="_on_input_event"]
+[connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares2/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares2/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura/Area3D" method="_on_input_event"]
-[connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura/Pintura/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura/Pintura/Area3D" method="_on_input_event"]
+[connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura2/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura2/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Modelo+corazon/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Modelo+corazon/Area3D" method="_on_input_event"]
-[connection signal="input_event" from="Biblia/Biblia/Area3D" to="Biblia/Biblia/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Biblia/Area3D" to="Biblia/Area3D" method="_on_input_event"]
+[connection signal="input_event" from="Biblia2/Area3D" to="Biblia2/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Canasta peces/Area3D" to="Canasta peces/Area3D" method="_on_input_event"]
 [connection signal="pressed" from="Interfaz 1/ColorRect/Button" to="Interfaz 1/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz 2/ColorRect/Label/Button" to="Interfaz 2/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz 3/ColorRect/Button" to="Interfaz 3/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz 4/ColorRect/Button" to="Interfaz 4/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Insignia 7/TextureRect/Button" to="Insignia 7/TextureRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Insignia 8/TextureRect/Button" to="Insignia 8/TextureRect" method="_on_button_pressed"]
 
 [editable path="MAPA 62"]
 [editable path="MAPA ESCALA sec 7 y 8"]

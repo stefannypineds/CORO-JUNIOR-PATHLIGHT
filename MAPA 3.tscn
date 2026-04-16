@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dvgy244nscapg" path="res://MODELOS/MAPA 4 Y 5/Canoa baja calidad.glb" id="14_k4wfn"]
 [ext_resource type="Texture2D" uid="uid://vq8a53028tgl" path="res://MODELOS/Niebla 2.webp" id="15_qy7de"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="16_6hbkg"]
-[ext_resource type="Script" uid="uid://codviaqne8qcn" path="res://hacia_mapa_4_y_5.gd" id="17_2pv8m"]
+[ext_resource type="Script" path="res://hacia_mapa_4_y_5.gd" id="17_2pv8m"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="17_7xj8a"]
 [ext_resource type="PackedScene" uid="uid://bhk4xldcg0qnr" path="res://MODELOS/MAPA 3/Familia orando.glb" id="18_5snh3"]
 [ext_resource type="Script" uid="uid://b18yx66jgj5os" path="res://familiaorando.gd" id="19_0jsfg"]
@@ -26,6 +26,8 @@
 [ext_resource type="PackedScene" uid="uid://cbm34q5j54ldg" path="res://MODELOS/MAPA 1 Y 2/Pintura.glb" id="22_rnjqh"]
 [ext_resource type="Script" uid="uid://h0vrmqte5dr4" path="res://area_3d13.gd" id="24_rnjqh"]
 [ext_resource type="Script" uid="uid://65vsc3q8stcc" path="res://color_rect.gd" id="24_wy8ug"]
+[ext_resource type="Texture2D" uid="uid://bvra1d8lkb1nq" path="res://INSIGNIA 3.png" id="27_5gx0d"]
+[ext_resource type="Script" uid="uid://d3esdgtfbe31r" path="res://texture_rect3.gd" id="28_n2sp5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -95,7 +97,7 @@ environment = SubResource("Environment_v1v01")
 [node name="Fondo mapa 3" parent="Seccion1" unique_id=2121909699 instance=ExtResource("3_01mhm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.180943, 0.37781048, -5.516509)
 
-[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=1842946025]
+[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=746569204]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030014038, 1.9073486e-06, 0.083227634)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Seccion1/Fondo mapa 3/MAPA 3" index="0" unique_id=1182644870]
@@ -1083,6 +1085,27 @@ offset_right = 255.5
 offset_bottom = 37.5
 text = "X"
 
+[node name="Insignia 3" type="CanvasLayer" parent="." unique_id=1459140018]
+
+[node name="TextureRect" type="TextureRect" parent="Insignia 3" unique_id=483960274]
+visible = false
+offset_left = 83.0
+offset_top = 65.0
+offset_right = 2083.0
+offset_bottom = 1118.0
+scale = Vector2(0.47381273, 0.48258117)
+texture = ExtResource("27_5gx0d")
+script = ExtResource("28_n2sp5")
+
+[node name="Button" type="Button" parent="Insignia 3/TextureRect" unique_id=896636593]
+layout_mode = 0
+offset_left = 1306.4233
+offset_top = 47.660385
+offset_right = 1324.4233
+offset_bottom = 78.660385
+scale = Vector2(5.7093625, 2.8454337)
+text = "X"
+
 [connection signal="input_event" from="Seccion1/StaticBody3D4/CollisionShape3D/Binoculares/Area3D" to="Seccion1/StaticBody3D4/CollisionShape3D/Binoculares/Area3D" method="_on_input_event"]
 [connection signal="body_entered" from="Portal hacia 4" to="CharacterBody3D" method="_on_hacia_mapa_4_y_5_body_entered"]
 [connection signal="input_event" from="Portal hacia 4/Familia orando/StaticBody3D" to="Portal hacia 4/Familia orando/StaticBody3D/CollisionShape3D" method="_on_static_body_3d_input_event"]
@@ -1091,5 +1114,6 @@ text = "X"
 [connection signal="input_event" from="Pintura/Area3D" to="Pintura/Area3D" method="_on_input_event"]
 [connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz 2/ColorRect/Button" to="Interfaz 2/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Insignia 3/TextureRect/Button" to="Insignia 3/TextureRect" method="_on_button_pressed"]
 
 [editable path="Seccion1/Fondo mapa 3"]

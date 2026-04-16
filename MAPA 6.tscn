@@ -23,6 +23,8 @@
 [ext_resource type="Script" uid="uid://douxjemcfkkdh" path="res://area_3d16.gd" id="18_n6yrs"]
 [ext_resource type="Script" uid="uid://s2hwi070wq5l" path="res://color_rectregalo.gd" id="19_4007m"]
 [ext_resource type="Script" uid="uid://bf6hk0dwmy471" path="res://color_rectflor.gd" id="20_itoc3"]
+[ext_resource type="Texture2D" uid="uid://b0yldb0ikoc2l" path="res://INSIGNIA 6.png" id="24_fkco4"]
+[ext_resource type="Script" uid="uid://ctldcjxbfj3em" path="res://texture_rect5.gd" id="25_gecxq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -835,6 +837,27 @@ offset_right = 462.0
 offset_bottom = 31.0
 text = "x"
 
+[node name="Insignia 6" type="CanvasLayer" parent="." unique_id=677285292]
+
+[node name="TextureRect" type="TextureRect" parent="Insignia 6" unique_id=1233408270]
+visible = false
+offset_left = 26.0
+offset_top = 31.0
+offset_right = 2026.0
+offset_bottom = 1084.0
+scale = Vector2(0.5473265, 0.56105036)
+texture = ExtResource("24_fkco4")
+script = ExtResource("25_gecxq")
+
+[node name="Button" type="Button" parent="Insignia 6/TextureRect" unique_id=470563016]
+layout_mode = 0
+offset_left = 1300.8688
+offset_top = 85.55381
+offset_right = 1318.8688
+offset_bottom = 116.55382
+scale = Vector2(5.5493703, 2.8530176)
+text = "X"
+
 [connection signal="input_event" from="modelo regalo/Area3D" to="modelo regalo/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Rosa/Area3D" to="Rosa/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Biblia/Area3D" to="Biblia/Area3D" method="_on_input_event"]
@@ -844,6 +867,7 @@ text = "x"
 [connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz2/ColorRect/Label/Button" to="Interfaz2/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz3/ColorRect/Label/Button" to="Interfaz3/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Insignia 6/TextureRect/Button" to="Insignia 6/TextureRect" method="_on_button_pressed"]
 
 [editable path="MAPA 4 Y 52"]
 [editable path="Casas baja calidad"]
