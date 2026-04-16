@@ -1083,8 +1083,6 @@ offset_right = 255.5
 offset_bottom = 37.5
 text = "X"
 
-[node name="Insignia 3" type="CanvasLayer" parent="." unique_id=925403278]
-
 [connection signal="input_event" from="Seccion1/StaticBody3D4/CollisionShape3D/Binoculares/Area3D" to="Seccion1/StaticBody3D4/CollisionShape3D/Binoculares/Area3D" method="_on_input_event"]
 [connection signal="body_entered" from="Portal hacia 4" to="CharacterBody3D" method="_on_hacia_mapa_4_y_5_body_entered"]
 [connection signal="input_event" from="Portal hacia 4/Familia orando/StaticBody3D" to="Portal hacia 4/Familia orando/StaticBody3D/CollisionShape3D" method="_on_static_body_3d_input_event"]
