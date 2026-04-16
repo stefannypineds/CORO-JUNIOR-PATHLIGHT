@@ -700,6 +700,12 @@ offset_bottom = 143.9448
 scale = Vector2(4.8842134, 2.6194074)
 text = "X"
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2033721478]
+light_energy = 1.5
+light_angular_distance = 74.69
+shadow_enabled = true
+shadow_bias = 2.957
+
 [connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares2/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares2/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Pintura/Area3D" method="_on_input_event"]
