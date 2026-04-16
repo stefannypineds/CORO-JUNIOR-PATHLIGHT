@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="14_4a02i"]
 [ext_resource type="PackedScene" uid="uid://cbm34q5j54ldg" path="res://MODELOS/MAPA 1 Y 2/Pintura.glb" id="14_4007m"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="15_jmva6"]
-[ext_resource type="Script" uid="uid://dh6w836cm4ycy" path="res://color_rect2.gd" id="16_1ipgx"]
 [ext_resource type="Script" uid="uid://dfhxf163o34ps" path="res://area_3d15.gd" id="16_fpnkm"]
 [ext_resource type="Script" uid="uid://douxjemcfkkdh" path="res://area_3d16.gd" id="18_n6yrs"]
 [ext_resource type="Script" uid="uid://s2hwi070wq5l" path="res://color_rectregalo.gd" id="19_4007m"]
@@ -84,6 +83,14 @@ size = Vector3(1, 0.15722656, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_swncp"]
 size = Vector3(1, 13.067505, 12.394531)
 
+[sub_resource type="GDScript" id="GDScript_rw4hq"]
+script/source = "extends ColorRect
+
+func _on_button_pressed() -> void:
+	hide()
+	CerebroMisiones.m6.registrar_clic(\"Biblia\")
+"
+
 [node name="Node3D" type="Node3D" unique_id=978302472]
 
 [node name="Seccion1" type="Node3D" parent="." unique_id=561212832]
@@ -137,7 +144,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.62981, 0.7545209, 21.2055
 [node name="MAPA 4 Y 52" parent="." unique_id=1723137936 instance=ExtResource("3_wl5jl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.26569, 0.42946243, -5.8137546)
 
-[node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=238985656]
+[node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=36781098]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08642244, -0.014123917)
 
 [node name="Casas baja calidad" parent="." unique_id=1523019399 instance=ExtResource("4_3g7tv")]
@@ -152,7 +159,7 @@ transform = Transform3D(0.14689444, 0, 0.98915243, 0, 1, 0, -0.98915243, 0, 0.14
 [node name="MAPA 62" parent="." unique_id=654540168 instance=ExtResource("6_ywa86")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.270184, 0.5539274, -5.781687)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 1399633031) index="0" unique_id=85689587]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 1903520241) index="0" unique_id=85689587]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA 62/MAPA 6/StaticBody3D" unique_id=1758604841]
 shape = SubResource("ConcavePolygonShape3D_swncp")
@@ -683,7 +690,7 @@ transform = Transform3D(0.9985859, -0.04981169, -0.01857566, 0.05095764, 0.99642
 
 [node name="Area3D" type="Area3D" parent="modelo regalo" unique_id=16002143 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("10_4007m")
-cuadro_texto = NodePath("../../Interfaz2/ColorRect")
+cuadro_texto = NodePath("../../Regalo/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="modelo regalo/Area3D" unique_id=262024667]
 transform = Transform3D(1, -1.7369166e-06, -5.476177e-07, 1.7508864e-07, 0.9999744, -1.4901161e-07, 2.7939677e-09, 1.2665987e-06, 0.99997556, -0.047576904, 0.019346714, -0.05802536)
@@ -694,7 +701,7 @@ transform = Transform3D(2.1534407, 0, 0, 0, 1.2569884, 0, 0, 0, 1.8715689, -40.2
 
 [node name="Area3D" type="Area3D" parent="Rosa" unique_id=96974587 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("12_pmdqn")
-cuadro_texto = NodePath("../../Interfaz3/ColorRect")
+cuadro_texto = NodePath("../../Rosa2/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rosa/Area3D" unique_id=1527269561]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999995, 0.0011291504, 0.22406, 0.07079506)
@@ -705,7 +712,7 @@ transform = Transform3D(-0.74063814, 0, -0.3945507, 0, 0.8391753, 0, 0.3945507, 
 
 [node name="Area3D" type="Area3D" parent="Biblia" unique_id=88312061 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("12_swncp")
-cuadro_texto = NodePath("../../Interfaz/ColorRect")
+cuadro_texto = NodePath("../../Biblia2/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Biblia/Area3D" unique_id=1358712842]
 transform = Transform3D(1.066465, 0, -3.7252903e-09, 0, 0.5963049, 0, 6.556511e-07, 0, 0.061694924, -0.029550552, -0.013830423, -0.02601242)
@@ -749,22 +756,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.878151, -9.536743e-07, -40
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.0337524, -0.15625)
 shape = SubResource("BoxShape3D_swncp")
 
-[node name="Interfaz" type="CanvasLayer" parent="." unique_id=248812068]
+[node name="Biblia2" type="CanvasLayer" parent="." unique_id=248812068]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz" unique_id=1717665502]
+[node name="ColorRect" type="ColorRect" parent="Biblia2" unique_id=1717665502]
 visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -232.0
-offset_top = 84.0
-offset_right = 240.0
-offset_bottom = 229.0
+offset_left = -239.0
+offset_top = 247.0
+offset_right = 233.0
+offset_bottom = 392.0
 grow_horizontal = 2
-script = ExtResource("16_1ipgx")
+script = SubResource("GDScript_rw4hq")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Interfaz/ColorRect" unique_id=2054496834]
+[node name="Label" type="Label" parent="Biblia2/ColorRect" unique_id=2054496834]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 17.0
@@ -778,7 +785,7 @@ en las responsabilidades más grandes.”
 Lucas 16:10"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz/ColorRect" unique_id=1407797017]
+[node name="Button" type="Button" parent="Biblia2/ColorRect" unique_id=1407797017]
 layout_mode = 0
 offset_left = 434.0
 offset_top = 2.0
@@ -786,55 +793,64 @@ offset_right = 470.0
 offset_bottom = 33.0
 text = "x"
 
-[node name="Interfaz2" type="CanvasLayer" parent="." unique_id=1256516327]
+[node name="Regalo" type="CanvasLayer" parent="." unique_id=1256516327]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz2" unique_id=347942573]
+[node name="ColorRect" type="ColorRect" parent="Regalo" unique_id=347942573]
 visible = false
-offset_left = 324.0
-offset_top = 72.0
-offset_right = 699.0
-offset_bottom = 154.0
+offset_left = 356.0
+offset_top = 246.0
+offset_right = 733.0
+offset_bottom = 353.0
 script = ExtResource("19_4007m")
 
-[node name="Label" type="Label" parent="Interfaz2/ColorRect" unique_id=321089451]
+[node name="Label" type="Label" parent="Regalo/ColorRect" unique_id=321089451]
 layout_mode = 0
-offset_right = 332.0
-offset_bottom = 86.0
+offset_left = 17.999998
+offset_top = 8.999999
+offset_right = 350.0
+offset_bottom = 95.0
+scale = Vector2(0.9599988, 1)
 theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 text = "Todo lo que tenemos es un regalo de Dios, 
 por eso debemos aprender a cuidarlo y 
 ser responsables con ello."
+horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz2/ColorRect/Label" unique_id=1618977816]
+[node name="Button" type="Button" parent="Regalo/ColorRect/Label" unique_id=1618977816]
 layout_mode = 0
-offset_left = 340.0
-offset_right = 374.0
-offset_bottom = 31.0
+offset_left = 335.41708
+offset_top = -3.9999998
+offset_right = 369.41708
+offset_bottom = 27.0
 text = "x"
 
-[node name="Interfaz3" type="CanvasLayer" parent="." unique_id=2138608130]
+[node name="Rosa2" type="CanvasLayer" parent="." unique_id=2138608130]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz3" unique_id=1501145575]
+[node name="ColorRect" type="ColorRect" parent="Rosa2" unique_id=1501145575]
 visible = false
-offset_left = 301.0
-offset_top = 49.0
-offset_right = 766.0
-offset_bottom = 114.0
+offset_left = 315.0
+offset_top = 330.0
+offset_right = 781.0
+offset_bottom = 464.0
 script = ExtResource("20_itoc3")
 
-[node name="Label" type="Label" parent="Interfaz3/ColorRect" unique_id=984542810]
+[node name="Label" type="Label" parent="Rosa2/ColorRect" unique_id=984542810]
 layout_mode = 0
-offset_right = 364.0
-offset_bottom = 67.0
+offset_left = 21.0
+offset_top = 40.0
+offset_right = 433.0
+offset_bottom = 107.0
 theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 text = "Ser responsables cuidando nuestra relación con Dios 
 y con lo que Jesús nos envió a hacer."
+horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz3/ColorRect/Label" unique_id=1652045210]
+[node name="Button" type="Button" parent="Rosa2/ColorRect/Label" unique_id=1652045210]
 layout_mode = 0
-offset_left = 437.0
-offset_right = 462.0
-offset_bottom = 31.0
+offset_left = 414.0
+offset_top = -29.0
+offset_right = 439.0
+offset_bottom = 2.0
 text = "x"
 
 [node name="Insignia 6" type="CanvasLayer" parent="." unique_id=677285292]
@@ -864,9 +880,9 @@ text = "X"
 [connection signal="input_event" from="Binoculares/Area3D" to="Binoculares/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Pintura/Area3D" to="Pintura/Area3D" method="_on_input_event"]
 [connection signal="body_entered" from="Portal hacia 7" to="CharacterBody3D" method="_on_portal_hacia_7_body_entered"]
-[connection signal="pressed" from="Interfaz/ColorRect/Button" to="Interfaz/ColorRect" method="_on_button_pressed"]
-[connection signal="pressed" from="Interfaz2/ColorRect/Label/Button" to="Interfaz2/ColorRect" method="_on_button_pressed"]
-[connection signal="pressed" from="Interfaz3/ColorRect/Label/Button" to="Interfaz3/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Biblia2/ColorRect/Button" to="Biblia2/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Regalo/ColorRect/Label/Button" to="Regalo/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Rosa2/ColorRect/Label/Button" to="Rosa2/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Insignia 6/TextureRect/Button" to="Insignia 6/TextureRect" method="_on_button_pressed"]
 
 [editable path="MAPA 4 Y 52"]
