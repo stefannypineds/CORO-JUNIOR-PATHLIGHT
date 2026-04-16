@@ -33,13 +33,13 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 0
 offset_left = 365.0
 offset_top = 336.0
-offset_right = 433.5
-offset_bottom = 367.0
-scale = Vector2(4.4800024, 1.36)
+offset_right = 672.0
+offset_bottom = 376.0
 theme_override_colors/font_color = Color(0.0093103545, 0.0093103545, 0.0093103545, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxEmpty_lmeoh")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_y4e4u")
+alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=1478385071]
 layout_mode = 0
