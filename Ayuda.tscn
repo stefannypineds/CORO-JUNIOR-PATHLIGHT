@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d2xgjkccb8w13"]
 
-[ext_resource type="Texture2D" uid="uid://bpgu6f3a2tttb" path="res://40.png" id="1_ec4fp"]
 [ext_resource type="Script" uid="uid://y6rmc75t5rn7" path="res://ayuda.gd" id="1_w45k5"]
-[ext_resource type="Texture2D" uid="uid://br0c75sg5300n" path="res://41.png" id="2_nmhqv"]
+[ext_resource type="Texture2D" uid="uid://br0c75sg5300n" path="res://40.png" id="2_nmhqv"]
+[ext_resource type="Texture2D" uid="uid://kuitvfclaaoc" path="res://41.png" id="3_w45k5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ec4fp"]
 
@@ -77,7 +77,7 @@ script = ExtResource("1_w45k5")
 layout_mode = 0
 offset_right = 1160.0
 offset_bottom = 655.0
-texture = ExtResource("1_ec4fp")
+texture = ExtResource("2_nmhqv")
 expand_mode = 1
 
 [node name="Button1" type="Button" parent="." unique_id=873462208]
@@ -146,7 +146,7 @@ visible = false
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 654.0
-texture = ExtResource("2_nmhqv")
+texture = ExtResource("3_w45k5")
 expand_mode = 1
 
 [node name="Flecha" type="Button" parent="." unique_id=1168327088]

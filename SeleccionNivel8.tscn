@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cd0ucplkwisal"]
 
 [ext_resource type="Script" uid="uid://cgy2qh5e87jbl" path="res://seleccion_nivel_8.gd" id="1_hvbak"]
-[ext_resource type="Texture2D" uid="uid://dslypyl1t2yi6" path="res://39.png" id="1_wdc48"]
+[ext_resource type="Texture2D" uid="uid://6cqsyuf4pch3" path="res://Nivel8.png" id="2_hvbak"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hvbak"]
 
@@ -26,15 +26,15 @@ script = ExtResource("1_hvbak")
 layout_mode = 0
 offset_right = 1157.0
 offset_bottom = 656.0
-texture = ExtResource("1_wdc48")
+texture = ExtResource("2_hvbak")
 expand_mode = 1
 
 [node name="Button8" type="Button" parent="." unique_id=1579856009]
 layout_mode = 0
-offset_left = 896.0
-offset_top = 304.0
-offset_right = 981.0
-offset_bottom = 393.0
+offset_left = 788.0
+offset_top = 285.0
+offset_right = 857.0
+offset_bottom = 357.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_hvbak")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ymosb")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5lfyv")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bd525rd8hny6h"]
 
-[ext_resource type="Texture2D" uid="uid://27tw8ir2x60a" path="res://35.png" id="1_ktq7g"]
 [ext_resource type="Script" uid="uid://bkcwugnahre7d" path="res://seleccion_nivel_4.gd" id="1_qxrj5"]
+[ext_resource type="Texture2D" uid="uid://b2fgi7sao7xqw" path="res://39.png" id="2_qxrj5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qxrj5"]
 
@@ -26,15 +26,15 @@ script = ExtResource("1_qxrj5")
 layout_mode = 0
 offset_right = 1157.0
 offset_bottom = 653.0
-texture = ExtResource("1_ktq7g")
+texture = ExtResource("2_qxrj5")
 expand_mode = 1
 
 [node name="Button4" type="Button" parent="." unique_id=911035479]
 layout_mode = 0
-offset_left = 500.0
+offset_left = 524.0
 offset_top = 292.0
 offset_right = 583.0
-offset_bottom = 380.0
+offset_bottom = 352.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qxrj5")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3fk6")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_xfbx7")

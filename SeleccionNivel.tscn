@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://r8k56yawnx16"]
 
 [ext_resource type="Script" uid="uid://c2ifs4l8rh2a6" path="res://seleccion_nivel.gd" id="1_upqat"]
-[ext_resource type="Texture2D" uid="uid://bqe8voavkay5s" path="res://32.png" id="1_ycytp"]
+[ext_resource type="Texture2D" uid="uid://cl74wkaq03fh7" path="res://36.png" id="2_upqat"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_62g5r"]
 
@@ -26,15 +26,15 @@ script = ExtResource("1_upqat")
 layout_mode = 0
 offset_right = 1160.0
 offset_bottom = 659.0
-texture = ExtResource("1_ycytp")
+texture = ExtResource("2_upqat")
 expand_mode = 1
 
 [node name="Button1" type="Button" parent="TextureRect" unique_id=333711202]
 layout_mode = 0
-offset_left = 211.0
-offset_top = 313.0
-offset_right = 292.0
-offset_bottom = 401.0
+offset_left = 263.0
+offset_top = 280.0
+offset_right = 336.0
+offset_bottom = 355.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_62g5r")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_m47qq")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_1tvjn")

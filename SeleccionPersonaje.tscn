@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c7d6aym6ccivg"]
 
 [ext_resource type="Script" uid="uid://pxpnsh5mwym5" path="res://SeleccionPersonaje.gd" id="1_bw7nc"]
-[ext_resource type="Texture2D" uid="uid://pcrv8oq1gdia" path="res://Imagenes del recorrido.png" id="1_iq6wu"]
+[ext_resource type="Texture2D" uid="uid://27tw8ir2x60a" path="res://35.png" id="2_bw7nc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bw7nc"]
 
@@ -35,18 +35,19 @@ script = ExtResource("1_bw7nc")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=247258312]
 layout_mode = 0
-offset_right = 1164.0
-offset_bottom = 662.0
-texture = ExtResource("1_iq6wu")
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 1165.0
+offset_bottom = 654.0
+texture = ExtResource("2_bw7nc")
 expand_mode = 1
-stretch_mode = 5
 
 [node name="TheoButton" type="Button" parent="." unique_id=1511378116]
 layout_mode = 0
-offset_left = 293.0
-offset_top = 89.0
-offset_right = 513.0
-offset_bottom = 611.0
+offset_left = 325.0
+offset_top = 138.0
+offset_right = 545.0
+offset_bottom = 660.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_bw7nc")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_na2pe")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_qj2k4")
@@ -56,10 +57,10 @@ flat = true
 
 [node name="JoyButton" type="Button" parent="TheoButton" unique_id=13409702]
 layout_mode = 0
-offset_left = 344.0
-offset_top = -1.0
-offset_right = 583.0
-offset_bottom = 522.0
+offset_left = 295.0
+offset_top = -3.0
+offset_right = 534.0
+offset_bottom = 520.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_bcrrj")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_uvvut")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_c48os")

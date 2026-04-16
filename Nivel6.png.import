@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pcrv8oq1gdia"
-path="res://.godot/imported/Imagenes del recorrido.png-6636f60ba7bfdfa8b8eb1b35283b3354.ctex"
+uid="uid://cbwpaosx1lt2j"
+path="res://.godot/imported/Nivel6.png-d5e72e210e7b856bf42cebfea82159d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes del recorrido.png"
-dest_files=["res://.godot/imported/Imagenes del recorrido.png-6636f60ba7bfdfa8b8eb1b35283b3354.ctex"]
+source_file="res://Nivel6.png"
+dest_files=["res://.godot/imported/Nivel6.png-d5e72e210e7b856bf42cebfea82159d1.ctex"]
 
 [params]
 

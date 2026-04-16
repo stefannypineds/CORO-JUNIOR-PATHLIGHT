@@ -2,42 +2,34 @@ extends Control
 
 @onready var fondo = $TextureRect
 
-# 1. Definimos qué archivo es cada quién (Rutas de archivos)
-const RUTA_THEO = "res://JUGADOR NIÑO.tscn"
-const RUTA_JOY = "res://MODELO NIÑA.tscn"
-
-# 2. Imágenes de fondo para el efecto de iluminación
-var img_normal = preload("res://Imagenes del recorrido.png")
-var img_theo_brilla = preload("res://Imagenes del recorrido (1).png")
-var img_joy_brilla = preload("res://Imagenes del recorrido (2).png")
-
 func _ready():
-	# Al empezar, el fondo está normal
-	fondo.texture = img_normal
-	print("Menú de Selección Listo. Global actual: ", Global.personaje_seleccionado)
+	# El fondo se queda fijo con la imagen normal
+	fondo.texture = preload("res://35.png")
+	print("Menú de Selección Listo.")
 
-# --- LÓGICA PARA THEO (EL NIÑO) ---
-
-func _on_theo_button_mouse_entered():
-	fondo.texture = img_theo_brilla
-
-func _on_theo_button_mouse_exited():
-	fondo.texture = img_normal
+# --- BOTÓN THEO ---
 
 func _on_theo_button_pressed():
+	# 1. Guardamos la elección internamente
 	Global.personaje_seleccionado = "Theo"
-	print("Seleccionaste a THEO (Ruta: ", RUTA_THEO, ")")
+	print("Theo seleccionado internamente.")
+	
+	# 2. CAMBIAMOS DE ESCENA (Esto es lo que faltaba)
 	get_tree().change_scene_to_file("res://SeleccionNivel.tscn")
 
-# --- LÓGICA PARA JOY (LA NIÑA) ---
-
-func _on_joy_button_mouse_entered():
-	fondo.texture = img_joy_brilla
-
-func _on_joy_button_mouse_exited():
-	fondo.texture = img_normal
+# --- BOTÓN JOY ---
 
 func _on_joy_button_pressed():
+	# 1. Guardamos la elección internamente
 	Global.personaje_seleccionado = "Joy"
-	print("Seleccionaste a JOY (Ruta: ", RUTA_JOY, ")")
+	print("Joy seleccionada internamente.")
+	
+	# 2. CAMBIAMOS DE ESCENA
 	get_tree().change_scene_to_file("res://SeleccionNivel.tscn")
+
+# --- FUNCIONES DE MOUSE (VACÍAS PARA QUE NO HAGAN NADA) ---
+
+func _on_theo_button_mouse_entered(): pass
+func _on_theo_button_mouse_exited(): pass
+func _on_joy_button_mouse_entered(): pass
+func _on_joy_button_mouse_exited(): pass
