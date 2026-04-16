@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://veyd274q6ehe"]
+[gd_scene format=3 uid="uid://o3gwb2asdkek"]
 
 [ext_resource type="Texture2D" uid="uid://38bxbyc7mvh1" path="res://MODELOS/Personajes prueba/NOMBRE.png" id="1_lmeoh"]
 [ext_resource type="Script" uid="uid://djrg23vfuqot3" path="res://registro.gd" id="1_y4e4u"]
