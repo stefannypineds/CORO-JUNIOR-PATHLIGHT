@@ -1,20 +1,20 @@
 extends Control
 
 func _ready() -> void:
-	pass 
-
-func _process(_delta: float) -> void:
-	pass
+	# Intentar cargar el nombre si ya existe uno guardado
+	CerebroMisiones.cargar_partida()
+	if CerebroMisiones.nombre_jugador != "":
+		$LineEdit.text = CerebroMisiones.nombre_jugador
 
 func _on_button_pressed() -> void:
 	var caja_nombre = $LineEdit
 	
-	# Verificamos que no esté vacío y que el "Cerebro" exista
-	if caja_nombre.text != "":
+	if caja_nombre.text.strip_edges() != "":
+		# Guardamos en la variable y luego en el disco
 		CerebroMisiones.nombre_jugador = caja_nombre.text
 		CerebroMisiones.guardar_partida() 
 		
-		# Cambia a la escena del menú (Asegúrate que el nombre sea exacto)
+		# Cambiamos de escena (Asegúrate que el nombre del archivo sea idéntico)
 		get_tree().change_scene_to_file("res://Menu_de_juego.tscn")
 	else:
 		print("Por favor, escribe un nombre")
