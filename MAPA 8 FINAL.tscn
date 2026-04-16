@@ -7,13 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://cu54xoc21qaou" path="res://MODELOS/MAPA 7 Y 8/Letrero 7.glb" id="4_f7hgi"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="5_88omp"]
 [ext_resource type="PackedScene" uid="uid://cbm34q5j54ldg" path="res://MODELOS/MAPA 1 Y 2/Pintura.glb" id="5_j0ig6"]
-[ext_resource type="Script" path="res://area_3d17.gd" id="5_t0tnf"]
+[ext_resource type="Script" uid="uid://bi0v0y5e4aq2e" path="res://area_3d17.gd" id="5_t0tnf"]
 [ext_resource type="PackedScene" uid="uid://dgkt2su5oabm0" path="res://MODELOS/MAPA 7 Y 8/Modelo+corazon.glb" id="6_wgsdw"]
 [ext_resource type="Script" uid="uid://brq17m3ay072v" path="res://area_3d11.gd" id="7_ca3ql"]
 [ext_resource type="PackedScene" uid="uid://dvnls3d7dsu3o" path="res://MODELOS/MAPA 7 Y 8/Templo.glb" id="7_oap3w"]
 [ext_resource type="PackedScene" uid="uid://w3x3ox0jwsfv" path="res://MODELOS/MAPA 1 Y 2/Biblia.glb" id="8_ctyqp"]
 [ext_resource type="PackedScene" uid="uid://duxdgb8kt3ydy" path="res://MODELOS/MAPA 7 Y 8/bread+loaves+3d+model.glb" id="9_11ok7"]
-[ext_resource type="Script" path="res://area_3d18.gd" id="9_ke4pg"]
+[ext_resource type="Script" uid="uid://blfja8q1kbha5" path="res://area_3d18.gd" id="9_ke4pg"]
 [ext_resource type="Script" uid="uid://c1gurxlw1immd" path="res://area_3d1.gd" id="9_oap3w"]
 [ext_resource type="PackedScene" uid="uid://ck15ig2g6bsbg" path="res://MODELOS/MAPA 7 Y 8/Canasta peces.glb" id="10_wumo3"]
 [ext_resource type="PackedScene" uid="uid://d4dvcpyrglsyf" path="res://MODELOS/MAPA 7 Y 8/Letrero 8a.glb" id="11_rag1x"]
@@ -22,13 +22,12 @@
 [ext_resource type="Script" uid="uid://u7ox50hdcow2" path="res://area_3d.gd" id="13_rag1x"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="14_f7hgi"]
 [ext_resource type="Script" path="res://area_3d19.gd" id="15_ke4pg"]
-[ext_resource type="Script" uid="uid://civqabr566kal" path="res://color_rect1.gd" id="17_ctyqp"]
 [ext_resource type="Script" uid="uid://bmjy2t1na4g0n" path="res://color_rect3.gd" id="18_ctyqp"]
 [ext_resource type="Script" uid="uid://65vsc3q8stcc" path="res://color_rect.gd" id="20_wumo3"]
 [ext_resource type="Texture2D" uid="uid://dfcp5kxw71p7j" path="res://INSIGNIA 7.png" id="26_peuw5"]
-[ext_resource type="Script" path="res://texture_rect7.gd" id="27_t0tnf"]
+[ext_resource type="Script" uid="uid://da15vet7yo57u" path="res://texture_rect7.gd" id="27_t0tnf"]
 [ext_resource type="Texture2D" uid="uid://w06bra1stgdd" path="res://INSIGNIA 8.png" id="28_ke4pg"]
-[ext_resource type="Script" path="res://texture_rect8.gd" id="29_yoddv"]
+[ext_resource type="Script" uid="uid://dui7q11qxxa0v" path="res://texture_rect8.gd" id="29_yoddv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -111,6 +110,14 @@ size = Vector3(0.9513092, 0.30529785, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j0ig6"]
 
+[sub_resource type="GDScript" id="GDScript_t0tnf"]
+script/source = "extends ColorRect
+
+func _on_button_pressed() -> void:
+	hide()
+	CerebroMisiones.m7.registrar_clic(\"Biblia\")
+"
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_wumo3"]
 size = Vector3(0.001, 8.37207, 18.502258)
 
@@ -119,6 +126,14 @@ size = Vector3(0.001, 7.313965, 13.957336)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ucm78"]
 size = Vector3(0.001, 8.310547, 9.051804)
+
+[sub_resource type="GDScript" id="GDScript_ke4pg"]
+script/source = "extends ColorRect
+
+func _on_button_pressed() -> void:
+	hide() 
+	CerebroMisiones.m8.registrar_clic(\"Modelo+corazon\")
+"
 
 [node name="Node3D2" type="Node3D" unique_id=978302472]
 
@@ -243,7 +258,7 @@ transform = Transform3D(0.23017025, 0, 0.5676936, 0, 0.61258, 0, -0.5676936, 0, 
 [node name="Area3D" type="Area3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Modelo+corazon" unique_id=1625573480 node_paths=PackedStringArray("cuadro_texto")]
 transform = Transform3D(0.83485156, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1.0669587, -0.044475555, -0.02916336, -0.060764313)
 script = ExtResource("13_rag1x")
-cuadro_texto = NodePath("../../../../../Interfaz 4/ColorRect")
+cuadro_texto = NodePath("../../../../../Corazon/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Modelo+corazon/Area3D" unique_id=1285123539]
 transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, 3.8146973e-06, -0.029387474, 0.014537811)
@@ -283,7 +298,7 @@ transform = Transform3D(0.4138758, 0, 0.6807596, 0, 0.79669744, 0, -0.6807596, 0
 
 [node name="Area3D" type="Area3D" parent="Biblia" unique_id=1102011465 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("9_oap3w")
-cuadro_texto = NodePath("../../Interfaz 1/ColorRect")
+cuadro_texto = NodePath("../../Biblia mis7/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Biblia/Area3D" unique_id=1666420737]
 transform = Transform3D(1, 0, 2.9802322e-08, 0, 0.48270035, 0, -2.9802322e-08, 0, 1, 0, 0, 0)
@@ -294,7 +309,7 @@ transform = Transform3D(0.35683855, 0.17455094, 0.40097126, -0.17829552, 0.53062
 
 [node name="Area3D" type="Area3D" parent="Biblia2" unique_id=1115936426 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("15_ke4pg")
-cuadro_texto = NodePath("../../Interfaz 2/ColorRect")
+cuadro_texto = NodePath("../../Biblia mis8/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Biblia2/Area3D" unique_id=151642048]
 transform = Transform3D(1, 7.450581e-09, 2.9802322e-08, 3.7252903e-08, 1, 1.4901161e-08, -2.9802322e-08, 0, 1, 0.0018043518, 0.13171005, -0.062459946)
@@ -308,7 +323,7 @@ transform = Transform3D(0.9981592, 0.060647856, 0, -0.060647856, 0.9981592, 0, 0
 
 [node name="Area3D" type="Area3D" parent="Canasta peces" unique_id=1963248473 node_paths=PackedStringArray("cuadro_texto")]
 script = ExtResource("13_rag1x")
-cuadro_texto = NodePath("../../Interfaz 3/ColorRect")
+cuadro_texto = NodePath("../../Peces/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Canasta peces/Area3D" unique_id=445892525]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0011520386, 0.15118313, 0)
@@ -487,9 +502,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.807417, 7.203243, -46.4056
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=403144689]
 shape = SubResource("BoxShape3D_j0ig6")
 
-[node name="Interfaz 1" type="CanvasLayer" parent="." unique_id=27873401]
+[node name="Biblia mis7" type="CanvasLayer" parent="." unique_id=27873401]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz 1" unique_id=1906224785]
+[node name="ColorRect" type="ColorRect" parent="Biblia mis7" unique_id=1906224785]
 visible = false
 custom_minimum_size = Vector2(0.055, 0)
 anchors_preset = 8
@@ -503,9 +518,9 @@ offset_right = 100.0
 offset_bottom = 54.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("17_ctyqp")
+script = SubResource("GDScript_t0tnf")
 
-[node name="Label" type="Label" parent="Interfaz 1/ColorRect" unique_id=1946988353]
+[node name="Label" type="Label" parent="Biblia mis7/ColorRect" unique_id=1946988353]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 23.0
@@ -517,7 +532,7 @@ en dar que en recibir”
 Hechos 20:35c"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz 1/ColorRect" unique_id=156579070]
+[node name="Button" type="Button" parent="Biblia mis7/ColorRect" unique_id=156579070]
 layout_mode = 0
 offset_left = 176.0
 offset_top = 5.0
@@ -525,9 +540,9 @@ offset_right = 194.0
 offset_bottom = 36.0
 text = "X"
 
-[node name="Interfaz 2" type="CanvasLayer" parent="." unique_id=1030418626]
+[node name="Biblia mis8" type="CanvasLayer" parent="." unique_id=1030418626]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz 2" unique_id=1293453670]
+[node name="ColorRect" type="ColorRect" parent="Biblia mis8" unique_id=1293453670]
 visible = false
 offset_left = 389.0
 offset_top = 48.0
@@ -535,7 +550,7 @@ offset_right = 735.0
 offset_bottom = 178.0
 script = ExtResource("18_ctyqp")
 
-[node name="Label" type="Label" parent="Interfaz 2/ColorRect" unique_id=696644676]
+[node name="Label" type="Label" parent="Biblia mis8/ColorRect" unique_id=696644676]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 23.0
@@ -548,7 +563,7 @@ vientre de mi madre.\"
 Salmos 139:13-14 "
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz 2/ColorRect/Label" unique_id=1546646309]
+[node name="Button" type="Button" parent="Biblia mis8/ColorRect/Label" unique_id=1546646309]
 layout_mode = 0
 offset_left = 311.0
 offset_top = -23.0
@@ -571,9 +586,9 @@ shape = SubResource("BoxShape3D_ke4pg")
 transform = Transform3D(0.003787361, 0, -0.9999928, 0, 1, 0, 0.9999928, 0, 0.003787361, 4.453478, 0.33396244, -2.4310913)
 shape = SubResource("BoxShape3D_ucm78")
 
-[node name="Interfaz 3" type="CanvasLayer" parent="." unique_id=1639902021]
+[node name="Peces" type="CanvasLayer" parent="." unique_id=1639902021]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz 3" unique_id=279862371]
+[node name="ColorRect" type="ColorRect" parent="Peces" unique_id=279862371]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -588,7 +603,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("20_wumo3")
 
-[node name="Label" type="Label" parent="Interfaz 3/ColorRect" unique_id=1507782188]
+[node name="Label" type="Label" parent="Peces/ColorRect" unique_id=1507782188]
 layout_mode = 0
 offset_left = 17.0
 offset_top = 9.0
@@ -600,7 +615,7 @@ tener mucho, es estar
 dispuesto a compartir"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz 3/ColorRect" unique_id=1662171411]
+[node name="Button" type="Button" parent="Peces/ColorRect" unique_id=1662171411]
 layout_mode = 0
 offset_left = 213.0
 offset_top = 5.0
@@ -608,9 +623,9 @@ offset_right = 231.0
 offset_bottom = 36.0
 text = "X"
 
-[node name="Interfaz 4" type="CanvasLayer" parent="." unique_id=99731110]
+[node name="Corazon" type="CanvasLayer" parent="." unique_id=99731110]
 
-[node name="ColorRect" type="ColorRect" parent="Interfaz 4" unique_id=1273272605]
+[node name="ColorRect" type="ColorRect" parent="Corazon" unique_id=1273272605]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -623,9 +638,9 @@ offset_right = 163.0
 offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("20_wumo3")
+script = SubResource("GDScript_ke4pg")
 
-[node name="Label" type="Label" parent="Interfaz 4/ColorRect" unique_id=1981392666]
+[node name="Label" type="Label" parent="Corazon/ColorRect" unique_id=1981392666]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 31.0
@@ -635,7 +650,7 @@ theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 
 text = "“Tu vida tiene propósito”"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Interfaz 4/ColorRect" unique_id=2131292725]
+[node name="Button" type="Button" parent="Corazon/ColorRect" unique_id=2131292725]
 layout_mode = 0
 offset_left = 180.0
 offset_top = 3.0
@@ -693,10 +708,10 @@ text = "X"
 [connection signal="input_event" from="Biblia/Area3D" to="Biblia/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Biblia2/Area3D" to="Biblia2/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Canasta peces/Area3D" to="Canasta peces/Area3D" method="_on_input_event"]
-[connection signal="pressed" from="Interfaz 1/ColorRect/Button" to="Interfaz 1/ColorRect" method="_on_button_pressed"]
-[connection signal="pressed" from="Interfaz 2/ColorRect/Label/Button" to="Interfaz 2/ColorRect" method="_on_button_pressed"]
-[connection signal="pressed" from="Interfaz 3/ColorRect/Button" to="Interfaz 3/ColorRect" method="_on_button_pressed"]
-[connection signal="pressed" from="Interfaz 4/ColorRect/Button" to="Interfaz 4/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Biblia mis7/ColorRect/Button" to="Biblia mis7/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Biblia mis8/ColorRect/Label/Button" to="Biblia mis8/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Peces/ColorRect/Button" to="Peces/ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="Corazon/ColorRect/Button" to="Corazon/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Insignia 7/TextureRect/Button" to="Insignia 7/TextureRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Insignia 8/TextureRect/Button" to="Insignia 8/TextureRect" method="_on_button_pressed"]
 

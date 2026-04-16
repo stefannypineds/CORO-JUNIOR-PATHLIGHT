@@ -5,5 +5,4 @@ func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3,
 		
 		# Abre el video en el navegador del celular
 		OS.shell_open("https://youtu.be/7qGK_KcWAeY?si=IhM-1NVTkUNjZ82-")
-		
-		CerebroMisiones.m2.registrar_clic("Binoculares2")
+		CerebroMisiones.m7.registrar_clic("Pintura")

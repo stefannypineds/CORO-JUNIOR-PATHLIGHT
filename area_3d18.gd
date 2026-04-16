@@ -5,5 +5,4 @@ func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3,
 		
 		OS.shell_open("https://youtu.be/hPB0lnvHYtU?si=OILfPdkzgl-aWvOz")
 		
-		CerebroMisiones.Pintura2 = true
-		CerebroMisiones.revisar_mision()
+		CerebroMisiones.m8.registrar_clic("Pintura2")
