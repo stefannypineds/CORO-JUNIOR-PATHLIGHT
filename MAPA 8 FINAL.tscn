@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="14_f7hgi"]
 [ext_resource type="Script" uid="uid://dxfj6i33uxvml" path="res://area_3d19.gd" id="15_ke4pg"]
 [ext_resource type="Script" uid="uid://bmjy2t1na4g0n" path="res://color_rect3.gd" id="18_ctyqp"]
+[ext_resource type="PackedScene" uid="uid://dkrjfaaykls44" path="res://MapaPersistentUI.tscn" id="26_8r3u3"]
 [ext_resource type="Texture2D" uid="uid://dfcp5kxw71p7j" path="res://INSIGNIA 7.png" id="26_peuw5"]
 [ext_resource type="Script" uid="uid://da15vet7yo57u" path="res://texture_rect7.gd" id="27_t0tnf"]
 [ext_resource type="Texture2D" uid="uid://w06bra1stgdd" path="res://INSIGNIA 8.png" id="28_ke4pg"]
@@ -284,7 +285,7 @@ transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0.045
 shape = SubResource("BoxShape3D_jadkt")
 
 [node name="Modelo+corazon" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D" unique_id=845930955 instance=ExtResource("6_wgsdw")]
-transform = Transform3D(0.23017025, 0, 0.5676936, 0, 0.61258, 0, -0.5676936, 0, 0.23017025, 28.503365, 6.3896475, 13.403671)
+transform = Transform3D(0.23017025, 0, 0.5676936, 0, 0.61258, 0, -0.5676936, 0, 0.23017025, 29.519735, 5.4262543, 11.529301)
 
 [node name="Area3D" type="Area3D" parent="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Modelo+corazon" unique_id=1625573480 node_paths=PackedStringArray("cuadro_texto")]
 transform = Transform3D(0.83485156, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1.0669587, -0.044475555, -0.02916336, -0.060764313)
@@ -741,6 +742,8 @@ light_energy = 1.5
 light_angular_distance = 74.69
 shadow_enabled = true
 shadow_bias = 2.957
+
+[node name="MapaUI" parent="." unique_id=141221227 instance=ExtResource("26_8r3u3")]
 
 [connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares2/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares2/Area3D" method="_on_input_event"]

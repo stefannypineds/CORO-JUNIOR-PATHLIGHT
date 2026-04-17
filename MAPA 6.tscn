@@ -23,6 +23,7 @@
 [ext_resource type="Script" uid="uid://s2hwi070wq5l" path="res://color_rectregalo.gd" id="19_4007m"]
 [ext_resource type="Script" uid="uid://bf6hk0dwmy471" path="res://color_rectflor.gd" id="20_itoc3"]
 [ext_resource type="Texture2D" uid="uid://b0yldb0ikoc2l" path="res://INSIGNIA 6.png" id="24_fkco4"]
+[ext_resource type="PackedScene" uid="uid://dkrjfaaykls44" path="res://MapaPersistentUI.tscn" id="25_fkco4"]
 [ext_resource type="Script" uid="uid://ctldcjxbfj3em" path="res://texture_rect5.gd" id="25_gecxq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
@@ -889,6 +890,8 @@ offset_right = 1318.8688
 offset_bottom = 116.55382
 scale = Vector2(5.5493703, 2.8530176)
 text = "X"
+
+[node name="MapaUI" parent="." unique_id=141221227 instance=ExtResource("25_fkco4")]
 
 [connection signal="input_event" from="modelo regalo/Area3D" to="modelo regalo/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Rosa/Area3D" to="Rosa/Area3D" method="_on_input_event"]
