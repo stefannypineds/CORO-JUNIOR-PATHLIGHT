@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bdbkif57km02b" path="res://pantallainsignia.gd" id="1_r8lag"]
 
 [node name="Pantallainsignia" type="Control" unique_id=628208333]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
