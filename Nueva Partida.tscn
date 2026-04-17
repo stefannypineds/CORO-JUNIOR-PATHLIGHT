@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjkwav0ltrjnr"]
 
-[ext_resource type="Script" uid="uid://cmmtyai5mi2no" path="res://menu_de_juego.gd" id="1_jynhb"]
-[ext_resource type="Texture2D" uid="uid://c15s3tty5p45a" path="res://31.png" id="2_jynhb"]
+[ext_resource type="Script" uid="uid://cmmtyai5mi2no" path="res://Nueva partida cod.gd" id="1_pijpr"]
+[ext_resource type="Texture2D" uid="uid://c15s3tty5p45a" path="res://31.png" id="2_fb0py"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jynhb"]
 
@@ -54,7 +54,7 @@ offset_right = 137.0
 offset_bottom = 333.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jynhb")
+script = ExtResource("1_pijpr")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1165967618]
 layout_mode = 0
@@ -62,7 +62,7 @@ offset_left = -144.0
 offset_top = -340.0
 offset_right = 1028.0
 offset_bottom = 339.0
-texture = ExtResource("2_jynhb")
+texture = ExtResource("2_fb0py")
 expand_mode = 1
 
 [node name="Ayuda" type="Button" parent="TextureRect" unique_id=296018654]
