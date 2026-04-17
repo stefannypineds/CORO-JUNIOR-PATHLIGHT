@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 Global="*uid://0jmi15bkgc3t"
 CerebroMisiones="*uid://cfm145bmejikd"
-GuardadoManager="*uid://bw6wfsbvjomb3"
 
 [input]
 
