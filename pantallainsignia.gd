@@ -1,7 +1,12 @@
 extends Control
 
 func _ready():
-	# Cargamos los datos guardados
+	hide() # Empieza oculto
+	# ENLACE: Nos conectamos a la señal del cerebro
+	CerebroMisiones.mostrar_diploma.connect(_al_recibir_victoria)
+
+func _al_recibir_victoria():
+	# Cargamos los datos para tener el nombre fresco
 	CerebroMisiones.cargar_partida()
 	
 	# Ponemos el nombre del niño
@@ -10,10 +15,10 @@ func _ready():
 	else:
 		$LabelNombre.text = "Explorador"
 	
-	# Ponemos la fecha de hoy
+	# Ponemos la fecha
 	var t = Time.get_date_dict_from_system()
 	$LabelFecha.text = "%02d/%02d/%d" % [t.day, t.month, t.year]
 	
-	# Acomodamos los textos (esto ayuda si no los ves)
-	$LabelNombre.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	$LabelFecha.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	# Aseguramos color negro y visibilidad
+	$LabelNombre.add_theme_color_override("font_color", Color.BLACK)
+	show() # ¡Aparece!
