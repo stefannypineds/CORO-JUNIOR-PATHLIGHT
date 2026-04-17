@@ -1,33 +1,34 @@
 extends Node3D
 
 func _ready():
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(0.1).timeout
 	
-	var nino = null
-	var nina = null
-
-	# Buscamos en todos los hijos del mapa quién tiene cada script
-	for hijo in get_children():
-		if hijo is CharacterBody3D:
-			if "NIÑO" in hijo.get_script().get_path().to_upper():
-				nino = hijo
-			elif "NIÑA" in hijo.get_script().get_path().to_upper():
-				nina = hijo
-
+	var nino = find_child("jugador niño", true, false)
+	var nina = find_child("modelo niña", true, false)
+	
 	if nino == null or nina == null:
-		print("❌ ERROR: Sigo sin detectar los cuerpos 3D. Revisa que estén en la raíz del mapa.")
+		print("❌ Error: Revisa los nombres de los nodos")
 		return
 
-	# Aplicamos la selección del Global
 	if Global.personaje_seleccionado == "Joy":
-		print("✅ Activando MODELO NIÑA")
+		print("👗 ACTIVANDO A JOY")
+		# Prender Niña
 		nina.show()
 		nina.process_mode = Node.PROCESS_MODE_INHERIT
+		var cam_joy = nina.find_child("Camera3D", true, false)
+		if cam_joy: cam_joy.make_current()
+		
+		# Apagar Niño
 		nino.hide()
 		nino.process_mode = Node.PROCESS_MODE_DISABLED
 	else:
-		print("✅ Activando JUGADOR NIÑO")
+		print("👦 ACTIVANDO A THEO")
+		# Prender Niño
 		nino.show()
 		nino.process_mode = Node.PROCESS_MODE_INHERIT
+		var cam_theo = nino.find_child("Camera3D", true, false)
+		if cam_theo: cam_theo.make_current()
+		
+		# Apagar Niña
 		nina.hide()
 		nina.process_mode = Node.PROCESS_MODE_DISABLED
