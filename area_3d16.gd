@@ -6,5 +6,5 @@ func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3,
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		
 		# ¡MAGIA! Esto abre el navegador con el video
-		OS.shell_open("https://www.youtube.com/watch?v=lY2yjAdbvdQ&list=RDlY2yjAdbvdQ&start_radio=1")
+		OS.shell_open("https://www.youtube.com/watch?v=XUedXCJrjJw")
 		CerebroMisiones.m6.registrar_clic("Pintura")

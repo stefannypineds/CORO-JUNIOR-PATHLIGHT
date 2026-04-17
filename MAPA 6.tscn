@@ -144,7 +144,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.62981, 0.7545209, 21.2055
 [node name="MAPA 4 Y 52" parent="." unique_id=1723137936 instance=ExtResource("3_wl5jl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.26569, 0.42946243, -5.8137546)
 
-[node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=36781098]
+[node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=238985656]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08642244, -0.014123917)
 
 [node name="Casas baja calidad" parent="." unique_id=1523019399 instance=ExtResource("4_3g7tv")]
@@ -159,7 +159,7 @@ transform = Transform3D(0.14689444, 0, 0.98915243, 0, 1, 0, -0.98915243, 0, 0.14
 [node name="MAPA 62" parent="." unique_id=654540168 instance=ExtResource("6_ywa86")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.270184, 0.5539274, -5.781687)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 1903520241) index="0" unique_id=85689587]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 1399633031) index="0" unique_id=85689587]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA 62/MAPA 6/StaticBody3D" unique_id=1758604841]
 shape = SubResource("ConcavePolygonShape3D_swncp")

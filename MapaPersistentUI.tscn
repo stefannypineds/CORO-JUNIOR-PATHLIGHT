@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dkrjfaaykls44"]
+
+[ext_resource type="Script" uid="uid://b6v7uykpbxfud" path="res://mapa_persistent_ui.gd" id="1_cuuwq"]
+[ext_resource type="Texture2D" uid="uid://w034328vy62a" path="res://ICONO DE MAPITA.png" id="2_x8ln2"]
+[ext_resource type="Texture2D" uid="uid://cdfo7vh7p7lwr" path="res://MAPA LUPA.png" id="3_cuuwq"]
+
+[node name="MapaUI" type="CanvasLayer" unique_id=141221227]
+script = ExtResource("1_cuuwq")
+
+[node name="BotonMapaIcono" type="TextureButton" parent="." unique_id=1807704341]
+offset_left = 1038.0
+offset_top = 32.000004
+offset_right = 1601.0
+offset_bottom = 441.0
+scale = Vector2(0.119831316, 0.114449866)
+texture_normal = ExtResource("2_x8ln2")
+
+[node name="MapaVistaGrandeLayer" type="CanvasLayer" parent="." unique_id=320868177]
+
+[node name="TextureRect" type="TextureRect" parent="MapaVistaGrandeLayer" unique_id=59983346]
+offset_left = 170.0
+offset_top = 93.0
+offset_right = 2170.0
+offset_bottom = 1146.0
+scale = Vector2(0.42066184, 0.45026743)
+texture = ExtResource("3_cuuwq")
+
+[node name="Button" type="Button" parent="MapaVistaGrandeLayer/TextureRect" unique_id=1364488038]
+layout_mode = 0
+offset_left = 1799.5452
+offset_top = 33.313526
+offset_right = 1817.5452
+offset_bottom = 64.31352
+scale = Vector2(5.6153007, 2.6186008)
+text = "X"
+
+[connection signal="pressed" from="BotonMapaIcono" to="." method="_on_boton_mapa_icono_pressed"]
+[connection signal="pressed" from="MapaVistaGrandeLayer/TextureRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MapaVistaGrandeLayer/TextureRect/Button" to="MapaVistaGrandeLayer/TextureRect" method="_on_button_pressed"]
