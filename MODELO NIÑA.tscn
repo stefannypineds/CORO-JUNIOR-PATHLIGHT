@@ -102,7 +102,7 @@ shape = SubResource("CapsuleShape3D_go5fv")
 [node name="Caminar Niña" parent="." unique_id=8523499 instance=ExtResource("1_318t7")]
 transform = Transform3D(-0.99974215, 0, 0.022704773, 0, 1, 0, -0.022704773, 0, -0.99974215, -0.03663832, -0.016718328, 0.017962813)
 
-[node name="Skeleton3D" parent="Caminar Niña/Armature" parent_id_path=PackedInt32Array(8523499, 67661683) index="0" unique_id=501711284]
+[node name="Skeleton3D" parent="Caminar Niña/Armature" parent_id_path=PackedInt32Array(8523499, 235006100) index="0" unique_id=809947356]
 bones/0/position = Vector3(0.0006868923, 0.5854923, -0.00042740628)
 bones/0/rotation = Quaternion(-0.005202608, 0.086845234, -0.031193493, 0.99571973)
 bones/1/rotation = Quaternion(-0.023739027, -0.0075188056, 0.020131243, 0.9994873)
