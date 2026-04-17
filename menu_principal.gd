@@ -17,4 +17,4 @@ func _on_ayuda_pressed():
 func _on_creditos_pressed():
 	# Revisa en tu carpeta de archivos si la escena se llama 'Ayuda.tscn' 
 	# o si creaste una nueva llamada 'Creditos.tscn'
-	get_tree().change_scene_to_file("res://Creditos.tscn")s
+	get_tree().change_scene_to_file("res://Creditos.tscn")
