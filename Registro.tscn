@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://o3gwb2asdkek"]
 
 [ext_resource type="Texture2D" uid="uid://38bxbyc7mvh1" path="res://MODELOS/Personajes prueba/NOMBRE.png" id="1_lmeoh"]
-[ext_resource type="Script" path="res://registro.gd" id="1_y4e4u"]
+[ext_resource type="Script" uid="uid://djrg23vfuqot3" path="res://registro.gd" id="1_y4e4u"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lmeoh"]
 
@@ -31,10 +31,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit" type="LineEdit" parent="." unique_id=548636910]
 layout_mode = 0
-offset_left = 365.0
-offset_top = 336.0
-offset_right = 672.0
-offset_bottom = 376.0
+offset_left = 374.0
+offset_top = 318.0
+offset_right = 681.0
+offset_bottom = 361.0
 theme_override_colors/font_color = Color(0.0093103545, 0.0093103545, 0.0093103545, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxEmpty_lmeoh")
@@ -43,10 +43,10 @@ alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=1478385071]
 layout_mode = 0
-offset_left = 690.0
-offset_top = 325.0
-offset_right = 698.0
-offset_bottom = 333.0
+offset_left = 690.00006
+offset_top = 308.0
+offset_right = 698.00006
+offset_bottom = 316.0
 scale = Vector2(12.078947, 8.333333)
 flat = true
 
