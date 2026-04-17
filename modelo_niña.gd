@@ -6,35 +6,41 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var mouse_sensitivity = 0.002
 
-# --- REFERENCIAS A NODOS (USANDO BUSCADOR SEGURO) ---
+# --- REFERENCIAS A NODOS ---
 @onready var camera = find_child("Camera3D", true, false)
-@onready var animation_player = find_child("AnimationPlayer", true, false)
+
+# Preparamos las variables para las animaciones (sin buscar todavía)
+var anim_cuerpo: AnimationPlayer
+var anim_manos: AnimationPlayer
 
 func _ready():
+	# Ocultamos el mouse en la pantalla
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	if is_visible_in_tree() and camera:
 		camera.make_current()
 	
 	# --- CÓDIGO PARA LLAMAR MODELOS ---
-	# 1. Cargamos los archivos de la memoria
+	# 1. Cargamos los archivos
 	var escena_cuerpo = preload("res://MODELO NIÑA.tscn")
 	var escena_manos = preload("res://Niña uñas.tscn")
 	
-	# 2. Creamos una copia física (instancia) de cada uno
+	# 2. Creamos las copias 3D
 	var cuerpo_instancia = escena_cuerpo.instantiate()
 	var manos_instancia = escena_manos.instantiate()
 	
-	# 3. Los pegamos a nuestro CharacterBody3D
+	# 3. Los pegamos a la escena
 	add_child(cuerpo_instancia)
 	
-	# Si quieres que las manos sigan a la cámara:
 	if camera:
 		camera.add_child(manos_instancia)
 	else:
 		add_child(manos_instancia)
-	# -----------------------------------
+		
+	# 4. AHORA SÍ, buscamos los AnimationPlayers (ya que los modelos existen)
+	anim_cuerpo = cuerpo_instancia.find_child("AnimationPlayer", true, false)
+	anim_manos = manos_instancia.find_child("AnimationPlayer", true, false)
 
-	print("Script de Joy iniciado correctamente.")
+	print("Script de Joy iniciado correctamente. Animaciones conectadas.")
 
 func _input(event):
 	# Control de cámara con el mouse
@@ -42,6 +48,7 @@ func _input(event):
 		if camera:
 			rotate_y(-event.relative.x * mouse_sensitivity)
 			camera.rotate_x(-event.relative.y * mouse_sensitivity)
+			# Limitamos que tanto puede mirar arriba/abajo para no dar vueltas
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 func _physics_process(delta):
@@ -60,21 +67,22 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		# Reproducir animación de caminar
-		if animation_player and animation_player.has_animation("mixamo_com"):
-			animation_player.play("mixamo_com")
+		
+		# --- ANIMACIÓN DE CAMINAR ---
+		if anim_cuerpo and anim_cuerpo.has_animation("mixamo_com"):
+			anim_cuerpo.play("mixamo_com")
+			
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-		# Reproducir animación quieta
-		if animation_player and animation_player.has_animation("mixamo_com_001"):
-			animation_player.play("mixamo_com_001")
+		
+		# --- ANIMACIÓN QUIETA (IDLE) ---
+		if anim_cuerpo and anim_cuerpo.has_animation("mixamo_com_001"):
+			anim_cuerpo.play("mixamo_com_001")
 
 	move_and_slide()
 
 # --- SISTEMA DE PORTALES (TODOS LOS MAPAS) ---
-# Estas funciones se activan cuando Joy entra en un Area3D de portal
-
 func _on_portal_hacia_3_body_entered(body):
 	if body == self:
 		get_tree().change_scene_to_file("res://MAPA 3.tscn")
@@ -96,6 +104,5 @@ func _on_portal_hacia_8_body_entered(body):
 		get_tree().change_scene_to_file("res://MAPA 8 FINAL.tscn")
 
 # --- LIMPIEZA DE ADVERTENCIAS ---
-# Si usas señales de entrada de mouse, esto evita los errores amarillos
 func _on_input_event(_camera, _event, _event_position, _normal, _shape_idx):
 	pass
