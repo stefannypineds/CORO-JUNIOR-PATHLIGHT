@@ -6,28 +6,43 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var mouse_sensitivity = 0.002
 
 # Según tu foto, la cámara está dentro del modelo
-@onready var camera = $"MODELO NIÑA/Camera3D" 
-var anim_player: AnimationPlayer
+@onready var camera = $Camera3D
+@onready var animation_player: AnimationPlayer = $"Caminar Niña/AnimationPlayer"
+@onready var modelo = $"Caminar Niña"
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	if camera:
-		camera.make_current()
 	
-	# Buscamos el AnimationPlayer que ya vimos que existe
-	anim_player = find_child("AnimationPlayer", true, false)
+	# 2. ¿Soy el elegido? (ESTO VA ARRIBA DE TODO)
+	if Global.personaje_seleccionado == "Joy":
+		print("👦 Joy activo.")
+		show()
+		process_mode = Node.PROCESS_MODE_INHERIT
+		if camera:
+			camera.make_current()
+	else:
+		print("👦 Joy desactivado.")
+		hide()
+		process_mode = Node.PROCESS_MODE_DISABLED
 
 func _input(event):
-	# Rotación de cámara FPS
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		# Girar el cuerpo a los lados (Izquierda/Derecha)
-		rotate_y(-event.relative.x * mouse_sensitivity)
-		
-		# Girar la cámara arriba/abajo
-		if camera:
+		if camera != null:
+			rotate_y(-event.relative.x * mouse_sensitivity)
 			camera.rotate_x(-event.relative.y * mouse_sensitivity)
-			# Ponemos límites para que no se de la vuelta completa la cabeza
-			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-85), deg_to_rad(85))
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+			
+	# 2. CONTROL DE CÁMARA (TÁCTIL CELULAR)
+	if event is InputEventScreenDrag:
+		# Solo si deslizamos en la mitad derecha de la pantalla
+		if event.position.x > get_viewport().size.x / 2:
+			rotate_y(-event.relative.x * mouse_sensitivity * 0.5)
+			camera.rotate_x(-event.relative.y * mouse_sensitivity * 0.5)
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+			
+	# 3. LIBERAR EL MOUSE (TECLA ESCAPE)
+	if Input.is_action_just_pressed("ui_cancel"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _physics_process(delta):
 	# Gravedad
@@ -47,27 +62,39 @@ func _physics_process(delta):
 		velocity.z = direction.z * SPEED
 		
 		# Si se mueve, camina
-		if anim_player and anim_player.has_animation("mixamo_com"):
-			if anim_player.current_animation != "mixamo_com":
-				anim_player.play("mixamo_com")
+		animation_player.play("mixamo.com") 
+		modelo.rotation_degrees.y = 180
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-		
-		# Si se detiene, se queda estática (como pediste)
-		if anim_player:
-			anim_player.stop()
 
 	move_and_slide()
 
-# --- TUS PORTALES ---
-func _on_portal_hacia_3_body_entered(body):
-	if body == self: get_tree().change_scene_to_file("res://MAPA 3.tscn")
-func _on_hacia_mapa_4_y_5_body_entered(body):
-	if body == self: get_tree().change_scene_to_file("res://MAPA 3 Y 4.tscn")
-func _on_portal_hacia_6_body_entered(body):
-	if body == self: get_tree().change_scene_to_file("res://MAPA 6.tscn")
-func _on_portal_hacia_7_body_entered(body):
-	if body == self: get_tree().change_scene_to_file("res://MAPA 7 Y 8.tscn")
-func _on_portal_hacia_8_body_entered(body):
-	if body == self: get_tree().change_scene_to_file("res://MAPA 8 FINAL.tscn")
+# Esta función se activa cuando entras al portal del Mapa 1/2 hacia el Mapa 3
+func _on_portal_hacia_3_body_entered(body: Node3D) -> void:
+	if body.name == "CharacterBody3D2":
+		get_tree().change_scene_to_file("res://MAPA 3.tscn")
+
+# Esta función se activa cuando entras al bote (u otro portal) del Mapa 3 hacia el Mapa 3 y 4
+func _on_hacia_mapa_4_y_5_body_entered(body: Node3D) -> void:
+	if body.name == "CharacterBody3D2":
+		# Asegúrate de que el nombre del archivo sea exacto
+		get_tree().change_scene_to_file("res://MAPA 3 Y 4.tscn")
+
+
+func _on_portal_hacia_6_body_entered(body: Node3D) -> void:
+	if body.name == "CharacterBody3D2":
+		# ¡Nos vamos al mapa 6!
+		get_tree().change_scene_to_file("res://MAPA 6.tscn")
+
+
+func _on_portal_hacia_7_body_entered(body: Node3D) -> void:
+	if body.name == "CharacterBody3D2":
+		# ¡Nos vamos al mapa 6!
+		get_tree().change_scene_to_file("res://MAPA 7 Y 8.tscn")
+
+
+func _on_portal_hacia_8_body_entered(body: Node3D) -> void:
+	if body.name == "CharacterBody3D2":
+		# ¡Nos vamos al mapa 6!
+		get_tree().change_scene_to_file("res://MAPA 8 FINAL.tscn")
