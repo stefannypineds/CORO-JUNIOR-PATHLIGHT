@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://o3gwb2asdkek"]
 
 [ext_resource type="Texture2D" uid="uid://38bxbyc7mvh1" path="res://MODELOS/Personajes prueba/NOMBRE.png" id="1_lmeoh"]
-[ext_resource type="Script" uid="uid://djrg23vfuqot3" path="res://registro.gd" id="1_y4e4u"]
+[ext_resource type="Script" path="res://registro.gd" id="1_y4e4u"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lmeoh"]
 
@@ -19,13 +19,13 @@ script = ExtResource("1_y4e4u")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=778664801]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.028645834
-anchor_top = -0.0015432099
-anchor_right = 1.6727431
-anchor_bottom = 1.5617284
+anchor_left = -0.00086805556
+anchor_top = -0.0046296297
+anchor_right = 1.7005209
+anchor_bottom = 1.558642
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(0.60000056, 0.6400001)
+scale = Vector2(0.576724, 0.61375886)
 texture = ExtResource("1_lmeoh")
 metadata/_edit_use_anchors_ = true
 

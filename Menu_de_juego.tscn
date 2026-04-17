@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://xy56usg5maio"]
+
+[ext_resource type="Script" path="res://menu_de_juego.gd" id="1_jynhb"]
+[ext_resource type="Texture2D" uid="uid://c15s3tty5p45a" path="res://31.png" id="2_jynhb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jynhb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fdg7y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1jkg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xkj5m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n5qjq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ppwi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o8as8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qa0h7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3qus7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n36yt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ytfq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eq02a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bedns"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u775y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3g50q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_364gd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d25cy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fi1jb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3o6r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2jgy"]
+
+[node name="Control2" type="Control" unique_id=1422325343]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 137.0
+offset_top = 333.0
+offset_right = 137.0
+offset_bottom = 333.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jynhb")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1165967618]
+layout_mode = 0
+offset_left = -144.0
+offset_top = -340.0
+offset_right = 1028.0
+offset_bottom = 339.0
+texture = ExtResource("2_jynhb")
+expand_mode = 1
+
+[node name="Ayuda" type="Button" parent="TextureRect" unique_id=296018654]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 444.0
+offset_right = 738.0
+offset_bottom = 482.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jynhb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fdg7y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h1jkg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xkj5m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n5qjq")
+
+[node name="Creditos" type="Button" parent="TextureRect" unique_id=1559020853]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 481.0
+offset_right = 740.0
+offset_bottom = 522.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0ppwi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_o8as8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qa0h7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3qus7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n36yt")
+
+[node name="Nueva Partida" type="Button" parent="." unique_id=1457933608]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 32.0
+offset_right = 584.0
+offset_bottom = 63.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ytfq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_eq02a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bedns")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u775y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3g50q")
+
+[node name="ReanudarPartida" type="Button" parent="Nueva Partida" unique_id=994049359]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 35.0
+offset_right = 288.0
+offset_bottom = 69.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_364gd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d25cy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fi1jb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w3o6r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u2jgy")
+
+[connection signal="pressed" from="TextureRect/Ayuda" to="." method="_on_ayuda_pressed"]
+[connection signal="pressed" from="TextureRect/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="Nueva Partida" to="." method="_on_nueva_partida_pressed"]
+[connection signal="pressed" from="Nueva Partida/ReanudarPartida" to="." method="_on_reanudar_partida_pressed"]
