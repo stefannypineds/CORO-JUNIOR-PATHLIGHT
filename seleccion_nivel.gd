@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-	var nivel_alcanzado = GuardadoManager.nivel_maximo
+	var nivel_alcanzado = CerebroMisiones.nivel_maximo
 	print("=== INICIANDO MENÚ ===")
 	print("El jugador va en el nivel: ", nivel_alcanzado)
 	
