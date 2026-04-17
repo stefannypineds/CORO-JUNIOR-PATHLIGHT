@@ -11,13 +11,29 @@ var mouse_sensitivity = 0.002
 @onready var animation_player = find_child("AnimationPlayer", true, false)
 
 func _ready():
-	# 1. Atrapamos el ratón para poder girar la cámara
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
-	# 2. Si este personaje es el que está activo, su cámara manda
 	if is_visible_in_tree() and camera:
 		camera.make_current()
 	
+	# --- CÓDIGO PARA LLAMAR MODELOS ---
+	# 1. Cargamos los archivos de la memoria
+	var escena_cuerpo = preload("res://MODELO NIÑA.tscn")
+	var escena_manos = preload("res://Niña uñas.tscn")
+	
+	# 2. Creamos una copia física (instancia) de cada uno
+	var cuerpo_instancia = escena_cuerpo.instantiate()
+	var manos_instancia = escena_manos.instantiate()
+	
+	# 3. Los pegamos a nuestro CharacterBody3D
+	add_child(cuerpo_instancia)
+	
+	# Si quieres que las manos sigan a la cámara:
+	if camera:
+		camera.add_child(manos_instancia)
+	else:
+		add_child(manos_instancia)
+	# -----------------------------------
+
 	print("Script de Joy iniciado correctamente.")
 
 func _input(event):
@@ -45,14 +61,14 @@ func _physics_process(delta):
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 		# Reproducir animación de caminar
-		if animation_player and animation_player.has_animation("walk_com"):
-			animation_player.play("walk_com")
+		if animation_player and animation_player.has_animation("mixamo_com"):
+			animation_player.play("mixamo_com")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		# Reproducir animación quieta
-		if animation_player and animation_player.has_animation("Idle_com_001"):
-			animation_player.play("Idle_com_001")
+		if animation_player and animation_player.has_animation("mixamo_com_001"):
+			animation_player.play("mixamo_com_001")
 
 	move_and_slide()
 
