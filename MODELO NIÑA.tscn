@@ -2,9 +2,98 @@
 
 [ext_resource type="PackedScene" uid="uid://jlbq5mtfvwj2" path="res://MODELOS/Personajes prueba/Joy.glb" id="1_318t7"]
 
+[sub_resource type="GDScript" id="GDScript_318t7"]
+script/source = "extends CharacterBody3D
+
+# --- CONFIGURACIÓN DE MOVIMIENTO ---
+const SPEED = 5.0
+const JUMP_VELOCITY = 4.5
+var gravity = ProjectSettings.get_setting(\"physics/3d/default_gravity\")
+var mouse_sensitivity = 0.002
+
+# --- REFERENCIAS A NODOS (USANDO BUSCADOR SEGURO) ---
+@onready var camera = find_child(\"Camera3D\", true, false)
+@onready var animation_player = find_child(\"AnimationPlayer\", true, false)
+
+func _ready():
+	# 1. Atrapamos el ratón para poder girar la cámara
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	# 2. Si este personaje es el que está activo, su cámara manda
+	if is_visible_in_tree() and camera:
+		camera.make_current()
+	
+	print(\"Script de Joy iniciado correctamente.\")
+
+func _input(event):
+	# Control de cámara con el mouse
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		if camera:
+			rotate_y(-event.relative.x * mouse_sensitivity)
+			camera.rotate_x(-event.relative.y * mouse_sensitivity)
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+
+func _physics_process(delta):
+	# Aplicar gravedad si no está en el suelo
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+
+	# Control de salto
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Obtener dirección de movimiento (WASD / Flechas)
+	var input_dir = Input.get_vector(\"derecha\", \"izquierda\", \"adelante\", \"atras\")
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+		# Reproducir animación de caminar
+		if animation_player and animation_player.has_animation(\"walk_com\"):
+			animation_player.play(\"walk_com\")
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
+		# Reproducir animación quieta
+		if animation_player and animation_player.has_animation(\"Idle_com_001\"):
+			animation_player.play(\"Idle_com_001\")
+
+	move_and_slide()
+
+# --- SISTEMA DE PORTALES (TODOS LOS MAPAS) ---
+# Estas funciones se activan cuando Joy entra en un Area3D de portal
+
+func _on_portal_hacia_3_body_entered(body):
+	if body == self:
+		get_tree().change_scene_to_file(\"res://MAPA 3.tscn\")
+
+func _on_hacia_mapa_4_y_5_body_entered(body):
+	if body == self:
+		get_tree().change_scene_to_file(\"res://MAPA 3 Y 4.tscn\")
+
+func _on_portal_hacia_6_body_entered(body):
+	if body == self:
+		get_tree().change_scene_to_file(\"res://MAPA 6.tscn\")
+
+func _on_portal_hacia_7_body_entered(body):
+	if body == self:
+		get_tree().change_scene_to_file(\"res://MAPA 7 Y 8.tscn\")
+
+func _on_portal_hacia_8_body_entered(body):
+	if body == self:
+		get_tree().change_scene_to_file(\"res://MAPA 8 FINAL.tscn\")
+
+# --- LIMPIEZA DE ADVERTENCIAS ---
+# Si usas señales de entrada de mouse, esto evita los errores amarillos
+func _on_input_event(_camera, _event, _event_position, _normal, _shape_idx):
+	pass
+"
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_go5fv"]
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=544758080]
+script = SubResource("GDScript_318t7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1033741138]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044956386, 0.84789264, 0)
@@ -13,42 +102,42 @@ shape = SubResource("CapsuleShape3D_go5fv")
 [node name="Caminar Niña" parent="." unique_id=8523499 instance=ExtResource("1_318t7")]
 transform = Transform3D(-0.99974215, 0, 0.022704773, 0, 1, 0, -0.022704773, 0, -0.99974215, -0.03663832, -0.016718328, 0.017962813)
 
-[node name="Skeleton3D" parent="Caminar Niña/Armature" parent_id_path=PackedInt32Array(8523499, 3038201) index="0" unique_id=913577742]
-bones/0/position = Vector3(0.0006869029, 0.5854923, -0.0004274128)
-bones/0/rotation = Quaternion(-0.0052026073, 0.08684525, -0.031193532, 0.99571973)
-bones/1/rotation = Quaternion(-0.023739012, -0.0075188233, 0.020131268, 0.9994873)
-bones/2/rotation = Quaternion(0.014301646, -0.020558944, 0.005210805, 0.99967283)
-bones/3/rotation = Quaternion(-0.025549999, -0.020042099, 0.0008531381, 0.99947226)
-bones/4/rotation = Quaternion(0.017074868, -0.009898576, -0.008755499, 0.9997669)
-bones/5/rotation = Quaternion(-0.011859487, -0.033482965, 0.0031001777, 0.99936414)
-bones/7/rotation = Quaternion(-0.68189853, -0.37983692, 0.4327458, -0.451076)
-bones/8/rotation = Quaternion(0.49786043, -0.01743744, -0.08593621, 0.8628128)
-bones/9/rotation = Quaternion(0.029566694, -0.002113495, 0.31014213, 0.950228)
-bones/10/rotation = Quaternion(-0.052520413, 0.39839825, 0.17778325, 0.89828366)
-bones/11/rotation = Quaternion(0.028994393, 0.32428136, 0.13114892, 0.93637645)
-bones/12/rotation = Quaternion(0.09215103, -0.18468249, -0.03525802, 0.97783303)
-bones/13/rotation = Quaternion(0.015528239, 0.084968574, 0.23869544, 0.9672454)
-bones/15/rotation = Quaternion(-0.010066187, 0.0022270177, -0.020722331, 0.9997322)
-bones/16/rotation = Quaternion(0.1428396, -0.00049289106, -0.009898183, 0.9896963)
-bones/17/rotation = Quaternion(0.031441327, 0.001903376, 0.036875896, 0.9988233)
-bones/19/rotation = Quaternion(0.5991314, -0.3803887, 0.5737373, 0.40886623)
-bones/20/rotation = Quaternion(0.4509811, -0.123893425, 0.19416091, 0.8623039)
-bones/21/rotation = Quaternion(0.025450155, 0.0026100029, -0.27881032, 0.96000546)
-bones/22/rotation = Quaternion(0.019709153, -0.4710825, -0.08146005, 0.8780986)
-bones/23/rotation = Quaternion(0.04482912, -0.17603597, -0.17203149, 0.96819776)
-bones/24/rotation = Quaternion(-0.04109963, -0.070510335, 0.15285134, 0.9848734)
-bones/25/rotation = Quaternion(-0.05174605, 0.08649488, -0.33252323, 0.9376936)
-bones/27/rotation = Quaternion(0.10265014, 0.010296178, -0.05907996, 0.9929081)
-bones/28/rotation = Quaternion(0.2215346, 0.0028596018, -0.05571998, 0.9735551)
-bones/29/rotation = Quaternion(0.13897869, -0.0002468397, -0.050523818, 0.9890057)
-bones/31/rotation = Quaternion(-0.010285664, 0.18817002, 0.9819561, -0.015761562)
-bones/32/rotation = Quaternion(-0.5469675, 0.01661848, 0.070544615, 0.8340107)
-bones/33/rotation = Quaternion(0.37574682, -0.10311318, 0.10850723, 0.9145536)
-bones/34/rotation = Quaternion(0.3716611, -0.1834129, 0.045047585, 0.9089546)
-bones/36/rotation = Quaternion(-0.09324411, 0.029828979, 0.9902155, -0.099444136)
-bones/37/rotation = Quaternion(-0.104114905, -0.015729725, -0.033651344, 0.99387133)
-bones/38/rotation = Quaternion(0.4394531, 0.11722928, -0.17472385, 0.8732754)
-bones/39/rotation = Quaternion(0.38125202, 0.16774325, -0.061034635, 0.90707433)
+[node name="Skeleton3D" parent="Caminar Niña/Armature" parent_id_path=PackedInt32Array(8523499, 67661683) index="0" unique_id=501711284]
+bones/0/position = Vector3(0.0006868923, 0.5854923, -0.00042740628)
+bones/0/rotation = Quaternion(-0.005202608, 0.086845234, -0.031193493, 0.99571973)
+bones/1/rotation = Quaternion(-0.023739027, -0.0075188056, 0.020131243, 0.9994873)
+bones/2/rotation = Quaternion(0.014301647, -0.020558944, 0.005210805, 0.99967283)
+bones/3/rotation = Quaternion(-0.025549997, -0.020042103, 0.0008531381, 0.99947226)
+bones/4/rotation = Quaternion(0.017074872, -0.009898577, -0.008755498, 0.9997669)
+bones/5/rotation = Quaternion(-0.0118594915, -0.03348297, 0.0031001787, 0.99936414)
+bones/7/rotation = Quaternion(-0.68189853, -0.37983686, 0.43274575, -0.45107603)
+bones/8/rotation = Quaternion(0.49786037, -0.01743743, -0.085936256, 0.8628128)
+bones/9/rotation = Quaternion(0.029566739, -0.0021134913, 0.3101422, 0.950228)
+bones/10/rotation = Quaternion(-0.052520595, 0.39839834, 0.17778313, 0.8982837)
+bones/11/rotation = Quaternion(0.02899452, 0.32428142, 0.13114884, 0.9363765)
+bones/12/rotation = Quaternion(0.09213263, -0.18471442, -0.035266545, 0.9778285)
+bones/13/rotation = Quaternion(0.015528314, 0.08496859, 0.23869543, 0.9672454)
+bones/15/rotation = Quaternion(-0.010066359, 0.0022271038, -0.020722406, 0.99973214)
+bones/16/rotation = Quaternion(0.1428398, -0.0004930807, -0.009897798, 0.98969626)
+bones/17/rotation = Quaternion(0.031441417, 0.0019033715, 0.036875796, 0.9988233)
+bones/19/rotation = Quaternion(0.59913146, -0.38038856, 0.5737374, 0.4088661)
+bones/20/rotation = Quaternion(0.45098108, -0.123893425, 0.19416094, 0.862304)
+bones/21/rotation = Quaternion(0.025450505, 0.0026099833, -0.27881023, 0.96000546)
+bones/22/rotation = Quaternion(0.019708987, -0.47108263, -0.0814601, 0.87809855)
+bones/23/rotation = Quaternion(0.044829108, -0.17603599, -0.17203154, 0.96819776)
+bones/24/rotation = Quaternion(-0.041099682, -0.07051021, 0.15285134, 0.9848734)
+bones/25/rotation = Quaternion(-0.05174611, 0.08649487, -0.33252326, 0.93769366)
+bones/27/rotation = Quaternion(0.10265016, 0.010295917, -0.059080094, 0.9929081)
+bones/28/rotation = Quaternion(0.22153465, 0.002859678, -0.05572001, 0.9735551)
+bones/29/rotation = Quaternion(0.13897882, -0.00024680776, -0.050523758, 0.9890057)
+bones/31/rotation = Quaternion(-0.010285631, 0.18816963, 0.98195624, -0.01576165)
+bones/32/rotation = Quaternion(-0.5469673, 0.016618576, 0.07054464, 0.8340108)
+bones/33/rotation = Quaternion(0.3757472, -0.10311328, 0.108507074, 0.91455346)
+bones/34/rotation = Quaternion(0.37166098, -0.18341286, 0.04504762, 0.9089547)
+bones/36/rotation = Quaternion(-0.093244016, 0.029827742, 0.9902156, -0.09944404)
+bones/37/rotation = Quaternion(-0.10411217, -0.015729895, -0.033651393, 0.9938717)
+bones/38/rotation = Quaternion(0.43945146, 0.11722948, -0.17472331, 0.87327635)
+bones/39/rotation = Quaternion(0.38125184, 0.16774318, -0.06103462, 0.90707445)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=581548126]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0919474, -0.07126352)
