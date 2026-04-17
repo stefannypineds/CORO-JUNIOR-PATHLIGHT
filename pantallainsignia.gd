@@ -1,24 +1,31 @@
 extends Control
 
-func _ready():
-	hide() # Empieza oculto
-	# ENLACE: Nos conectamos a la señal del cerebro
-	CerebroMisiones.mostrar_diploma.connect(_al_recibir_victoria)
+# Esta variable decide qué dibujo mostrar (1 para Nivel 1, etc.)
+var numero_de_insignia : int = 1 
 
-func _al_recibir_victoria():
-	# Cargamos los datos para tener el nombre fresco
+func _ready():
+	# 1. CARGAR DATOS: Esto va al "disco" a buscar el nombre que guardaste en el Registro
 	CerebroMisiones.cargar_partida()
 	
-	# Ponemos el nombre del niño
+	# 2. ESCRIBIR EL NOMBRE:
 	if CerebroMisiones.nombre_jugador != "":
-		$LabelNombre.text = CerebroMisiones.nombre_jugador
+		$LabelNombre.text = "¡Felicidades, " + CerebroMisiones.nombre_jugador + "!"
 	else:
-		$LabelNombre.text = "Explorador"
+		$LabelNombre.text = "¡Felicidades, Explorador!"
 	
-	# Ponemos la fecha
+	# 3. PONER LA FECHA: (Hoy es 16/04/2026)
 	var t = Time.get_date_dict_from_system()
-	$LabelFecha.text = "%02d/%02d/%d" % [t.day, t.month, t.year]
+	$LabelFecha.text = "Logrado el: %02d/%02d/%d" % [t.day, t.month, t.year]
 	
-	# Aseguramos color negro y visibilidad
-	$LabelNombre.add_theme_color_override("font_color", Color.BLACK)
-	show() # ¡Aparece!
+	# 4. MOSTRAR LA IMAGEN:
+	# Busca el archivo "INSIGNIA 1.png" en tu carpeta principal
+	var ruta = "res://INSIGNIA " + str(numero_de_insignia) + ".png"
+	if FileAccess.file_exists(ruta):
+		$TextureRect.texture = load(ruta)
+	else:
+		print("Error: No encontré la imagen en " + ruta)
+
+# EXTRA: Cerrar la pantalla si el niño hace clic
+func _input(event):
+	if event is InputEventMouseButton and event.pressed:
+		queue_free()
