@@ -1,66 +1,44 @@
 extends CharacterBody3D
 
-# --- CONFIGURACIÓN DE MOVIMIENTO ---
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var mouse_sensitivity = 0.002
 
-# --- REFERENCIAS A NODOS ---
-@onready var camera = find_child("Camera3D", true, false)
-
-# Preparamos las variables para las animaciones (sin buscar todavía)
-var anim_cuerpo: AnimationPlayer
-var anim_manos: AnimationPlayer
+# Según tu foto, la cámara está dentro del modelo
+@onready var camera = $"MODELO NIÑA/Camera3D" 
+var anim_player: AnimationPlayer
 
 func _ready():
-	# Ocultamos el mouse en la pantalla
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	if is_visible_in_tree() and camera:
+	if camera:
 		camera.make_current()
 	
-	# --- CÓDIGO PARA LLAMAR MODELOS ---
-	# 1. Cargamos los archivos
-	var escena_cuerpo = preload("res://MODELO NIÑA.tscn")
-	var escena_manos = preload("res://Niña uñas.tscn")
-	
-	# 2. Creamos las copias 3D
-	var cuerpo_instancia = escena_cuerpo.instantiate()
-	var manos_instancia = escena_manos.instantiate()
-	
-	# 3. Los pegamos a la escena
-	add_child(cuerpo_instancia)
-	
-	if camera:
-		camera.add_child(manos_instancia)
-	else:
-		add_child(manos_instancia)
-		
-	# 4. AHORA SÍ, buscamos los AnimationPlayers (ya que los modelos existen)
-	anim_cuerpo = cuerpo_instancia.find_child("AnimationPlayer", true, false)
-	anim_manos = manos_instancia.find_child("AnimationPlayer", true, false)
-
-	print("Script de Joy iniciado correctamente. Animaciones conectadas.")
+	# Buscamos el AnimationPlayer que ya vimos que existe
+	anim_player = find_child("AnimationPlayer", true, false)
 
 func _input(event):
-	# Control de cámara con el mouse
+	# Rotación de cámara FPS
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		# Girar el cuerpo a los lados (Izquierda/Derecha)
+		rotate_y(-event.relative.x * mouse_sensitivity)
+		
+		# Girar la cámara arriba/abajo
 		if camera:
-			rotate_y(-event.relative.x * mouse_sensitivity)
 			camera.rotate_x(-event.relative.y * mouse_sensitivity)
-			# Limitamos que tanto puede mirar arriba/abajo para no dar vueltas
-			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+			# Ponemos límites para que no se de la vuelta completa la cabeza
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-85), deg_to_rad(85))
 
 func _physics_process(delta):
-	# Aplicar gravedad si no está en el suelo
+	# Gravedad
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	# Control de salto
+	# Salto
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Obtener dirección de movimiento (WASD / Flechas)
+	# Movimiento basado en hacia dónde mira la cámara
 	var input_dir = Input.get_vector("derecha", "izquierda", "adelante", "atras")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
@@ -68,41 +46,28 @@ func _physics_process(delta):
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 		
-		# --- ANIMACIÓN DE CAMINAR ---
-		if anim_cuerpo and anim_cuerpo.has_animation("mixamo_com"):
-			anim_cuerpo.play("mixamo_com")
-			
+		# Si se mueve, camina
+		if anim_player and anim_player.has_animation("mixamo_com"):
+			if anim_player.current_animation != "mixamo_com":
+				anim_player.play("mixamo_com")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
-		# --- ANIMACIÓN QUIETA (IDLE) ---
-		if anim_cuerpo and anim_cuerpo.has_animation("mixamo_com_001"):
-			anim_cuerpo.play("mixamo_com_001")
+		# Si se detiene, se queda estática (como pediste)
+		if anim_player:
+			anim_player.stop()
 
 	move_and_slide()
 
-# --- SISTEMA DE PORTALES (TODOS LOS MAPAS) ---
+# --- TUS PORTALES ---
 func _on_portal_hacia_3_body_entered(body):
-	if body == self:
-		get_tree().change_scene_to_file("res://MAPA 3.tscn")
-
+	if body == self: get_tree().change_scene_to_file("res://MAPA 3.tscn")
 func _on_hacia_mapa_4_y_5_body_entered(body):
-	if body == self:
-		get_tree().change_scene_to_file("res://MAPA 3 Y 4.tscn")
-
+	if body == self: get_tree().change_scene_to_file("res://MAPA 3 Y 4.tscn")
 func _on_portal_hacia_6_body_entered(body):
-	if body == self:
-		get_tree().change_scene_to_file("res://MAPA 6.tscn")
-
+	if body == self: get_tree().change_scene_to_file("res://MAPA 6.tscn")
 func _on_portal_hacia_7_body_entered(body):
-	if body == self:
-		get_tree().change_scene_to_file("res://MAPA 7 Y 8.tscn")
-
+	if body == self: get_tree().change_scene_to_file("res://MAPA 7 Y 8.tscn")
 func _on_portal_hacia_8_body_entered(body):
-	if body == self:
-		get_tree().change_scene_to_file("res://MAPA 8 FINAL.tscn")
-
-# --- LIMPIEZA DE ADVERTENCIAS ---
-func _on_input_event(_camera, _event, _event_position, _normal, _shape_idx):
-	pass
+	if body == self: get_tree().change_scene_to_file("res://MAPA 8 FINAL.tscn")

@@ -1,46 +1,86 @@
-extends Node
+extends CharacterBody3D
 
-# --- SEÑALES ---
-signal mostrar_diploma
+# --- CONFIGURACIÓN DE MOVIMIENTO ---
+const SPEED = 5.0
+const JUMP_VELOCITY = 4.5
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var mouse_sensitivity = 0.002
 
-# --- VARIABLES ---
-var nombre_jugador : String = ""
-var nivel_maximo : int = 1  # <--- ESTA LÍNEA ARREGLA EL ERROR ROJO
+# --- REFERENCIAS DIRECTAS (SIN INSTANCIAR COPIAS) ---
+@onready var camera = find_child("Camera3D", true, false)
+@onready var anim_player = find_child("AnimationPlayer", true, false)
 
-# Tus misiones (Basadas en tu proyecto)
-var m1 = MisionBase.new(["Ovejas", "Biblia", "Binoculares"])
-var m2 = MisionBase.new(["Paso", "Pintura", "Biblia2"])
-var m3 = MisionBase.new(["Familia orando", "Biblia", "Pintura"])
-var m4 = MisionBase.new(["Biblia", "Binoculares", "Pintura"])
-var m5 = MisionBase.new(["Biblia2", "Binoculares2", "Pintura2"])
-var m6 = MisionBase.new(["modelo regalo", "Rosa", "Biblia"])
-var m7 = MisionBase.new(["Biblia", "Pintura", "Canasta"])
+func _ready():
+	# Bloqueamos el mouse para girar la cabeza como un FPS real
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	if camera:
+		camera.make_current()
+		print("¡Cámara FPS de Joy lista!")
+	
+	if anim_player:
+		print("¡Cerebro de animación de Joy conectado!")
 
-# --- FUNCIONES DE JUEGO ---
+func _input(event):
+	# Rotación de cámara FPS
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		# Girar el cuerpo (Izquierda/Derecha)
+		rotate_y(-event.relative.x * mouse_sensitivity)
+		
+		# Girar la cabeza/cámara (Arriba/Abajo)
+		if camera:
+			camera.rotate_x(-event.relative.y * mouse_sensitivity)
+			# Límite para no dar la vuelta completa con la cabeza
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-85), deg_to_rad(85))
 
-# Llama a esta función para que aparezca la carpa
-func activar_victoria():
-	guardar_partida()
-	mostrar_diploma.emit()
-	print("Señal de victoria enviada")
+func _physics_process(delta):
+	# Aplicar gravedad
+	if not is_on_floor():
+		velocity.y -= gravity * delta
 
-# --- GUARDAR Y CARGAR DEL DISCO ---
+	# Saltar con Espacio
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
 
-func guardar_partida():
-	var archivo = FileAccess.open("user://guardado.save", FileAccess.WRITE)
-	if archivo:
-		archivo.store_line(nombre_jugador)
-		archivo.store_line(str(nivel_maximo)) # También guardamos el nivel
-		archivo.close()
-		print("Datos guardados con éxito.")
+	# Obtener dirección (WASD)
+	var input_dir = Input.get_vector("derecha", "izquierda", "adelante", "atras")
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+		
+		# Solo camina cuando tú te mueves
+		if anim_player and anim_player.has_animation("mixamo_com"):
+			if anim_player.current_animation != "mixamo_com":
+				anim_player.play("mixamo_com")
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
+		
+		# Se queda quieta como estatua al soltar las teclas
+		if anim_player:
+			anim_player.stop()
 
-func cargar_partida():
-	if FileAccess.file_exists("user://guardado.save"):
-		var archivo = FileAccess.open("user://guardado.save", FileAccess.READ)
-		if archivo:
-			nombre_jugador = archivo.get_line()
-			var nivel_leido = archivo.get_line()
-			if nivel_leido != "":
-				nivel_maximo = int(nivel_leido)
-			archivo.close()
-			print("Datos cargados. Nombre: " + nombre_jugador)
+	move_and_slide()
+
+# --- TUS PORTALES ---
+func _on_portal_hacia_3_body_entered(body):
+	if body == self:
+		get_tree().change_scene_to_file("res://MAPA 3.tscn")
+
+func _on_hacia_mapa_4_y_5_body_entered(body):
+	if body == self:
+		get_tree().change_scene_to_file("res://MAPA 3 Y 4.tscn")
+
+func _on_portal_hacia_6_body_entered(body):
+	if body == self:
+		get_tree().change_scene_to_file("res://MAPA 6.tscn")
+
+func _on_portal_hacia_7_body_entered(body):
+	if body == self:
+		get_tree().change_scene_to_file("res://MAPA 7 Y 8.tscn")
+
+func _on_portal_hacia_8_body_entered(body):
+	if body == self:
+		get_tree().change_scene_to_file("res://MAPA 8 FINAL.tscn")
