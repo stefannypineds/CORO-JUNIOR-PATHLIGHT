@@ -5,12 +5,13 @@
 [ext_resource type="Script" uid="uid://cv4dafxp6pld8" path="res://area_3d3.gd" id="2_ptqfw"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="2_wmqtt"]
 [ext_resource type="Script" uid="uid://denqvnplyaojp" path="res://area_3d2.gd" id="3_6ifq2"]
-[ext_resource type="Script" path="res://portal_hacia_3.gd" id="3_rpkj6"]
+[ext_resource type="Script" uid="uid://3exigo218luq" path="res://portal_hacia_3.gd" id="3_rpkj6"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="4_4tp43"]
 [ext_resource type="PackedScene" uid="uid://jdqlsraj7lo" path="res://MODELOS/MAPA 3/Pez.glb" id="5_7mx0f"]
 [ext_resource type="PackedScene" uid="uid://c8kairutbn80o" path="res://MODELO NIÑA.tscn" id="6_ieipr"]
 [ext_resource type="Script" uid="uid://bykpl7dv5vdjh" path="res://area_3d12.gd" id="7_v7ijo"]
 [ext_resource type="Script" uid="uid://dh6w836cm4ycy" path="res://color_rect2.gd" id="10_jtvy8"]
+[ext_resource type="Script" uid="uid://co0qdqj6ribmc" path="res://modelo_niña.gd" id="11_n5ty3"]
 [ext_resource type="Texture2D" uid="uid://cxgi6k4xq1qwd" path="res://MODELOS/MAPA 1 Y 2/INSIGNIA 1.png" id="17_nwc6w"]
 [ext_resource type="Script" uid="uid://cpmi3bniljxuj" path="res://texture_rect.gd" id="18_0838n"]
 [ext_resource type="Texture2D" uid="uid://c2paa3iei0sug" path="res://INSIGNIA 2.png" id="19_0838n"]
@@ -133,7 +134,7 @@ func _on_button_pressed() -> void:
 [node name="Seccion1" parent="." unique_id=561212832 instance=ExtResource("1_bh17j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14452791, 0, -0.4316411)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="Seccion1/MAPA 1 Y 22/MAPA 1 Y 2" parent_id_path=PackedInt32Array(561212832, 616135401, 1721443301) index="1" unique_id=1394976610]
+[node name="StaticBody3D2" type="StaticBody3D" parent="Seccion1/MAPA 1 Y 22/MAPA 1 Y 2" parent_id_path=PackedInt32Array(561212832, 616135401, 17269051) index="1" unique_id=1394976610]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/MAPA 1 Y 22/MAPA 1 Y 2/StaticBody3D2" unique_id=2062439330]
 shape = SubResource("ConcavePolygonShape3D_wmqtt")
@@ -141,7 +142,7 @@ shape = SubResource("ConcavePolygonShape3D_wmqtt")
 [node name="Mandamientos" parent="Seccion1" index="3" unique_id=999986881]
 transform = Transform3D(0.45070767, 0.06345452, -0.8904135, -0.0007744563, 0.99749774, 0.07069375, 0.89267135, -0.031172628, 0.44962892, 15.815756, 0.21399069, 10.621023)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Seccion1/Mandamientos/tripo_node_9f0c6252-e072-4081-985f-db1e336f778b" parent_id_path=PackedInt32Array(561212832, 999986881, 227046741) index="0" unique_id=679709062]
+[node name="StaticBody3D" type="StaticBody3D" parent="Seccion1/Mandamientos/tripo_node_9f0c6252-e072-4081-985f-db1e336f778b" parent_id_path=PackedInt32Array(561212832, 999986881, 610709150) index="0" unique_id=679709062]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Seccion1/Mandamientos/tripo_node_9f0c6252-e072-4081-985f-db1e336f778b/StaticBody3D" unique_id=336725855]
 shape = SubResource("ConcavePolygonShape3D_rpkj6")
@@ -233,7 +234,7 @@ shape = SubResource("BoxShape3D_pr80j")
 [node name="Letrero 2" parent="Seccion1" index="166" unique_id=246655698]
 transform = Transform3D(0.6682352, 0, -0.74395007, 0, 1, 0, 0.74395007, 0, 0.6682352, 12.802973, 2.7919655, 17.141123)
 
-[node name="CharacterBody3D" parent="." unique_id=595004463 instance=ExtResource("2_wmqtt")]
+[node name="jugador niño" parent="." unique_id=595004463 instance=ExtResource("2_wmqtt")]
 transform = Transform3D(-0.027625069, 0, 0.99961835, 0, 1, 0, -0.99961835, 0, -0.027625069, 22.608624, 0.4351393, 22.454422)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1778515329]
@@ -265,8 +266,9 @@ cuadro_texto = NodePath("../../Interfaz Pez/ColorRect")
 transform = Transform3D(1, -4.5788865e-06, 2.9802322e-08, 6.825074e-08, 0.99999714, 2.7001676e-07, -2.9802322e-08, -1.1066575e-06, 1.0000001, 0.0065989494, 0.22228909, 0.07279968)
 shape = SubResource("BoxShape3D_n5ty3")
 
-[node name="CharacterBody3D2" parent="." unique_id=544758080 instance=ExtResource("6_ieipr")]
+[node name="modelo niña" parent="." unique_id=544758080 instance=ExtResource("6_ieipr")]
 transform = Transform3D(-0.033626102, 0, 0.9994345, 0, 1, 0, -0.9994345, 0, -0.033626102, 22.521473, 0.5078525, 21.524885)
+script = ExtResource("11_n5ty3")
 
 [node name="Interfaz Biblia 1" type="CanvasLayer" parent="." unique_id=1863494185]
 
@@ -509,7 +511,7 @@ text = "X"
 [connection signal="input_event" from="Seccion1/Pintura/Area3D" to="Seccion1/Pintura/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Seccion1/Pintura2/Area3D" to="Seccion1/Pintura2/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Seccion1/Paso/Area3D" to="Seccion1/Paso/Area3D" method="_on_input_event"]
-[connection signal="body_entered" from="Portal hacia 3" to="CharacterBody3D" method="_on_portal_hacia_3_body_entered"]
+[connection signal="body_entered" from="Portal hacia 3" to="jugador niño" method="_on_portal_hacia_3_body_entered"]
 [connection signal="input_event" from="Pez/Area3D" to="Pez/Area3D" method="_on_input_event"]
 [connection signal="pressed" from="Interfaz Biblia 1/ColorRect/Button" to="Interfaz Biblia 1/ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="Interfaz Biblia 2/ColorRect/Button" to="Interfaz Biblia 2/ColorRect" method="_on_button_pressed"]

@@ -11,14 +11,20 @@ var mouse_sensitivity = 0.002
 @onready var animation_player = find_child("AnimationPlayer", true, false)
 
 func _ready():
-	# 1. Atrapamos el ratón para poder girar la cámara
+	# 1. Atrapamos el mouse
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
-	# 2. Si este personaje es el que está activo, su cámara manda
-	if is_visible_in_tree() and camera:
-		camera.make_current()
-	
-	print("Script de Joy iniciado correctamente.")
+	# 2. ¿Soy la elegida?
+	if Global.personaje_seleccionado == "Joy":
+		print("👗 Joy activa y lista para jugar.")
+		show()
+		process_mode = Node.PROCESS_MODE_INHERIT # Permite que se mueva y procese
+		if camera:
+			camera.make_current() # Activa su cámara
+	else:
+		print("👗 Joy desactivada (No seleccionada).")
+		hide()
+		process_mode = Node.PROCESS_MODE_DISABLED # Congela el script por completo
 
 func _input(event):
 	# Control de cámara con el mouse

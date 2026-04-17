@@ -14,8 +14,20 @@ var mouse_sensitivity = 0.002
 @onready var modelo = $"Animacion niño"
 
 func _ready():
-	# Atrapamos el mouse al inicio para que no se salga de la ventana
+	# 1. Atrapamos el mouse
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	# 2. ¿Soy el elegido? (ESTO VA ARRIBA DE TODO)
+	if Global.personaje_seleccionado == "Theo":
+		print("👦 Theo activo.")
+		show()
+		process_mode = Node.PROCESS_MODE_INHERIT
+		if camera:
+			camera.make_current()
+	else:
+		print("👦 Theo desactivado.")
+		hide()
+		process_mode = Node.PROCESS_MODE_DISABLED
 
 func _input(event):
 	# 1. CONTROL DE CÁMARA (MOUSE PC)
