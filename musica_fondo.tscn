@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cen66ulhdhugx"]
+
+[ext_resource type="AudioStream" uid="uid://846uoe30n783" path="res://Instrumental PATHLIGHT.mp3" id="1_21ge5"]
+
+[node name="MusicaFondo" type="AudioStreamPlayer" unique_id=99694534]
+stream = ExtResource("1_21ge5")
+autoplay = true
