@@ -35,16 +35,18 @@ func _input(event: InputEvent) -> void:
 		
 		punta.position = centro_base + desplazamiento - (punta.size / 2.0)
 		
-		# 3. Simulamos tus acciones personalizadas
+		# 3. Simulamos tus acciones personalizadas (LOGICA INVERTIDA)
 		var direccion = desplazamiento / radio_maximo
 		
-		# Eje Horizontal (Derecha / Izquierda)
+		# Eje Horizontal (INVERTIDO: Derecha / Izquierda)
 		if direccion.x > 0.3:
+			# Si la bolita va a la derecha, presionamos "izquierda"
+			Input.action_press("izquierda") 
+			Input.action_release("derecha")
+		elif direccion.x < -0.3:
+			# Si la bolita va a la izquierda, presionamos "derecha"
 			Input.action_press("derecha")
 			Input.action_release("izquierda")
-		elif direccion.x < -0.3:
-			Input.action_press("izquierda")
-			Input.action_release("derecha")
 		else:
 			Input.action_release("derecha")
 			Input.action_release("izquierda")

@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://b0yldb0ikoc2l" path="res://INSIGNIA 6.png" id="24_fkco4"]
 [ext_resource type="PackedScene" uid="uid://dkrjfaaykls44" path="res://MapaPersistentUI.tscn" id="25_fkco4"]
 [ext_resource type="Script" uid="uid://ctldcjxbfj3em" path="res://texture_rect5.gd" id="25_gecxq"]
+[ext_resource type="PackedScene" uid="uid://b2qwaetrt0m5j" path="res://ControlesMovilesUI.tscn" id="26_gecxq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -892,6 +893,8 @@ scale = Vector2(5.5493703, 2.8530176)
 text = "X"
 
 [node name="MapaUI" parent="." unique_id=141221227 instance=ExtResource("25_fkco4")]
+
+[node name="ControlesMovilesUI" parent="." unique_id=192328907 instance=ExtResource("26_gecxq")]
 
 [connection signal="input_event" from="modelo regalo/Area3D" to="modelo regalo/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Rosa/Area3D" to="Rosa/Area3D" method="_on_input_event"]

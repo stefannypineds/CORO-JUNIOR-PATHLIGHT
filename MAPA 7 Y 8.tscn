@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="5_8rm53"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="5_e758g"]
 [ext_resource type="PackedScene" uid="uid://dkrjfaaykls44" path="res://MapaPersistentUI.tscn" id="6_8rm53"]
+[ext_resource type="PackedScene" uid="uid://b2qwaetrt0m5j" path="res://ControlesMovilesUI.tscn" id="7_14amg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -1333,6 +1334,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.661417, 6.465475, -46.3680
 shape = SubResource("BoxShape3D_hdhv6")
 
 [node name="MapaUI" parent="." unique_id=141221227 instance=ExtResource("6_8rm53")]
+
+[node name="ControlesMovilesUI" parent="." unique_id=192328907 instance=ExtResource("7_14amg")]
 
 [connection signal="body_entered" from="Portal hacia 8" to="CharacterBody3D" method="_on_portal_hacia_8_body_entered"]
 

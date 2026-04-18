@@ -23,6 +23,7 @@
 [ext_resource type="Script" uid="uid://bmjy2t1na4g0n" path="res://color_rect3.gd" id="18_ctyqp"]
 [ext_resource type="PackedScene" uid="uid://dkrjfaaykls44" path="res://MapaPersistentUI.tscn" id="26_8r3u3"]
 [ext_resource type="Texture2D" uid="uid://dfcp5kxw71p7j" path="res://INSIGNIA 7.png" id="26_peuw5"]
+[ext_resource type="PackedScene" uid="uid://b2qwaetrt0m5j" path="res://ControlesMovilesUI.tscn" id="27_peuw5"]
 [ext_resource type="Script" uid="uid://da15vet7yo57u" path="res://texture_rect7.gd" id="27_t0tnf"]
 [ext_resource type="Texture2D" uid="uid://w06bra1stgdd" path="res://INSIGNIA 8.png" id="28_ke4pg"]
 [ext_resource type="Script" uid="uid://dui7q11qxxa0v" path="res://texture_rect8.gd" id="29_yoddv"]
@@ -744,6 +745,8 @@ shadow_enabled = true
 shadow_bias = 2.957
 
 [node name="MapaUI" parent="." unique_id=141221227 instance=ExtResource("26_8r3u3")]
+
+[node name="ControlesMovilesUI" parent="." unique_id=192328907 instance=ExtResource("27_peuw5")]
 
 [connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares2/Area3D" to="MAPA ESCALA sec 7 y 8/Mball_074/StaticBody3D/Binoculares2/Area3D" method="_on_input_event"]

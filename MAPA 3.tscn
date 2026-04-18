@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dvgy244nscapg" path="res://MODELOS/MAPA 4 Y 5/Canoa baja calidad.glb" id="14_k4wfn"]
 [ext_resource type="Texture2D" uid="uid://vq8a53028tgl" path="res://MODELOS/Niebla 2.webp" id="15_qy7de"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="16_6hbkg"]
-[ext_resource type="Script" uid="uid://codviaqne8qcn" path="res://hacia_mapa_4_y_5.gd" id="17_2pv8m"]
+[ext_resource type="Script" path="res://hacia_mapa_4_y_5.gd" id="17_2pv8m"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="17_7xj8a"]
 [ext_resource type="PackedScene" uid="uid://bhk4xldcg0qnr" path="res://MODELOS/MAPA 3/Familia orando.glb" id="18_5snh3"]
 [ext_resource type="Script" uid="uid://b18yx66jgj5os" path="res://familiaorando.gd" id="19_0jsfg"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" uid="uid://u7ox50hdcow2" path="res://area_3d.gd" id="22_0jsfg"]
 [ext_resource type="PackedScene" uid="uid://cbm34q5j54ldg" path="res://MODELOS/MAPA 1 Y 2/Pintura.glb" id="22_rnjqh"]
 [ext_resource type="PackedScene" uid="uid://dkrjfaaykls44" path="res://MapaPersistentUI.tscn" id="25_wy8ug"]
+[ext_resource type="PackedScene" uid="uid://b2qwaetrt0m5j" path="res://ControlesMovilesUI.tscn" id="26_rnjqh"]
 [ext_resource type="Texture2D" uid="uid://bvra1d8lkb1nq" path="res://INSIGNIA 3.png" id="27_5gx0d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uyt8m"]
@@ -165,7 +166,7 @@ environment = SubResource("Environment_v1v01")
 [node name="Fondo mapa 3" parent="Seccion1" unique_id=2121909699 instance=ExtResource("3_01mhm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.180943, 0.37781048, -5.516509)
 
-[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=1842946025]
+[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=746569204]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030014038, 1.9073486e-06, 0.083227634)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Seccion1/Fondo mapa 3/MAPA 3" index="0" unique_id=1182644870]
@@ -285,7 +286,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.62981, 0.7545209, 21.2055
 [node name="Fogata" parent="." unique_id=2033573339 instance=ExtResource("2_5rrxg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0977318, -25.8272, 0.94542503, 25.448006)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Fogata/tripo_node_2484a654-e877-4936-af36-8a8bd5dec047" parent_id_path=PackedInt32Array(2033573339, 372242710) index="0" unique_id=737456233]
+[node name="StaticBody3D" type="StaticBody3D" parent="Fogata/tripo_node_2484a654-e877-4936-af36-8a8bd5dec047" parent_id_path=PackedInt32Array(2033573339, 936722295) index="0" unique_id=737456233]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Fogata/tripo_node_2484a654-e877-4936-af36-8a8bd5dec047/StaticBody3D" unique_id=1463744510]
 shape = SubResource("ConcavePolygonShape3D_wy8ug")
@@ -1042,7 +1043,7 @@ shape = SubResource("BoxShape3D_7xj8a")
 [node name="Familia orando" parent="Portal hacia 4" unique_id=1737435999 instance=ExtResource("18_5snh3")]
 transform = Transform3D(1.3936791, 7.259213e-10, -0.12786487, -0.009284467, 1.395838, -0.101197205, 0.12752734, 0.10162222, 1.39, -14.4145775, -2.1375365, 14.092425)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Portal hacia 4/Familia orando/tripo_node_d2cfdaa0-2472-44bd-8646-ac23982235a2" parent_id_path=PackedInt32Array(1737435999, 1993575276) index="0" unique_id=1245800419]
+[node name="StaticBody3D" type="StaticBody3D" parent="Portal hacia 4/Familia orando/tripo_node_d2cfdaa0-2472-44bd-8646-ac23982235a2" parent_id_path=PackedInt32Array(1737435999, 29966045) index="0" unique_id=1245800419]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Portal hacia 4/Familia orando/tripo_node_d2cfdaa0-2472-44bd-8646-ac23982235a2/StaticBody3D" unique_id=912839576]
 shape = SubResource("ConcavePolygonShape3D_rnjqh")
@@ -1219,6 +1220,8 @@ scale = Vector2(5.7093625, 2.8454337)
 text = "X"
 
 [node name="MapaUI" parent="." unique_id=141221227 instance=ExtResource("25_wy8ug")]
+
+[node name="ControlesMovilesUI" parent="." unique_id=192328907 instance=ExtResource("26_rnjqh")]
 
 [connection signal="input_event" from="Seccion1/StaticBody3D4/CollisionShape3D/Binoculares/Area3D" to="Seccion1/StaticBody3D4/CollisionShape3D/Binoculares/Area3D" method="_on_input_event"]
 [connection signal="body_entered" from="Portal hacia 4" to="CharacterBody3D" method="_on_hacia_mapa_4_y_5_body_entered"]

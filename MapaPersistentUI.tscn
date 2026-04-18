@@ -10,9 +10,9 @@
 script = ExtResource("1_cuuwq")
 
 [node name="BotonMapaIcono" type="TextureButton" parent="." unique_id=1807704341]
-offset_left = 971.0
-offset_top = 33.000015
-offset_right = 1534.0
+offset_left = 1011.0
+offset_top = 33.0
+offset_right = 1574.0
 offset_bottom = 442.0
 scale = Vector2(0.119831316, 0.114449866)
 texture_normal = ExtResource("2_x8ln2")
@@ -20,10 +20,10 @@ texture_normal = ExtResource("2_x8ln2")
 [node name="MapaVistaGrandeLayer" type="CanvasLayer" parent="." unique_id=320868177]
 
 [node name="TextureRect" type="TextureRect" parent="MapaVistaGrandeLayer" unique_id=59983346]
-offset_left = 121.999985
-offset_top = 112.0
-offset_right = 2122.0
-offset_bottom = 1165.0
+offset_left = 137.0
+offset_top = 106.0
+offset_right = 2137.0
+offset_bottom = 1159.0
 scale = Vector2(0.42066184, 0.45026743)
 texture = ExtResource("3_cuuwq")
 
@@ -37,9 +37,9 @@ scale = Vector2(5.6153007, 2.6186008)
 text = "X"
 
 [node name="BotonMusica" type="TextureButton" parent="." unique_id=1691849460]
-offset_left = 916.0
+offset_left = 956.0
 offset_top = 38.0
-offset_right = 1260.0
+offset_right = 1300.0
 offset_bottom = 370.0
 scale = Vector2(0.12055573, 0.12055573)
 toggle_mode = true
