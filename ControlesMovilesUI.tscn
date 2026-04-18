@@ -8,17 +8,17 @@
 [node name="ControlesMovilesUI" type="CanvasLayer" unique_id=192328907]
 
 [node name="BotonSalto" type="TouchScreenButton" parent="." unique_id=1867574116]
-position = Vector2(979, 524)
-scale = Vector2(0.40981507, 0.40981507)
+position = Vector2(1008, 557)
+scale = Vector2(0.31252468, 0.31252468)
 texture_normal = ExtResource("1_mi40y")
 action = "ui_accept"
 
 [node name="Joystick" type="TextureRect" parent="." unique_id=1947936339]
-offset_left = 54.0
-offset_top = 513.0
-offset_right = 465.0
-offset_bottom = 952.0
-scale = Vector2(0.22148982, 0.22148982)
+offset_left = 52.000004
+offset_top = 544.00006
+offset_right = 463.0
+offset_bottom = 983.00006
+scale = Vector2(0.16745976, 0.16745976)
 texture = ExtResource("2_plx68")
 script = ExtResource("3_plx68")
 
