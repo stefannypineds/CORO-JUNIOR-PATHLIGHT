@@ -1,20 +1,20 @@
 extends TextureRect
 
 func _ready() -> void:
-	# Nos aseguramos de que el diploma arranque invisible
-	hide() 
+	# REGLA: Cambia "mX" por la misión de este mapa (m1, m2, m3...)
 	CerebroMisiones.m1.insignia = self
-	
-	# Nos conectamos a la señal general de victoria del Cerebro
-	CerebroMisiones.mostrar_diploma.connect(_aparecer)
+# Esto es lo nuevo para el nombre y la fecha
+	actualizar_identidad_insignia()
 
-# Esta función se activa SOLA cuando el jugador cumple el objetivo del mapa
-func _aparecer() -> void:
-	show()
+func actualizar_identidad_insignia():
+	# 1. Usamos 'nombre_jugador' que es como aparece en tu CerebroMisiones
+	if CerebroMisiones.nombre_jugador != "":
+		$LabelNombre.text = CerebroMisiones.nombre_jugador
+	else:
+		$LabelNombre.text = "Explorador"
 
-# Este es tu botón (probablemente la "X" para cerrar o "Continuar")
+	# 2. Ponemos la fecha del sistema
+	var d = Time.get_date_dict_from_system()
+	$LabelFecha.text = "%02d/%02d/%d" % [d.day, d.month, d.year]
 func _on_button_pressed() -> void:
-	hide()
-	
-	# ¡Aquí es un excelente lugar para enviar al jugador de vuelta!
-	# get_tree().change_scene_to_file("res://Menu_de_seleccion_nivel.tscn")
+	hide() # Replace with function body.
