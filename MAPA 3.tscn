@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dvgy244nscapg" path="res://MODELOS/MAPA 4 Y 5/Canoa baja calidad.glb" id="14_k4wfn"]
 [ext_resource type="Texture2D" uid="uid://vq8a53028tgl" path="res://MODELOS/Niebla 2.webp" id="15_qy7de"]
 [ext_resource type="PackedScene" uid="uid://cmj4f118e2s8s" path="res://JUGADOR NIÑO.tscn" id="16_6hbkg"]
-[ext_resource type="Script" path="res://hacia_mapa_4_y_5.gd" id="17_2pv8m"]
+[ext_resource type="Script" uid="uid://codviaqne8qcn" path="res://hacia_mapa_4_y_5.gd" id="17_2pv8m"]
 [ext_resource type="PackedScene" uid="uid://bikin50vuivjk" path="res://MODELOS/MAPA 7 Y 8/MAPA ESCALA sec 7 y 8.glb" id="17_7xj8a"]
 [ext_resource type="PackedScene" uid="uid://bhk4xldcg0qnr" path="res://MODELOS/MAPA 3/Familia orando.glb" id="18_5snh3"]
 [ext_resource type="Script" uid="uid://b18yx66jgj5os" path="res://familiaorando.gd" id="19_0jsfg"]
@@ -137,7 +137,19 @@ script/source = "extends TextureRect
 func _ready() -> void:
 	# REGLA: Cambia \"mX\" por la misión de este mapa (m1, m2, m3...)
 	CerebroMisiones.m3.insignia = self
+# Esto es lo nuevo para el nombre y la fecha
+	actualizar_identidad_insignia()
 
+func actualizar_identidad_insignia():
+	# 1. Usamos 'nombre_jugador' que es como aparece en tu CerebroMisiones
+	if CerebroMisiones.nombre_jugador != \"\":
+		$LabelNombre.text = CerebroMisiones.nombre_jugador
+	else:
+		$LabelNombre.text = \"Explorador\"
+
+	# 2. Ponemos la fecha del sistema
+	var d = Time.get_date_dict_from_system()
+	$LabelFecha.text = \"%02d/%02d/%d\" % [d.day, d.month, d.year]
 func _on_button_pressed() -> void:
 	hide() # Replace with function body.
 "
@@ -153,7 +165,7 @@ environment = SubResource("Environment_v1v01")
 [node name="Fondo mapa 3" parent="Seccion1" unique_id=2121909699 instance=ExtResource("3_01mhm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.180943, 0.37781048, -5.516509)
 
-[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=746569204]
+[node name="MAPA 3" parent="Seccion1/Fondo mapa 3" index="0" unique_id=1842946025]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030014038, 1.9073486e-06, 0.083227634)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Seccion1/Fondo mapa 3/MAPA 3" index="0" unique_id=1182644870]
@@ -273,7 +285,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.62981, 0.7545209, 21.2055
 [node name="Fogata" parent="." unique_id=2033573339 instance=ExtResource("2_5rrxg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0977318, -25.8272, 0.94542503, 25.448006)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Fogata/tripo_node_2484a654-e877-4936-af36-8a8bd5dec047" parent_id_path=PackedInt32Array(2033573339, 936722295) index="0" unique_id=737456233]
+[node name="StaticBody3D" type="StaticBody3D" parent="Fogata/tripo_node_2484a654-e877-4936-af36-8a8bd5dec047" parent_id_path=PackedInt32Array(2033573339, 372242710) index="0" unique_id=737456233]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Fogata/tripo_node_2484a654-e877-4936-af36-8a8bd5dec047/StaticBody3D" unique_id=1463744510]
 shape = SubResource("ConcavePolygonShape3D_wy8ug")
@@ -1030,7 +1042,7 @@ shape = SubResource("BoxShape3D_7xj8a")
 [node name="Familia orando" parent="Portal hacia 4" unique_id=1737435999 instance=ExtResource("18_5snh3")]
 transform = Transform3D(1.3936791, 7.259213e-10, -0.12786487, -0.009284467, 1.395838, -0.101197205, 0.12752734, 0.10162222, 1.39, -14.4145775, -2.1375365, 14.092425)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Portal hacia 4/Familia orando/tripo_node_d2cfdaa0-2472-44bd-8646-ac23982235a2" parent_id_path=PackedInt32Array(1737435999, 29966045) index="0" unique_id=1245800419]
+[node name="StaticBody3D" type="StaticBody3D" parent="Portal hacia 4/Familia orando/tripo_node_d2cfdaa0-2472-44bd-8646-ac23982235a2" parent_id_path=PackedInt32Array(1737435999, 1993575276) index="0" unique_id=1245800419]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Portal hacia 4/Familia orando/tripo_node_d2cfdaa0-2472-44bd-8646-ac23982235a2/StaticBody3D" unique_id=912839576]
 shape = SubResource("ConcavePolygonShape3D_rnjqh")
@@ -1162,6 +1174,40 @@ offset_bottom = 1118.0
 scale = Vector2(0.47381273, 0.48258117)
 texture = ExtResource("27_5gx0d")
 script = SubResource("GDScript_5gx0d")
+
+[node name="LabelNombre" type="Label" parent="Insignia 3/TextureRect" unique_id=422994400]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -174.77948
+offset_top = -110.15344
+offset_right = 181.90161
+offset_bottom = -60.74817
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.011764706, 0.011764706, 0.011764706, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="LabelFecha" type="Label" parent="Insignia 3/TextureRect" unique_id=240068464]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -132.56866
+offset_top = -81.14276
+offset_right = 137.58032
+offset_bottom = -35.675964
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.011764706, 0.011764706, 0.011764706, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Insignia 3/TextureRect" unique_id=896636593]
 layout_mode = 0
