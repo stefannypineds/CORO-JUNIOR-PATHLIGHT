@@ -152,7 +152,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.62981, 0.7545209, 21.2055
 [node name="MAPA 4 Y 52" parent="." unique_id=1723137936 instance=ExtResource("3_wl5jl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.26569, 0.42946243, -5.8137546)
 
-[node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=238985656]
+[node name="MAPA 4 Y 5" parent="MAPA 4 Y 52" index="0" unique_id=833492811]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08642244, -0.014123917)
 
 [node name="Casas baja calidad" parent="." unique_id=1523019399 instance=ExtResource("4_3g7tv")]
@@ -167,7 +167,7 @@ transform = Transform3D(0.14689444, 0, 0.98915243, 0, 1, 0, -0.98915243, 0, 0.14
 [node name="MAPA 62" parent="." unique_id=654540168 instance=ExtResource("6_ywa86")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.270184, 0.5539274, -5.781687)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 1399633031) index="0" unique_id=85689587]
+[node name="StaticBody3D" type="StaticBody3D" parent="MAPA 62/MAPA 6" parent_id_path=PackedInt32Array(654540168, 310382042) index="0" unique_id=85689587]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MAPA 62/MAPA 6/StaticBody3D" unique_id=1758604841]
 shape = SubResource("ConcavePolygonShape3D_swncp")
@@ -696,7 +696,7 @@ transform = Transform3D(-0.43158197, 0, -0.90207374, 0, 1, 0, 0.90207374, 0, -0.
 [node name="modelo regalo" parent="." unique_id=435506256 instance=ExtResource("10_jmva6")]
 transform = Transform3D(0.9985859, -0.04981169, -0.01857566, 0.05095764, 0.99642396, 0.06740005, 0.015151963, -0.0682513, 0.99755305, -48.202988, 1.2846866, -40.893326)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="modelo regalo/tripo_node_931c1dbd-9837-465f-8bc4-ac8925339bf3" parent_id_path=PackedInt32Array(435506256, 462964925) index="0" unique_id=585365434]
+[node name="StaticBody3D" type="StaticBody3D" parent="modelo regalo/tripo_node_931c1dbd-9837-465f-8bc4-ac8925339bf3" parent_id_path=PackedInt32Array(435506256, 1396979535) index="0" unique_id=585365434]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="modelo regalo/tripo_node_931c1dbd-9837-465f-8bc4-ac8925339bf3/StaticBody3D" unique_id=1212320042]
 shape = SubResource("ConcavePolygonShape3D_rw4hq")
@@ -712,7 +712,7 @@ shape = SubResource("BoxShape3D_itoc3")
 [node name="Rosa" parent="." unique_id=2077392669 instance=ExtResource("11_1ipgx")]
 transform = Transform3D(2.1534407, 0, 0, 0, 1.2569884, 0, 0, 0, 1.8715689, -40.23596, 1.1264946, -42.4299)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rosa/tripo_node_af9c99a3-bd99-4d88-a3a5-54d6df8ad992" parent_id_path=PackedInt32Array(2077392669, 1468999358) index="0" unique_id=1472209071]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rosa/tripo_node_af9c99a3-bd99-4d88-a3a5-54d6df8ad992" parent_id_path=PackedInt32Array(2077392669, 2036960625) index="0" unique_id=1472209071]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rosa/tripo_node_af9c99a3-bd99-4d88-a3a5-54d6df8ad992/StaticBody3D" unique_id=367654290]
 shape = SubResource("ConcavePolygonShape3D_fkco4")
@@ -882,6 +882,40 @@ offset_bottom = 1084.0
 scale = Vector2(0.5473265, 0.56105036)
 texture = ExtResource("24_fkco4")
 script = ExtResource("25_gecxq")
+
+[node name="LabelNombre" type="Label" parent="Insignia 6/TextureRect" unique_id=213806692]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -174.77954
+offset_top = -110.1535
+offset_right = 181.90161
+offset_bottom = -60.74823
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.011764706, 0.011764706, 0.011764706, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="LabelFecha" type="Label" parent="Insignia 6/TextureRect" unique_id=50871430]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -132.56879
+offset_top = -81.14276
+offset_right = 137.5802
+offset_bottom = -35.675964
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.011764706, 0.011764706, 0.011764706, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Insignia 6/TextureRect" unique_id=470563016]
 layout_mode = 0
