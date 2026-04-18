@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b2qwaetrt0m5j"]
+
+[ext_resource type="Texture2D" uid="uid://x7ipj7c5xl00" path="res://CANGURO SALTO.png" id="1_mi40y"]
+[ext_resource type="Texture2D" uid="uid://jhs8ab6guf1f" path="res://BASE JOYSTICK.png" id="2_plx68"]
+[ext_resource type="Texture2D" uid="uid://d1bn005jdeim8" path="res://PUNTA JOYSTICK.png" id="3_3bf4p"]
+[ext_resource type="Script" uid="uid://hj10xikqgqbp" path="res://joystick.gd" id="3_plx68"]
+
+[node name="ControlesMovilesUI" type="CanvasLayer" unique_id=192328907]
+
+[node name="BotonSalto" type="TouchScreenButton" parent="." unique_id=1867574116]
+position = Vector2(979, 524)
+scale = Vector2(0.40981507, 0.40981507)
+texture_normal = ExtResource("1_mi40y")
+action = "ui_accept"
+
+[node name="Joystick" type="TextureRect" parent="." unique_id=1947936339]
+offset_left = 54.0
+offset_top = 513.0
+offset_right = 465.0
+offset_bottom = 952.0
+scale = Vector2(0.22148982, 0.22148982)
+texture = ExtResource("2_plx68")
+script = ExtResource("3_plx68")
+
+[node name="Punta" type="TextureRect" parent="Joystick" unique_id=169650721]
+layout_mode = 0
+offset_left = 85.78272
+offset_top = 103.84225
+offset_right = 323.7827
+offset_bottom = 335.84225
+texture = ExtResource("3_3bf4p")
